@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="purchase_line_button">
+            <field name="name">purchase_line_button</field>
+            <field name="model">purchase.order</field>
+            <field name="inherit_id" ref="purchase.purchase_order_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='order_line']/tree//field[@name='state']" position="after">
+                    <button name="button_details" string="Details" type="object" icon="STOCK_EDIT" class="oe_edit_only"/>
+                </xpath>
+            </field>
+        </record>
+    
+    </data>
+</openerp>
