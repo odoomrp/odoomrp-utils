@@ -30,6 +30,12 @@
     "category": "Hidden/Dependency",
     "website": "http://www.odoomrp.com",
     "summary": "",
+<<<<<<< HEAD
+=======
+    "description": """
+This module adds an smartbutton for accessing quants from purchase orders
+    """,
+>>>>>>> [ADD] <stock_quant_shortcut> modules
     "data": [
         "views/purchase_order_view.xml",
     ],
