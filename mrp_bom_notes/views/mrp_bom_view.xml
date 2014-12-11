@@ -9,12 +9,13 @@
                 <page string="Properties" position="after">
                     <page string="Notes">
                         <group>
-                            <field name="note" nolabel="1" />
+                            <field name="notes" nolabel="1" />
                         </group>
                     </page>
                 </page>
             </field>
         </record>
+
         <record id="mrp_production_form_view_inh_notes" model="ir.ui.view">
             <field name="name">mrp.production.form.view.inh.notes</field>
             <field name="model">mrp.production</field>
@@ -23,7 +24,7 @@
                 <page string="Extra Information" position="after">
                     <page string="Notes">
                         <group>
-                            <field name="note" nolabel="1" />
+                            <field name="bom_notes" nolabel="1" />
                         </group>
                     </page>
                 </page>
