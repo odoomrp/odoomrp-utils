@@ -37,7 +37,7 @@ msgstr "Órden de producción"
 
 #. module: mrp_bom_notes
 #: view:mrp.bom:mrp_bom_notes.mrp_bom_form_view_inh_notes
-#: field:mrp.bom,note:0
+#: field:mrp.bom,notes:0
 #: view:mrp.production:mrp_bom_notes.mrp_production_form_view_inh_notes
 msgid "Notes"
 msgstr "Notas"
