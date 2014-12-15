@@ -15,24 +15,22 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
-
 {
-    "name": "Purchase Stock Quant Shortcut",
+    "name": "Stock Picking Visible Scheduled Date",
     "version": "1.0",
-    "depends": [
-        "purchase",
-        "stock_quants_shortcuts",
-    ],
     "author": "OdooMRP team",
     "contributors": [
-        "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
+        "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
+        "Ana Juaristi <ajuaristio@gmail.com>",
     ],
-    "category": "Hidden/Dependency",
+    "category": "Warehouse Management",
     "website": "http://www.odoomrp.com",
-    "summary": "",
-    "data": [
-        "views/purchase_order_view.xml",
+    "depends": [
+        "stock",
     ],
-    "installable": True,
-    "auto_install": True,
+    "data": [
+        "views/stock_picking_view.xml",
+    ],
+    "installable": True
 }

@@ -15,24 +15,3 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
-
-{
-    "name": "Purchase Stock Quant Shortcut",
-    "version": "1.0",
-    "depends": [
-        "purchase",
-        "stock_quants_shortcuts",
-    ],
-    "author": "OdooMRP team",
-    "contributors": [
-        "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
-    ],
-    "category": "Hidden/Dependency",
-    "website": "http://www.odoomrp.com",
-    "summary": "",
-    "data": [
-        "views/purchase_order_view.xml",
-    ],
-    "installable": True,
-    "auto_install": True,
-}

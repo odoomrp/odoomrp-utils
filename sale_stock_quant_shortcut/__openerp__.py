@@ -30,12 +30,6 @@
     "category": "Hidden/Dependency",
     "website": "http://www.odoomrp.com",
     "summary": "",
-<<<<<<< HEAD
-=======
-    "description": """
-This module adds an smartbutton for accessing quants from sale orders
-    """,
->>>>>>> [ADD] <stock_quant_shortcut> modules
     "data": [
         "views/sale_order_view.xml",
     ],

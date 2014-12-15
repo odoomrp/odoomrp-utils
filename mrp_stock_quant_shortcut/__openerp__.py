@@ -30,12 +30,6 @@
     "category": "Hidden/Dependency",
     "website": "http://www.odoomrp.com",
     "summary": "",
-<<<<<<< HEAD
-=======
-    "description": """
-This module adds an smartbutton for accessing quants from production orders
-    """,
->>>>>>> [ADD] <stock_quant_shortcut> modules
     "data": [
         "views/mrp_production_view.xml",
     ],
