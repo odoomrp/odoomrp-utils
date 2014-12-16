@@ -1,4 +1,3 @@
-
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
@@ -18,13 +17,23 @@
 ##############################################################################
 
 {
-    "name": "Purchase Products Shortcut",
+    "name": "Purchase Products Menu",
     "version": "1.0",
-    'author': 'OdooMRP team',
-    'website': "http://www.odoomrp.com",
-    "depends": ['purchase'],
-    "category": "Custom Modules",
-    "data": ['views/purchase_order_view.xml'],
+    "author": "OdooMRP team",
+    "website": "http://www.odoomrp.com",
+    "contributors": [
+        "Daniel Campos <danielcampos@avanzosc.es>",
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
+        "Ana Juaristi <ajuaristio@gmail.com>",
+    ],
+    "depends": [
+        "purchase",
+        "product",
+    ],
+    "category": "Hidden/Dependency",
+    "data": [
+        "views/purchase_order_view.xml"
+    ],
     "installable": True,
     "auto_install": True,
 }

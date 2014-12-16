@@ -23,17 +23,15 @@
         "mrp",
     ],
     "author": "OdooMRP team",
+    "website": "http://www.odoomrp.com",
     "contributors": [
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristio@gmail.com>"
     ],
-    "category": "Manufacturing",
-    "website": "http://www.odoomrp.com",
-    "summary": "",
+    "category": "Tools",
     "data": [
         "views/mrp_production_view.xml",
     ],
     "installable": True,
-    "auto_install": False,
 }

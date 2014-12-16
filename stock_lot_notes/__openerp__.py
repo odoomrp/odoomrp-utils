@@ -23,18 +23,15 @@
         "stock",
     ],
     "author": "OdooMRP team",
+    "website": "http://www.odoomrp.com",
     "contributors": [
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristio@gmail.com>",
     ],
-    "category": "Stock management",
-    "website": "http://www.odoomrp.com",
-    "complexity": "normal",
-    "summary": "",
+    "category": "Tools",
     "data": [
         "views/lot_view.xml",
     ],
     "installable": True,
-    "auto_install": False,
 }

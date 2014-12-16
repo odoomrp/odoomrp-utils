@@ -15,17 +15,18 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
+
 {
     "name": "Stock Picking Visible Scheduled Date",
     "version": "1.0",
     "author": "OdooMRP team",
+    "website": "http://www.odoomrp.com",
     "contributors": [
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristio@gmail.com>",
     ],
-    "category": "Warehouse Management",
-    "website": "http://www.odoomrp.com",
+    "category": "Tools",
     "depends": [
         "stock",
     ],

@@ -15,6 +15,7 @@
 #    along with this program.  If not, see http://www.gnu.org/licenses/.
 #
 ##############################################################################
+
 {
     "name": "Stock Quants Shortcuts",
     "version": "1.0",
@@ -22,10 +23,12 @@
         "stock",
     ],
     "author": "OdooMRP team",
+    "website": "http://www.odoomrp.com",
     "contributors": [
         "Mikel Arregi <mikelarregi@avanzosc.es>",
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
+        "Ana Juaristi <ajuaristio@gmail.com>"
     ],
-    "website": "http://www.odoomrp.com",
-    "category": "Warehouse Management",
+    "category": "Tools",
     "installable": True,
 }

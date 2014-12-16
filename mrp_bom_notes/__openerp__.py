@@ -26,7 +26,7 @@
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristio@gmail.com>"
     ],
-    "category": "Manufacturing",
+    "category": "Tools",
     "depends": [
         "mrp",
     ],
