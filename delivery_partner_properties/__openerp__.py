@@ -18,6 +18,7 @@
 
 {
     "name": "Delivery - Carriers on partner info",
+    "summary": "Partner's mandatory and banned carriers",
     "version": "1.0",
     "depends": [
         "base",
@@ -31,12 +32,10 @@
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <ajuaristio@gmail.com>"
     ],
-    "category": "Custom Module",
-    "summary": "Partner's mandatory and banned carriers",
+    "category": "Tools",
     "data": [
         "views/partner_view.xml",
         "views/sale_view.xml",
     ],
     "installable": True,
-    "auto_install": False,
 }
