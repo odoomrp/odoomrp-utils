@@ -4,8 +4,9 @@ python:
   - "2.7"
 
 env:
-  - VERSION="8.0" ODOO_REPO="odoo/odoo"
-  - VERSION="8.0" ODOO_REPO="OCA/OCB"
+  - VERSION="8.0" LINT_CHECK="1"
+  - VERSION="8.0" ODOO_REPO="odoo/odoo" OPTIONS="--test-commit" LINT_CHECK="0"
+  - VERSION="8.0" ODOO_REPO="OCA/OCB" OPTIONS="--test-commit" LINT_CHECK="0"
 
 virtualenv:
   system_site_packages: true
@@ -13,11 +14,12 @@ virtualenv:
 install:
   - sudo pip install unidecode
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
+  - git clone https://github.com/odoomrp/odoomrp-wip ${HOME}/odoomrp-wip -b ${VERSION}
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
-  - travis_install_nightly ${VERSION}
+  - travis_install_nightly
 
 script:
-  - travis_run_tests ${VERSION}
+  - travis_run_tests
 
 after_success:
   coveralls

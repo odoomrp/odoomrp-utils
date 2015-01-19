@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <menuitem id="pricelist_partnerinfo_purchase_menu" parent="purchase.menu_procurement_management_product"
+            action="product_pricelist_partnerinfo.pricelist_partnerinfo_action" sequence="50" />
+
+    </data>
+</openerp>

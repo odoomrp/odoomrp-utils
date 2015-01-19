@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="product_template_form_view">
+            <field name="name">product.template.form</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_only_form_view" />
+            <field name="arch" type="xml">
+                <div name="buttons" position="inside">
+                    <button class="oe_stat_button" name="open_related_partnerinfo"
+                        icon="fa-money" type="object" string="Product Partnerinfo">
+                    </button>
+                </div>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_product_form_view">
+            <field name="name">product.product.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <div name="buttons" position="inside">
+                    <button class="oe_stat_button" name="open_related_partnerinfo"
+                        icon="fa-money" type="object" string="Product Partnerinfo">
+                    </button>
+                </div>
+            </field>
+        </record>
+
+    </data>
+</openerp>
