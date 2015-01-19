@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="pricelist_partnerinfo_tree_view" model="ir.ui.view">
+            <field name="name">pricelist.partnerinfo.tree</field>
+            <field name="model">pricelist.partnerinfo</field>
+            <field name="arch" type="xml">
+                <tree string="Partnerinfo" editable="top">
+                    <field name="sequence" readonly="1" />
+                    <field name="name" />
+                    <field name="suppinfo_id" />
+                    <field name="min_quantity" />
+                    <field name="price" />
+                    <field name="type" invisible="1" />
+                    <field name="product_tmpl_id" readonly="1" />
+                    <field name="partner" readonly="1" />
+                    <field name="product_code" readonly="1" />
+                    <field name="product_name" readonly="1" />
+                    <field name="company_id" groups="base.group_multi_company"
+                        invisible="1" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="pricelist_partnerinfo_search_view" model="ir.ui.view">
+            <field name="name">pricelist.partnerinfo.search</field>
+            <field name="model">pricelist.partnerinfo</field>
+            <field name="arch" type="xml">
+                <search string="Partnerinfo">
+                    <field name="name" />
+                    <field name="suppinfo_id" />
+                    <field name="product_tmpl_id" />
+                    <field name="product_code" />
+                    <field name="company_id" groups="base.group_multi_company" />
+                    <filter string="Customer" domain="[('type','=','customer')]" name="is_customer_filter"/>
+                    <filter string="Supplier" domain="[('type','=','supplier')]" name="is_supplier_filter"/>
+                    <group expand="0" string="Group By">
+                        <filter string="Partner" icon="terp-partner"
+                            domain="[]" context="{'group_by':'partner'}" />
+                        <filter string="Product Template" domain="[]"
+                            name="group_product_tmpl_id" context="{'group_by':'product_tmpl_id'}" />
+                        <separator />
+                        <filter string="Type" domain="[]"
+                            context="{'group_by':'type'}" />
+                        <filter string="Company" domain="[]"
+                            name="group_company_id" context="{'group_by':'company_id'}"
+                            groups="base.group_multi_company" />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="pricelist_partnerinfo_action" model="ir.actions.act_window">
+            <field name="name">Partnerinfo</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">pricelist.partnerinfo</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="pricelist_partnerinfo_search_view" />
+            <field name="domain">[]</field>
+            <field name="context">{}
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to define a new pricelist.partnerinfo.
+                </p>
+            </field>
+        </record>
+
+        <menuitem id="pricelist_partnerinfo_sale_menu" parent="base.menu_product"
+            action="pricelist_partnerinfo_action" sequence="50" />
+
+    </data>
+</openerp>
