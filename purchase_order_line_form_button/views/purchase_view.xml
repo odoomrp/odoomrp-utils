@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="purchase.purchase_order_form" />
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='order_line']/tree//field[@name='state']" position="after">
-                    <button name="button_details" string="Details" type="object" icon="STOCK_EDIT" class="oe_edit_only"/>
+                    <button name="button_details" string="Details" type="object" icon="STOCK_EDIT" />
                 </xpath>
             </field>
         </record>
