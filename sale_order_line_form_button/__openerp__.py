@@ -17,10 +17,10 @@
 ##############################################################################
 
 {
-    "name": "Purchase - Button to open purchase order lines in form view",
+    "name": "Sale - Button to open sale order lines in form view",
     "version": "1.0",
     "depends": [
-        "purchase"
+        "sale"
     ],
     "author": "OdooMRP team",
     "website": "http://www.odoomrp.com",
@@ -32,7 +32,7 @@
     "category": "Custom Module",
     "summary": "",
     "data": [
-        "views/purchase_view.xml",
+        "views/sale_view.xml",
     ],
     "installable": True,
 }
