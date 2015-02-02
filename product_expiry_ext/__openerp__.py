@@ -17,9 +17,12 @@
 ##############################################################################
 
 {
-    "name": "Products Expiry Date Extension",
+    "name": "Products Expiry Date - Extension",
     "version": "1.0",
-    "depends": ["stock", "product_expiry"],
+    "depends": [
+        "stock",
+        "product_expiry",
+    ],
     "author": "OdooMRP team",
     "contributors": [
         "Juan Ignacio Úbeda <juanignacioubeda@avanzosc.es>",
@@ -27,17 +30,13 @@
         "Ana Juaristi Olalde <ajuaristio@gmail.com>",
         "Mikel Arregi <mikelarregi@avanzosc.es>"
     ],
-    "category": "Custom Module",
+    "category": "Tools",
     "website": "http://www.odoomrp.com",
-    "complexity": "normal",
     "summary": "",
-    "images": [],
-    "data": ["views/production_lot_ext_view.xml",
-             "views/stock_quant_view.xml",
-             "wizard/stock_transfer_details_view.xml"],
-    "qweb": [],
-    "demo": [],
-    "test": [],
+    "data": [
+        "views/production_lot_ext_view.xml",
+        "views/stock_quant_view.xml",
+        "wizard/stock_transfer_details_view.xml",
+    ],
     "installable": True,
-    "auto_install": False,
 }
