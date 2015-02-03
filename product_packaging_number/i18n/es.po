@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_packaging_number
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-02 19:03+0000\n"
+"PO-Revision-Date: 2015-02-02 20:05+0100\n"
+"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: product_packaging_number
+#: field:product.attribute,is_package:0
+msgid "Is package"
+msgstr "Es envase"
+
+#. module: product_packaging_number
+#: field:stock.move,packaging_number:0
+#: field:stock.quant,packaging_number:0
+msgid "Packaging number"
+msgstr "Número envases"
+
+#. module: product_packaging_number
+#: model:ir.model,name:product_packaging_number.model_product_attribute
+msgid "Product Attribute"
+msgstr "Atributo producto"
+
+#. module: product_packaging_number
+#: model:ir.model,name:product_packaging_number.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
+
+#. module: product_packaging_number
+#: model:ir.model,name:product_packaging_number.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento stock"
+
