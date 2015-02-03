@@ -18,7 +18,7 @@
 ##############################################################################
 
 {
-    "name": "Purchase stock quantity",
+    "name": "Purchase order line stock available",
     "version": "1.0",
     'author': 'OdooMRP team',
     'website': "http://www.odoomrp.com",

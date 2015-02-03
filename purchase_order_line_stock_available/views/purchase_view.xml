@@ -8,7 +8,7 @@
                 <data>
                     <xpath
                         expr="//field[@name='order_line']/tree//field[@name='product_uom']" position="after">
-                        <field name="stock_quantity"/>
+                        <field name="virtual_available"/>
                     </xpath>
                 </data>
             </field>
