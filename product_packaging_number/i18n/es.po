@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-02 19:03+0000\n"
-"PO-Revision-Date: 2015-02-02 20:05+0100\n"
+"PO-Revision-Date: 2015-02-03 16:27+0100\n"
 "Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,7 +24,7 @@ msgstr "Es envase"
 #: field:stock.move,packaging_number:0
 #: field:stock.quant,packaging_number:0
 msgid "Packaging number"
-msgstr "Número envases"
+msgstr "Nº de envases"
 
 #. module: product_packaging_number
 #: model:ir.model,name:product_packaging_number.model_product_attribute
