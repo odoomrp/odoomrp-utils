@@ -43,5 +43,16 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="stock_production_lot_expiry_search_view">
+            <field name="name">stock.production.lot.expiry.search</field>
+            <field name="model">stock.production.lot</field>
+            <field name="inherit_id" ref="stock.search_product_lot_filter" />
+            <field name="arch" type="xml">
+                <field name="product_id" position="after">
+                    <field name="expiry_state" />
+                </field>
+            </field>
+        </record>
+
     </data>
 </openerp>
