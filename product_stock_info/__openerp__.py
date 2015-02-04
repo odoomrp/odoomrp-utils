@@ -17,7 +17,7 @@
 ##############################################################################
 
 {
-    "name": "Stock Quantity Visible",
+    "name": "Product Stock Info",
     "version": "1.0",
     "depends": [
         "stock",
@@ -30,7 +30,7 @@
         "Ana Juaristi <ajuaristio@gmail.com>"
     ],
     "category": "Tools",
-    "summary": "",
+    "summary": "Stock quantities info on products",
     "data": [
         "views/product_view.xml",
     ],
