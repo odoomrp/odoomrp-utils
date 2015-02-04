@@ -45,7 +45,7 @@ class StockProductioLot(models.Model):
                    ('normal', 'Normal'),
                    ('to_remove', 'To remove'),
                    ('best_before', 'After the best before')],
-        string='Expiry state', store=True)
+        string='Expiry state')
 
 
 class StockQuant(models.Model):
