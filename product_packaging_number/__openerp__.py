@@ -1,6 +1,10 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
+# Copyright (c)
+#    2015 Serv. Tec. Avanzados - Pedro M. Baeza (http://www.serviciosbaeza.com)
+#    2015 AvanzOsc (http://www.avanzosc.es)
+#
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
 #    by the Free Software Foundation, either version 3 of the License, or
@@ -9,13 +13,12 @@
 #    This program is distributed in the hope that it will be useful,
 #    but WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
+#    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see http://www.gnu.org/licenses/.
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
     "name": "Product Packaging Number",
     "version": "1.0",
@@ -30,10 +33,10 @@
     "depends": [
         "product",
         "product_attribute_types",
-        "product_packaging",
         "stock",
     ],
     "data": [
+        "views/product_attribute_view.xml",
         "views/stock_move_view.xml",
         "views/stock_quant_view.xml",
     ],
