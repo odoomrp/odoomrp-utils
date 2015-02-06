@@ -17,25 +17,23 @@
 ##############################################################################
 
 {
-    "name": "Product Packaging Number",
+    "name": "Product Packaging",
     "version": "1.0",
+    "depends": [
+        "product",
+    ],
     "author": "OdooMRP team",
     "website": "http://www.odoomrp.com",
     "contributors": [
-        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
-        "Ana Juaristi <ajuaristo@gmail.com>",
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
+        "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
+        "Ana Juaristi <ajuaristio@gmail.com>",
     ],
-    "category": "Product",
-    "depends": [
-        "product",
-        "product_attribute_types",
-        "product_packaging",
-        "stock",
-    ],
+    "category": "Hidden/Dependency",
+    "summary": "",
     "data": [
-        "views/stock_move_view.xml",
-        "views/stock_quant_view.xml",
+        "views/product_view.xml",
     ],
-    "installable": True
+    "installable": True,
 }
