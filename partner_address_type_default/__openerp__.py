@@ -20,7 +20,7 @@
 #
 ##############################################################################
 {
-    "name": "Partner Contact Default Address",
+    "name": "Partner Address Type Default",
     "version": "1.0",
     "author": "OdooMRP team",
     "website": "http://www.odoomrp.com",

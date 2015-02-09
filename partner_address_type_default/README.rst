@@ -1,5 +1,5 @@
-Partner contact default address
-===============================
+Partner address type default
+============================
 * This module creates in customers form, a new check in contact addresses of
   type "invoice" or "delivery", to indicate that it is a contact address by
   default.
