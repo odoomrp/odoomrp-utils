@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-19 11:28+0000\n"
-"PO-Revision-Date: 2015-01-19 11:28+0000\n"
+"POT-Creation-Date: 2015-01-28 11:38+0000\n"
+"PO-Revision-Date: 2015-01-28 11:38+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,27 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: crm_claim_ref_search
-#: view:crm.claim:crm_claim_ref_search.view_crm_case_claims_filter_inh_reftype
+#: model:ir.model,name:crm_claim_ref_search.model_crm_claim
+msgid "Claim"
+msgstr ""
+
+#. module: crm_claim_ref_search
+#: view:crm.claim:crm_claim_ref_search.view_crm_case_claims_filter_inh_refsearch
 msgid "Partner"
 msgstr ""
 
 #. module: crm_claim_ref_search
-#: view:crm.claim:crm_claim_ref_search.view_crm_case_claims_filter_inh_reftype
+#: field:crm.claim,ref_model_name:0
+msgid "Ref. Model"
+msgstr ""
+
+#. module: crm_claim_ref_search
+#: field:crm.claim,ref_name:0
+msgid "Ref. Name"
+msgstr ""
+
+#. module: crm_claim_ref_search
+#: view:crm.claim:crm_claim_ref_search.view_crm_case_claims_filter_inh_refsearch
 msgid "Reference"
 msgstr ""
 
