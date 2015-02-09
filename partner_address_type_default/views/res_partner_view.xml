@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form_inh_defaultaddress">
+            <field name="name">view.partner.form.inh.defaultaddress</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//form[@string='Contact']//sheet//group//div[@name='div_type']" position="after">
+                    <label for="default_address" attrs="{'invisible':['|',('customer', '=', False),('type', 'not in', ('invoice','delivery'))]}"/>
+                    <div name="default_address" attrs="{'invisible':['|',('customer', '=', False),('type', 'not in', ('invoice','delivery'))]}">
+                        <field name="default_address"/>
+                    </div>
+                    <newline/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>
