@@ -11,6 +11,20 @@
                 </xpath>
             </field>
         </record>
-    
+       <record model="ir.ui.view" id="view_order_line_form2_button">
+            <field name="name">view.order.line.form2.button</field>
+            <field name="model">sale.order.line</field>
+            <field eval="40" name="priority"/>
+            <field name="inherit_id" ref="sale.view_order_line_form2" />
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="after">
+                    <footer invisible="not context.get('view_buttons')">
+                        <button class="oe_highlight" name="button_save_data" string="Save" type="object" />
+                        or
+                        <button class="oe_link" special="cancel" string="Cancel" />
+                    </footer>
+                </xpath>
+            </field>
+        </record>
     </data>
 </openerp>
