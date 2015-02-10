@@ -11,7 +11,7 @@ class SaleOrderLine(models.Model):
 
     @api.multi
     def button_save_data(self):
-        self = self
+        return True
 
     @api.multi
     def button_details(self):
