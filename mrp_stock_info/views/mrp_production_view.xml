@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="mrp_production_product_line_stock_info_tree_view">
+            <field name="name">mrp.production.product.line.stock_info.tree</field>
+            <field name="model">mrp.production.product.line</field>
+            <field name="inherit_id" ref="mrp.mrp_production_product_tree_view" />
+            <field name="arch" type="xml">
+                <field name="product_uos" position="after">
+                    <field name="product_qty_available" />
+                    <field name="product_virtual_available" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mrp_production_product_line_stock_info_form_view">
+            <field name="name">mrp.production.product.line.stock_info.form</field>
+            <field name="model">mrp.production.product.line</field>
+            <field name="inherit_id" ref="mrp.mrp_production_product_form_view" />
+            <field name="arch" type="xml">
+                <group position="inside">
+                    <field name="product_qty_available" />
+                    <field name="product_virtual_available" />
+                </group>
+            </field>
+        </record>
+
+    </data>
+</openerp>
