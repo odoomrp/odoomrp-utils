@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_lead_show_marketing_data
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-12 09:57+0000\n"
+"PO-Revision-Date: 2015-02-12 10:59+0100\n"
+"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: crm_lead_show_marketing_data
+#: view:crm.lead:crm_lead_show_marketing_data.crm_case_form_view_leads_inh_showmarketingdata
+msgid "Extra Info"
+msgstr "Información extra"
+
+#. module: crm_lead_show_marketing_data
+#: view:crm.lead:crm_lead_show_marketing_data.crm_case_form_view_oppor_inh_showmarketingdata
+msgid "Fund Raising"
+msgstr "Recaudación de fondos"
+
+#. module: crm_lead_show_marketing_data
+#: view:crm.lead:crm_lead_show_marketing_data.crm_case_form_view_leads_inh_showmarketingdata
+#: view:crm.lead:crm_lead_show_marketing_data.crm_case_form_view_oppor_inh_showmarketingdata
+msgid "Marketing Data"
+msgstr "Datos de Marketing"
+
