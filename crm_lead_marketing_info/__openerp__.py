@@ -20,7 +20,7 @@
 #
 ##############################################################################
 {
-    "name": "CRM Lead Show Marketing Data",
+    "name": "CRM Lead Marketing Info",
     "version": "1.0",
     "author": "OdooMRP team",
     "website": "http://www.odoomrp.com",

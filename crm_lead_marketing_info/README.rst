@@ -1,5 +1,5 @@
-CRM lead show marketing data
-============================
+CRM lead marketing info
+=======================
 
 This module displays the fields of marketing: "campaign", "channel", and
 "source", in the tree and the form of leads, and opportunities.
