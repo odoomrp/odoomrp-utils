@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="crm_case_form_view_leads_inh_marketinginfo">
+            <field name="name">crm.case.form.view.leads.inh.marketinginfo</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_leads" />
+            <field name="arch" type="xml">
+                <page string="Extra Info" position="after">
+                    <page string="Marketing Info" >
+                        <group>
+                            <field name="campaign_id"/>
+                            <field name="medium_id"/>
+                            <field name="source_id"/>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="crm_case_tree_view_leads_inh_marketinginfo">
+            <field name="name">crm.case.tree.view.leads.inh.marketinginfo</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads" />
+            <field name="arch" type="xml">
+                <field name="campaign_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </field>
+                <field name="medium_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </field>
+                <field name="medium_id" position="after">
+                    <field name="source_id" />
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_crm_case_leads_filter_inh_marketinginfo">
+            <field name="name">view.crm.case.leads.filter.inh.marketinginfo</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_leads_filter" />
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="campaign_id"/>
+                    <field name="medium_id"/>
+                    <field name="source_id"/>
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="crm_case_form_view_oppor_inh_marketinginfo">
+            <field name="name">crm.case.form.view.oppor.inh.marketinginfo</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_form_view_oppor" />
+            <field name="arch" type="xml">
+                <page string="Fund Raising" position="after">
+                    <page string="Marketing Info" >
+                        <group>
+                            <field name="campaign_id"/>
+                            <field name="medium_id"/>
+                            <field name="source_id"/>
+                        </group>
+                    </page>
+                </page>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="crm_case_tree_view_oppor_inh_marketinginfo">
+            <field name="name">crm.case.tree.view.oppor.inh.marketinginfo</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_oppor" />
+            <field name="arch" type="xml">
+                <field name="campaign_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </field>
+                <field name="medium_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </field>
+                <field name="source_id" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </field>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_crm_case_opportunities_filter_inh_marketinginfo">
+            <field name="name">view.crm.case.opportunities.filter.inh.marketinginfo</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter" />
+            <field name="arch" type="xml">
+                <field name="section_id" position="after">
+                    <field name="campaign_id"/>
+                    <field name="medium_id"/>
+                    <field name="source_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
