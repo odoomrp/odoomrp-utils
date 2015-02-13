@@ -20,7 +20,7 @@
 #
 ##############################################################################
 {
-    "name": "Stock Move Picking Partner",
+    "name": "Stock Move Partner Info",
     "version": "1.0",
     "author": "OdooMRP team",
     "website": "http://www.odoomrp.com",

@@ -1,5 +1,5 @@
-Stock move picking partner
-==========================
+Stock move partner info
+=======================
 
 This module displays the partner of the picking, in stock movements.
 
