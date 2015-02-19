@@ -23,9 +23,3 @@ class MrpBom(models.Model):
     _inherit = 'mrp.bom'
 
     notes = fields.Html()
-
-
-class MrpProduction(models.Model):
-    _inherit = 'mrp.production'
-
-    bom_notes = fields.Html(string='BoM Notes', related='bom_id.notes')
