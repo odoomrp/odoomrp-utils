@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="stock.view_stock_enter_transfer_details" />
             <field name="arch" type="xml">
                 <field name="lot_id" position="after">
-                    <field name="life_date" />
+                    <field name="removal_date" />
                 </field>
             </field>
         </record>
