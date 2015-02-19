@@ -37,7 +37,7 @@ msgstr ""
 #. module: mrp_stock_info
 #: field:mrp.production.product.line,product_virtual_available:0
 msgid "Forecast Quantity"
-msgstr "a"
+msgstr ""
 
 #. module: mrp_stock_info
 #: help:mrp.production.product.line,product_virtual_available:0
