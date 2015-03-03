@@ -7,7 +7,7 @@ from openerp import fields, models, api
 
 class StockPicking(models.Model):
     _inherit = "stock.picking"
-    
+
     @api.one
     @api.depends('group_id', 'sale_id', 'sale_id.client_order_ref')
     def _calculate_client_order_ref(self):
