@@ -1,6 +1,6 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* mrp_bom_notes
+#	* mrp_bom_note
 #
 msgid ""
 msgstr ""
@@ -15,30 +15,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 
-#. module: mrp_bom_notes
-#: model:ir.model,name:mrp_bom_notes.model_mrp_bom
+#. module: mrp_bom_note
+#: model:ir.model,name:mrp_bom_note.model_mrp_bom
 msgid "Bill of Material"
 msgstr "Lista de material"
 
-#. module: mrp_bom_notes
-#: view:mrp.bom:mrp_bom_notes.mrp_bom_form_view_inh_notes
+#. module: mrp_bom_note
+#: view:mrp.bom:mrp_bom_note.mrp_bom_form_view_inh_note
 msgid "Components"
 msgstr "Componentes"
 
-#. module: mrp_bom_notes
-#: view:mrp.production:mrp_bom_notes.mrp_production_form_view_inh_notes
+#. module: mrp_bom_note
+#: view:mrp.production:mrp_bom_note.mrp_production_form_view_inh_note
 msgid "Extra Information"
 msgstr "Información extra"
 
-#. module: mrp_bom_notes
-#: model:ir.model,name:mrp_bom_notes.model_mrp_production
+#. module: mrp_bom_note
+#: model:ir.model,name:mrp_bom_note.model_mrp_production
 msgid "Manufacturing Order"
 msgstr "Órden de producción"
 
-#. module: mrp_bom_notes
-#: view:mrp.bom:mrp_bom_notes.mrp_bom_form_view_inh_notes
+#. module: mrp_bom_note
+#: view:mrp.bom:mrp_bom_note.mrp_bom_form_view_inh_note
 #: field:mrp.bom,notes:0
-#: view:mrp.production:mrp_bom_notes.mrp_production_form_view_inh_notes
+#: view:mrp.production:mrp_bom_note.mrp_production_form_view_inh_note
 msgid "Notes"
 msgstr "Notas"
 
