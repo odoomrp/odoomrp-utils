@@ -18,6 +18,9 @@
                 <field name="partner_id" position="after">
                     <field name="client_order_ref" attrs="{'invisible':[('client_order_ref', '=', False)]}" />
                 </field>
+                <field name="group_id" position="after">
+                    <field name="sale_id" attrs="{'invisible':[('sale_id', '=', False)]}" />
+                </field>
             </field>
         </record>
         <record model="ir.ui.view" id="view_picking_internal_search_inh_customerinfo">
