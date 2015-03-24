@@ -1,10 +1,6 @@
 # -*- encoding: utf-8 -*-
 ##############################################################################
 #
-# Copyright (c)
-#    2015 Serv. Tec. Avanzados - Pedro M. Baeza (http://www.serviciosbaeza.com)
-#    2015 AvanzOsc (http://www.avanzosc.es)
-#
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as published
 #    by the Free Software Foundation, either version 3 of the License, or
@@ -24,6 +20,11 @@
     'version': "1.0",
     'author': 'OdooMRP team',
     'website': "http://www.odoomrp.com",
+    "contributors": [
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
+        "Ana Juaristi <ajuaristo@gmail.com>",
+        "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
+        ],
     'category': 'Accounting & Finance',
     'depends': ['stock_account',
                 ],

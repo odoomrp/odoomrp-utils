@@ -8,9 +8,3 @@ To use this module in the configuration of purchase and sale journals,
 
 Credits
 =======
-
-Contributors
-------------
-* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
-* Ana Juaristi <ajuaristo@gmail.com>
-* Alfredo de la Fuente <alfredodelafuente@avanzosc.es>
