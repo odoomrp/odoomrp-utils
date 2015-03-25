@@ -23,7 +23,9 @@
         "stock",
         "product_expiry",
     ],
-    "author": "OdooMRP team",
+    "author": "OdooMRP team,"
+              "AvanzOSC,"
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza",
     "contributors": [
         "Juan Ignacio Úbeda <juanignacioubeda@avanzosc.es>",
         "Pedro Manuel Baeza Romero <pedro.baeza@serviciosbaeza.com>",

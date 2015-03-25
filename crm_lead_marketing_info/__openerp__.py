@@ -22,7 +22,9 @@
 {
     "name": "CRM Lead Marketing Info",
     "version": "1.0",
-    "author": "OdooMRP team",
+    "author": "OdooMRP team,"
+              "AvanzOSC,"
+              "Serv. Tecnol. Avanzados - Pedro M. Baeza",
     "website": "http://www.odoomrp.com",
     "category": "Customer Relationship Management",
     "depends": [
