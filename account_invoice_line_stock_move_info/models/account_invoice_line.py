@@ -8,4 +8,4 @@ from openerp import models, fields
 class AccountInvoiceLine(models.Model):
     _inherit = 'account.invoice.line'
 
-    move = fields.Many2one('stock.move', string='stock_move')
+    move = fields.Many2one('stock.move', string='Stock Move')
