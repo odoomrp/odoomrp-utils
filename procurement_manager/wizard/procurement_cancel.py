@@ -15,5 +15,5 @@ class ProcurementCancel(models.TransientModel):
         cond = [('id', 'in', active_ids),
                 ('state', 'in', ('exception', 'confirmed', 'running'))]
         procurements = self.env['procurement.order'].search(cond)
-        procurements.cancel
+        procurements.cancel()
         return {'type': 'ir.actions.act_window_close'}

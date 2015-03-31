@@ -23,5 +23,5 @@ class ProcurementCheck(models.TransientModel):
                         ('rule_id', '=', procurement.rule_id.id),
                         ('state', '=', 'running')]
                 procurements = procurement_obj.search(cond)
-                procurements.check
+                procurements.check()
         return {'type': 'ir.actions.act_window_close'}
