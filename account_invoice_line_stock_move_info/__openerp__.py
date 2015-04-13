@@ -30,6 +30,7 @@
     'category': 'Accounting & Finance',
     'depends': ['stock_account',
                 'account',
+                'stock_picking_wave'
                 ],
     'data': ["views/account_invoice_line_view.xml",
              ],
