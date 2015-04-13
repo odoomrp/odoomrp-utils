@@ -4,6 +4,7 @@
 ##############################################################################
 from openerp import models, fields
 
+
 class AccountInvoiceLine(models.Model):
     _inherit = 'account.invoice.line'
 
@@ -12,6 +13,5 @@ class AccountInvoiceLine(models.Model):
         string='Picking', comodel_name='stock.picking',
         related='move.picking_id', readonly=True)
     wave_id = fields.Many2one(
-            string='Picking Wave', comodel_name='stock.picking.wave',
-            related='move.picking_id.wave_id', readonly=True)
-
+        string='Picking Wave', comodel_name='stock.picking.wave',
+        related='move.picking_id.wave_id', readonly=True)
