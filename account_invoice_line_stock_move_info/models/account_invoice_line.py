@@ -12,4 +12,3 @@ class AccountInvoiceLine(models.Model):
     picking_id = fields.Many2one(
         string='Picking', comodel_name='stock.picking',
         related='move.picking_id', readonly=True)
-
