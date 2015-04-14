@@ -16,7 +16,7 @@
 #
 ##############################################################################
 {
-    'name': 'Account Invoice Line Stock Move More Info',
+    'name': 'Account Invoice Line Picking Wave Info',
     'version': "1.0",
     'author': 'OdooMRP team,'
               'AvanzOSC,'
