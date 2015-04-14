@@ -16,7 +16,7 @@
 #
 ##############################################################################
 {
-    'name': 'Account Invoice Line Stock Move Info',
+    'name': 'Account Invoice Line Stock Move More Info',
     'version': "1.0",
     'author': 'OdooMRP team,'
               'AvanzOSC,'
@@ -30,6 +30,9 @@
     'category': 'Accounting & Finance',
     'depends': ['stock_account',
                 'account',
+                'stock_picking_wave'
                 ],
+    'data': ["views/account_invoice_line_view.xml",
+             ],
     'installable': True,
 }
