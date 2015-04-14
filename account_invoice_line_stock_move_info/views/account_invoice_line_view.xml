@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="invoice_form_inh_stockmoveinfo">
+            <field name="name">invoice.form.inh.stockmoveinfo</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+                <field name="price_subtotal" position="after" >
+                    <field name="move"/>
+                    <field name="picking_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="invoice_form_supplier_inh_stockmoveinfo">
+            <field name="name">invoice.form.supplier.inh.stockmoveinfo</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                <field name="price_subtotal" position="after" >
+                    <field name="move"/>
+                    <field name="picking_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

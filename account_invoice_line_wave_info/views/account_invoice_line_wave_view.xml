@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="invoice_form_inh_stockmovewaveinfo">
+            <field name="name">invoice.form.inh.stockmovewaveinfo</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_form" />
+            <field name="arch" type="xml">
+                <field name="picking_id" position="after" >
+                    <field name="wave_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="invoice_form_supplier_inh_stockmovewaveinfo">
+            <field name="name">invoice.form.supplier.inh.stockmovewaveinfo</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                <field name="picking_id" position="after" >
+                    <field name="wave_id"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

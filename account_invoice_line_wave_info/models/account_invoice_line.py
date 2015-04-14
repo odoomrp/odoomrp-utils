@@ -12,3 +12,6 @@ class AccountInvoiceLine(models.Model):
     picking_id = fields.Many2one(
         string='Picking', comodel_name='stock.picking',
         related='move.picking_id', readonly=True)
+    wave_id = fields.Many2one(
+        string='Picking Wave', comodel_name='stock.picking.wave',
+        related='move.picking_id.wave_id', readonly=True)
