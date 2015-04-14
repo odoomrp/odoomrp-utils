@@ -29,7 +29,8 @@
         ],
     'category': 'Accounting & Finance',
     'depends': ['stock_account',
-                'account',
                 ],
+    'data': ["views/account_invoice_line_view.xml",
+             ],
     'installable': True,
 }

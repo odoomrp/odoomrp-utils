@@ -28,11 +28,11 @@
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
         ],
     'category': 'Accounting & Finance',
-    'depends': ['stock_account',
-                'account',
+    'depends': ['account_invoice_line_stock_move_info',
                 'stock_picking_wave'
                 ],
-    'data': ["views/account_invoice_line_view.xml",
+    'data': ["views/account_invoice_line_wave_view.xml",
              ],
     'installable': True,
+    'auto_install': True,
 }
