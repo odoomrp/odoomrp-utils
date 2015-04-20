@@ -15,6 +15,7 @@ install:
   - sudo pip install unidecode
   - git clone https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - git clone https://github.com/odoomrp/odoomrp-wip ${HOME}/odoomrp-wip -b ${VERSION}
+  - git clone https://github.com/guewen/stock-logistics-workflow.git ${HOME}/stock-logistics-workflow -b add-stock_picking_package_preparation
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
