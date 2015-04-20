@@ -1,0 +1,59 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* crm_claim_extra_ref
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-04-20 08:37+0000\n"
+"PO-Revision-Date: 2015-04-20 10:39+0100\n"
+"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: crm_claim_extra_ref
+#: model:ir.model,name:crm_claim_extra_ref.model_crm_claim
+msgid "Claim"
+msgstr "Reclamación"
+
+#. module: crm_claim_extra_ref
+#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_model_name2:0
+msgid "Ref. Model 2"
+msgstr "Ref. modelo 2"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_model_name3:0
+msgid "Ref. Model 3"
+msgstr "Ref. modelo 3"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_name2:0
+msgid "Ref. Name 2"
+msgstr "Ref. descripción 2"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_name3:0
+msgid "Ref. Name 3"
+msgstr "Ref. descripción 3"
+
+#. module: crm_claim_extra_ref
+#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
+#: field:crm.claim,ref2:0
+msgid "Reference 2"
+msgstr "Referencia 2"
+
+#. module: crm_claim_extra_ref
+#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
+#: field:crm.claim,ref3:0
+msgid "Reference 3"
+msgstr "Referencia 3"
+
