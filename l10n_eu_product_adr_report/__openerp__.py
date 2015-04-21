@@ -36,6 +36,7 @@
     "summary": "",
     "data": [
         "views/product_view.xml",
+        "report/product_adr_report.xml",
     ],
     "installable": True,
 }
