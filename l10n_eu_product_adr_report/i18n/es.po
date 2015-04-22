@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-22 08:33+0000\n"
-"PO-Revision-Date: 2015-04-22 10:37+0100\n"
+"POT-Creation-Date: 2015-04-22 08:58+0000\n"
+"PO-Revision-Date: 2015-04-22 10:59+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -113,8 +113,8 @@ msgstr "Nombre"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
-msgid "Nº Picking:"
-msgstr "Nº albarán:"
+msgid "Picking number:"
+msgstr "Nº Albarán:"
 
 #. module: l10n_eu_product_adr_report
 #: model:ir.model,name:l10n_eu_product_adr_report.model_product_product

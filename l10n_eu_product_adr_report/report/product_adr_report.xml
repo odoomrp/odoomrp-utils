@@ -30,7 +30,7 @@
                                     tel:<span t-field="o.company_id.phone" /></td>
                             </tr>
                             <tr>
-                                <td><b>Nº Picking: </b></td>
+                                <td><b>Picking number: </b></td>
                                 <td style="padding-left: 15px;"><span t-field="o.name" /></td>
                             </tr>
                             <tr>
