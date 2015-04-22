@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-21 11:14+0000\n"
-"PO-Revision-Date: 2015-04-21 11:14+0000\n"
+"POT-Creation-Date: 2015-04-22 08:33+0000\n"
+"PO-Revision-Date: 2015-04-22 08:33+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,14 +16,13 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_eu_product_adr_report
-#: view:website:l10n_eu_product_adr_report.product_adr_report_document
-msgid ". an MSDS of the product specified above in which\n"
-"                        follows:"
+#: view:product.adr.class:l10n_eu_product_adr_report.product_adr_class_form_view
+msgid "ADR Class"
 msgstr ""
 
 #. module: l10n_eu_product_adr_report
-#: view:product.adr.class:l10n_eu_product_adr_report.product_adr_class_form_view
-msgid "ADR Class"
+#: model:ir.actions.report.xml,name:l10n_eu_product_adr_report.product_adr_report
+msgid "ADR product"
 msgstr ""
 
 #. module: l10n_eu_product_adr_report
@@ -33,7 +32,7 @@ msgstr ""
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
-msgid "CERTIFY that this matter is admitted to road transport in accordance with the provisions of\n"
+msgid "CERTIFY that these goods are admitted to be transported by road in accordance with the provisions of\n"
 "                        ADR, and has been properly classified, packaged, marked and labeled in accordance with the provisions\n"
 "                        needed to be transported by road."
 msgstr ""
@@ -84,11 +83,6 @@ msgid "ID"
 msgstr ""
 
 #. module: l10n_eu_product_adr_report
-#: view:website:l10n_eu_product_adr_report.product_adr_report_document
-msgid "It has received from"
-msgstr ""
-
-#. module: l10n_eu_product_adr_report
 #: field:product.adr.class,write_uid:0
 msgid "Last Updated by"
 msgstr ""
@@ -131,6 +125,11 @@ msgstr ""
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid "Quanty:"
+msgstr ""
+
+#. module: l10n_eu_product_adr_report
+#: view:website:l10n_eu_product_adr_report.product_adr_report_document
+msgid "Received from"
 msgstr ""
 
 #. module: l10n_eu_product_adr_report
@@ -178,8 +177,9 @@ msgid "Which is duly legitimized by driving the vehicle transported corresponds 
 msgstr ""
 
 #. module: l10n_eu_product_adr_report
-#: model:ir.actions.report.xml,name:l10n_eu_product_adr_report.product_adr_report
-msgid "producto ADR"
+#: view:website:l10n_eu_product_adr_report.product_adr_report_document
+msgid "an MSDS of the product specified above in which\n"
+"                        follows:"
 msgstr ""
 
 #. module: l10n_eu_product_adr_report

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-21 11:14+0000\n"
-"PO-Revision-Date: 2015-04-21 13:24+0100\n"
+"POT-Creation-Date: 2015-04-22 08:33+0000\n"
+"PO-Revision-Date: 2015-04-22 10:37+0100\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,17 +17,14 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #. module: l10n_eu_product_adr_report
-#: view:website:l10n_eu_product_adr_report.product_adr_report_document
-msgid ""
-". an MSDS of the product specified above in which\n"
-"                        follows:"
-msgstr ""
-".una ficha de seguridad del producto arriba especificado en la que seindica:"
-
-#. module: l10n_eu_product_adr_report
 #: view:product.adr.class:l10n_eu_product_adr_report.product_adr_class_form_view
 msgid "ADR Class"
 msgstr "Clase ADR"
+
+#. module: l10n_eu_product_adr_report
+#: model:ir.actions.report.xml,name:l10n_eu_product_adr_report.product_adr_report
+msgid "ADR product"
+msgstr "Producto ADR"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
@@ -37,8 +34,8 @@ msgstr "Por el transportista:"
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid ""
-"CERTIFY that this matter is admitted to road transport in accordance with "
-"the provisions of\n"
+"CERTIFY that these goods are admitted to be transported by road in "
+"accordance with the provisions of\n"
 "                        ADR, and has been properly classified, packaged, "
 "marked and labeled in accordance with the provisions\n"
 "                        needed to be transported by road."
@@ -57,7 +54,7 @@ msgstr "Clase:"
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid "Code:"
-msgstr "Codigo:"
+msgstr "Código:"
 
 #. module: l10n_eu_product_adr_report
 #: field:product.adr.class,create_uid:0
@@ -82,7 +79,7 @@ msgstr "Hora de salida:"
 #. module: l10n_eu_product_adr_report
 #: field:product.adr.class,picking_text:0
 msgid "Description text in stock picking"
-msgstr "Texto de descricion en stock picking"
+msgstr "Texto de descripción en albarán"
 
 #. module: l10n_eu_product_adr_report
 #: view:product.product:l10n_eu_product_adr_report.product_product_adr_search_view
@@ -93,11 +90,6 @@ msgstr "Agrupar por..."
 #: field:product.adr.class,id:0
 msgid "ID"
 msgstr "ID"
-
-#. module: l10n_eu_product_adr_report
-#: view:website:l10n_eu_product_adr_report.product_adr_report_document
-msgid "It has received from"
-msgstr "Recibido de"
 
 #. module: l10n_eu_product_adr_report
 #: field:product.adr.class,write_uid:0
@@ -122,7 +114,7 @@ msgstr "Nombre"
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid "Nº Picking:"
-msgstr "Nº Albaran:"
+msgstr "Nº albarán:"
 
 #. module: l10n_eu_product_adr_report
 #: model:ir.model,name:l10n_eu_product_adr_report.model_product_product
@@ -146,13 +138,18 @@ msgstr "Cantidad:"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
+msgid "Received from"
+msgstr "Que ha recibido de"
+
+#. module: l10n_eu_product_adr_report
+#: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid "Shipper:"
 msgstr "Expedidor:"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid "THE DRIVER OF THE VEHICLE:"
-msgstr "El conductor del vehiculo:"
+msgstr "El conductor del vehículo:"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
@@ -189,7 +186,7 @@ msgstr ""
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid "Vehicle registration:"
-msgstr "Matricula:"
+msgstr "Matrícula:"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
@@ -208,9 +205,13 @@ msgstr ""
 "transporte."
 
 #. module: l10n_eu_product_adr_report
-#: model:ir.actions.report.xml,name:l10n_eu_product_adr_report.product_adr_report
-msgid "producto ADR"
-msgstr "producto ADR"
+#: view:website:l10n_eu_product_adr_report.product_adr_report_document
+msgid ""
+"an MSDS of the product specified above in which\n"
+"                        follows:"
+msgstr ""
+"una MSDS del producto especificado anteriormente en la que  \n"
+"de la siguiente manera:"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document

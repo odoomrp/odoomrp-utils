@@ -5,7 +5,7 @@
         <report
 		    id="product_adr_report"
 		    model="stock.picking"
-		    string="producto ADR"
+		    string="ADR product"
 		    report_type="qweb-pdf"
 		    name="l10n_eu_product_adr_report.product_adr_report_document"
 		    file="l10n_eu_product_adr_report.product_adr_report"
@@ -63,7 +63,7 @@
                             </tr>
                         </table>
                         <br/>
-                        <p>CERTIFY that this matter is admitted to road transport in accordance with the provisions of
+                        <p>CERTIFY that these goods are admitted to be transported by road in accordance with the provisions of
                         ADR, and has been properly classified, packaged, marked and labeled in accordance with the provisions
                         needed to be transported by road.</p>
                         <p style="text-align:center"><b><span t-field="o.company_id" /></b></p>
@@ -71,7 +71,7 @@
                         <br/>
                         <br/>
                         <p>The driver DECLARES :</p>
-                        <p>It has received from <span t-field="o.company_id" /> . an MSDS of the product specified above in which
+                        <p>Received from <span t-field="o.company_id" /> an MSDS of the product specified above in which
                         follows:</p>
                         <p style='text-indent: 1em'>The nature of the goods and the danger posed transport.</p>
                         <p style='text-indent: 1em'>The instructions to follow in case of accident, leak or fire
