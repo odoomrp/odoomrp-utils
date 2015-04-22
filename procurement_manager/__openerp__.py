@@ -33,6 +33,7 @@
     'data': ['wizard/procurement_check_view.xml',
              'wizard/procurement_run_view.xml',
              'wizard/procurement_cancel_view.xml',
+             'wizard/procurement_reset_to_confirmed_view.xml',
              ],
     'installable': True,
 }

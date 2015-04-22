@@ -5,3 +5,4 @@
 from . import procurement_check
 from . import procurement_run
 from . import procurement_cancel
+from . import procurement_reset_to_confirmed
