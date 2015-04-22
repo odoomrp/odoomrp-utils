@@ -1,6 +1,7 @@
 Product pricelist partnerinfo - Purchase extension
 ==================================================
 
+This module adds a menu access to the pricelist.partnerinfo object in purchase menu
 
 Credits
 =======
