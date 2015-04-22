@@ -1,7 +1,7 @@
 Procurement manager
 ===================
-With this module, you can select multiple procurement orders and check, run or
-cancel them at once.
+With this module, you can select multiple procurement orders and check, run,
+cancel, and reset to confirmed them at once.
 
 Credits
 =======
