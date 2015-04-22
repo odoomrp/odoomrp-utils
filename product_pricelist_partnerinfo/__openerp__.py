@@ -23,14 +23,14 @@
         "product",
         "product_supplierinfo_for_customer",
     ],
-    "author": "OdooMRP team,"
-              "AvanzOSC,"
+    "author": "OdooMRP team, "
+              "AvanzOSC, "
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
     "website": "http://www.odoomrp.com",
     "contributors": [
         "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
-        "Ana Juaristi <ajuaristio@gmail.com>"
+        "Ana Juaristi <anajuaristi@avanzosc.es>",
     ],
     "category": "Custom Module",
     "summary": "",
