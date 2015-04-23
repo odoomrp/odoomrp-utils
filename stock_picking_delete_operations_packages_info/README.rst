@@ -1,8 +1,8 @@
 Stock picking delete operations packages info info
 ==================================================
 
-This module deletes operations and packets of pickings, when "Manual Quants"
-button is clicked.
+This module deletes operations and packets of pickings, when manual quants
+assignment is performed.
 
 Credits
 =======
