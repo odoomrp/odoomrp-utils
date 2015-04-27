@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="product_adr_class_form_view">
+            <field name="name">product.adr.class.form</field>
+            <field name="model">product.adr.class</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group string="ADR Class">
+                        <field name="name"/>
+                        <field name="picking_text"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_product_adr_class_form_view">
+            <field name="name">product.product.adr_class.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="adr_class_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="product_product_adr_search_view">
+            <field name="name">product.product.adr_class.search</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view" />
+            <field name="arch" type="xml">
+                <field name="product_tmpl_id" position="after">
+                    <field name="adr_class_id" />
+                </field>
+                <group string="Group by..." position="inside">
+                    <filter string="Product Type" name="adr_class"
+                        domain="[]" context="{'group_by' : 'adr_class_id'}" />
+                </group>
+            </field>
+        </record>
+
+        <record id="product_adr_action" model="ir.actions.act_window">
+            <field name="name">ADR Product</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.adr.class</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="domain">[]</field>
+            <field name="context">{}
+            </field>
+        </record>
+
+        <menuitem id="product_ADR_menu" parent="product.prod_config_main"
+            action="product_adr_action" sequence="16" />
+
+    </data>
+</openerp>
