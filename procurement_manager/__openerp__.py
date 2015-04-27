@@ -24,7 +24,7 @@
     'website': "http://www.odoomrp.com",
     "contributors": [
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
-        "Ana Juaristi <ajuaristio@gmail.com>",
+        "Ana Juaristi <anajuaristi@avanzosc.es>",
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
     ],
     'category': 'MPS',

@@ -29,7 +29,7 @@
     "contributors": [
         "Juan Ignacio Úbeda <juanignacioubeda@avanzosc.es>",
         "Pedro Manuel Baeza Romero <pedro.baeza@serviciosbaeza.com>",
-        "Ana Juaristi Olalde <ajuaristio@gmail.com>",
+        "Ana Juaristi Olalde <anajuaristi@avanzosc.es>",
         "Mikel Arregi <mikelarregi@avanzosc.es>"
     ],
     "category": "Tools",

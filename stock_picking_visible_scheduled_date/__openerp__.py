@@ -26,7 +26,7 @@
     "contributors": [
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
-        "Ana Juaristi <ajuaristio@gmail.com>",
+        "Ana Juaristi <anajuaristi@avanzosc.es>",
     ],
     "category": "Tools",
     "depends": [
