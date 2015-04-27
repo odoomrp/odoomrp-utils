@@ -37,6 +37,7 @@
     "data": [
         "views/product_view.xml",
         "report/product_adr_report.xml",
+        "security/ir.model.access.csv",
     ],
     "installable": True,
 }

@@ -11,7 +11,7 @@ class ProductAdrClass(models.Model):
 
     name = fields.Char(string='Name', size=64, required=True)
     picking_text = fields.Text(string='Description text in stock picking',
-                               size=256, required=True)
+                               size=256, required=True, translate=True)
 
 
 class ProductProduct(models.Model):
