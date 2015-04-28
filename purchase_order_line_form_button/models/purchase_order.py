@@ -20,6 +20,7 @@ class PurchaseOrderLine(models.Model):
             'purchase_order_line_form_button.'
             'purchase_order_line_button_form_view').id
         context['view_buttons'] = True
+        context['parent'] = self.order_id.id
         view = {
             'name': _('Details'),
             'view_type': 'form',
