@@ -17,7 +17,7 @@
 ##############################################################################
 
 {
-    "name": "ADR Product Class",
+    "name": "ADR Product report",
     "version": "1.0",
     "depends": [
         "product",
