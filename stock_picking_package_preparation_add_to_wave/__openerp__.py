@@ -33,9 +33,9 @@
     'depends': ["stock_picking_package_preparation",
                 "stock_picking_wave",
                 ],
-    'data': ["security/ir.model.access.csv",
-             "wizard/wiz_picking_to_wave_view.xml",
-             "views/stock_picking_package_preparation_view.xml",
-             ],
+    'data': [
+        "wizard/wiz_picking_to_wave_view.xml",
+        "views/stock_picking_package_preparation_view.xml",
+    ],
     'installable': True,
 }
