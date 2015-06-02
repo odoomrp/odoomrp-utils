@@ -74,7 +74,7 @@ msgstr "Otra información"
 #. module: stock_incoterm_extension
 #: model:ir.model,name:stock_incoterm_extension.model_stock_picking
 msgid "Picking List"
-msgstr "Lista de albaranes"
+msgstr "Albarán"
 
 #. module: stock_incoterm_extension
 #: field:stock.incoterms,destination_port:0
@@ -89,12 +89,12 @@ msgstr "Requiere medio de transporte"
 #. module: stock_incoterm_extension
 #: model:ir.model,name:stock_incoterm_extension.model_sale_order
 msgid "Sales Order"
-msgstr "Pedidos de venta"
+msgstr "Pedido de venta"
 
 #. module: stock_incoterm_extension
 #: model:ir.model,name:stock_incoterm_extension.model_stock_move
 msgid "Stock Move"
-msgstr "Movimientos de stock"
+msgstr "Movimiento de existencias"
 
 #. module: stock_incoterm_extension
 #: field:account.invoice,transport_type:0
