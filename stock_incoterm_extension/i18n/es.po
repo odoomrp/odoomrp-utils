@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_incoterm_extension
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-01 15:22+0000\n"
+"PO-Revision-Date: 2015-06-01 15:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_incoterm_extension
+#: view:stock.picking:stock_incoterm_extension.stock_view_picking_form_ext_inh
+msgid "Additional Info"
+msgstr "Información adicional"
+
+#. module: stock_incoterm_extension
+#: selection:account.invoice,transport_type:0
+#: selection:sale.order,transport_type:0
+#: selection:stock.picking,transport_type:0
+msgid "Air"
+msgstr "Aereo"
+
+#. module: stock_incoterm_extension
+#: field:account.invoice,destination_port:0
+#: field:sale.order,destination_port:0
+#: field:stock.picking,destination_port:0
+msgid "Destination port"
+msgstr "Puerto de destino"
+
+#. module: stock_incoterm_extension
+#: selection:account.invoice,transport_type:0
+#: selection:sale.order,transport_type:0
+#: selection:stock.picking,transport_type:0
+msgid "Ground"
+msgstr "Terrestre"
+
+#. module: stock_incoterm_extension
+#: view:account.invoice:stock_incoterm_extension.account_invoice_form_ext_inh
+#: field:account.invoice,incoterm:0
+#: view:stock.picking:stock_incoterm_extension.stock_view_picking_form_ext_inh
+#: field:stock.picking,incoterm:0
+msgid "Incoterm"
+msgstr "Incoterm"
+
+#. module: stock_incoterm_extension
+#: model:ir.model,name:stock_incoterm_extension.model_stock_incoterms
+msgid "Incoterms"
+msgstr "Incoterms"
+
+#. module: stock_incoterm_extension
+#: model:ir.model,name:stock_incoterm_extension.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: stock_incoterm_extension
+#: selection:account.invoice,transport_type:0
+#: selection:sale.order,transport_type:0
+#: selection:stock.picking,transport_type:0
+msgid "Maritime"
+msgstr "Maritimo"
+
+#. module: stock_incoterm_extension
+#: view:account.invoice:stock_incoterm_extension.account_invoice_form_ext_inh
+msgid "Other Info"
+msgstr "Otra información"
+
+#. module: stock_incoterm_extension
+#: model:ir.model,name:stock_incoterm_extension.model_stock_picking
+msgid "Picking List"
+msgstr "Albarán"
+
+#. module: stock_incoterm_extension
+#: field:stock.incoterms,destination_port:0
+msgid "Requires destination port"
+msgstr "Requiere puerto de destino"
+
+#. module: stock_incoterm_extension
+#: field:stock.incoterms,transport_type:0
+msgid "Requires transport type"
+msgstr "Requiere medio de transporte"
+
+#. module: stock_incoterm_extension
+#: model:ir.model,name:stock_incoterm_extension.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: stock_incoterm_extension
+#: model:ir.model,name:stock_incoterm_extension.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de existencias"
+
+#. module: stock_incoterm_extension
+#: field:account.invoice,transport_type:0
+#: field:sale.order,transport_type:0
+#: field:stock.picking,transport_type:0
+msgid "Transport type"
+msgstr "Medio de transporte"
+

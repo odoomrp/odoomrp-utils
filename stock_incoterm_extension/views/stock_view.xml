@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+        <record id="view_incoterms_tree_ext_inh" model="ir.ui.view">
+            <field name="name">stock.incoterms.tree</field>
+            <field name="inherit_id" ref="stock.view_incoterms_tree"/>
+            <field name="model">stock.incoterms</field>
+            <field name="arch" type="xml">
+                <field  name="name" position="after">
+                    <field name="destination_port"/>
+                    <field name="transport_type"/>
+                </field>
+            </field>
+        </record>
+        <record id="stock_incoterms_form_ext_inh" model="ir.ui.view">
+            <field name="name">stock.incoterms.form</field>
+            <field name="inherit_id" ref="stock.stock_incoterms_form"/>
+            <field name="model">stock.incoterms</field>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <label for="name"/>
+                </field>
+                <field name="code" position="before">
+                    <label for="code"/>
+                </field>
+                <field name="active" position="before">
+                    <label for="active"/>
+                </field>
+                <field name="active" position="after">
+                    <group>
+                        <field name="destination_port"/>
+                        <field name="transport_type"/>
+                    </group>
+                </field>
+            </field>
+        </record>
+
+        <record id="stock_view_picking_form_ext_inh" model="ir.ui.view">
+            <field name="name">stock.view.picking.ext.inh.form</field>
+            <field name="inherit_id" ref="stock.view_picking_form"/>
+            <field name="model">stock.picking</field>
+            <field name="arch" type="xml">
+                <page string="Additional Info" position="inside">
+                    <group string="Incoterm">
+                        <field name="incoterm"/>
+                        <field name="req_destination_port" invisible="1"/>
+                        <field name="req_transport_type" invisible="1"/>
+                        <field name="destination_port" attrs="{'required':[('req_destination_port', '=', True)]}"/>
+                        <field name="transport_type" attrs="{'required':[('req_transport_type', '=', True)]}"/>
+                    </group>
+                </page>
+            </field>
+        </record>
+</data>
+</openerp>
