@@ -8,6 +8,7 @@
             <field name="arch" type="xml">
                 <field name="company_id" position="after">
                     <field name="is_reserved" />
+                    <field name="reserved_for" />
                 </field>
             </field>
         </record>
