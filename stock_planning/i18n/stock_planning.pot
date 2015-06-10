@@ -1,0 +1,195 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_planning
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-06-10 09:45+0000\n"
+"PO-Revision-Date: 2015-06-10 09:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_planning
+#: view:wiz.stock.planning:stock_planning.wiz_stock_planning_form_view
+msgid "Calculate stock planning"
+msgstr ""
+
+#. module: stock_planning
+#: view:wiz.stock.planning:stock_planning.wiz_stock_planning_form_view
+msgid "Cancel"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+#: field:stock.planning,company:0
+#: field:wiz.stock.planning,company:0
+msgid "Company"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,create_uid:0
+#: field:wiz.stock.planning,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,create_date:0
+#: field:wiz.stock.planning,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: stock_planning
+#: field:wiz.stock.planning,days:0
+msgid "Days interval"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,from_date:0
+msgid "From Date"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,qty_available:0
+msgid "Quantity On Hand"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,virtual_available:0
+msgid "Forecast Quantity"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,incoming_qty:0
+msgid "Incoming"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,outgoing_qty:0
+msgid "Outgoing"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,incoming_to_date:0
+msgid "Incoming to date"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,outgoing_to_date:0
+msgid "Outgoing to date"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,scheduled_to_date:0
+msgid "Scheduled to date"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,rule_min_qty:0
+msgid "Rule min. qty"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,rule_max_qty:0
+msgid "Rule max. qty"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,required_increase:0
+msgid "Required increase"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_tree_view
+msgid "Generate procurement"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+msgid "Group By"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,write_uid:0
+#: field:wiz.stock.planning,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,write_date:0
+#: field:wiz.stock.planning,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+#: field:stock.planning,location:0
+msgid "Location"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+#: field:stock.planning,product:0
+msgid "Product"
+msgstr ""
+
+#. module: stock_planning
+#: field:stock.planning,required_qty:0
+msgid "Required quantity"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+#: field:stock.planning,scheduled_date:0
+#: field:wiz.stock.planning,scheduled_date:0
+msgid "Scheduled date"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+msgid "Search Stock Planning"
+msgstr ""
+
+#. module: stock_planning
+#: code:addons/stock_planning/models/stock_planning.py:198
+#: code:addons/stock_planning/wizard/wiz_stock_planning.py:83
+#: model:ir.actions.act_window,name:stock_planning.action_stock_planning
+#: model:ir.model,name:stock_planning.model_stock_planning
+#: model:ir.ui.menu,name:stock_planning.stock_planning_option_view
+#: view:stock.planning:stock_planning.stock_planning_tree_view
+#, python-format
+msgid "Stock Planning"
+msgstr ""
+
+#. module: stock_planning
+#: field:wiz.stock.planning,to_date:0
+msgid "To date"
+msgstr ""
+
+#. module: stock_planning
+#: view:stock.planning:stock_planning.stock_planning_search_view
+#: field:stock.planning,warehouse:0
+msgid "Warehouse"
+msgstr ""
+
+#. module: stock_planning
+#: model:ir.actions.act_window,name:stock_planning.action_wiz_stock_planning
+#: model:ir.model,name:stock_planning.model_wiz_stock_planning
+msgid "Wiz Stock Planning"
+msgstr ""
+
+#. module: stock_planning
+#: model:ir.ui.menu,name:stock_planning.wiz_stock_planning_option_view
+msgid "Wizard Stock Planning"
+msgstr ""
+
+#. module: stock_planning
+#: view:wiz.stock.planning:stock_planning.wiz_stock_planning_form_view
+msgid "or"
+msgstr ""
+
