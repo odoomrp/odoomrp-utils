@@ -2,7 +2,7 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-from openerp import models, fields, api, _
+from openerp import models, fields, api, exceptions, _
 import openerp.addons.decimal_precision as dp
 from dateutil.relativedelta import relativedelta
 
@@ -102,18 +102,26 @@ class StockPlanning(models.Model):
     def _get_required_increase(self):
         self.required_increase = 0
         if self.scheduled_to_date <= self.rule_min_qty:
-            if self.rule_max_qty > 0:
-                if self.scheduled_to_date > 0:
-                    self.required_increase = (
-                        self.rule_max_qty - self.scheduled_to_date)
-                else:
-                    self.required_increase = (
-                        self.rule_max_qty + (self.scheduled_to_date * -1))
+            self.required_increase = self.rule_min_qty
+            if self.scheduled_to_date < 0:
+                self.required_increase = ((self.scheduled_to_date * -1) +
+                                          self.rule_min_qty)
+        elif self.scheduled_to_date > 0 and self.rule_max_qty == 0:
+            if self.rule_min_qty == 0:
+                self.required_increase = self.scheduled_to_date * -1
+            elif self.rule_min_qty > self.scheduled_to_date:
+                self.required_increase = (self.rule_min_qty -
+                                          self.scheduled_to_date)
             else:
-                if self.scheduled_to_date < 0:
-                    self.required_increase = self.scheduled_to_date * -1
-                else:
-                    self.required_increase = self.scheduled_to_date
+                self.required_increase = (
+                    (self.scheduled_to_date - self.rule_min_qty) * -1)
+        elif self.scheduled_to_date > 0 and self.rule_max_qty > 0:
+            if self.scheduled_to_date > self.rule_max_qty:
+                self.required_increase = (
+                    (self.scheduled_to_date - self.rule_max_qty) * -1)
+            else:
+                self.required_increase = (
+                    (self.scheduled_to_date - self.rule_min_qty) * -1)
 
     company = fields.Many2one('res.company', 'Company')
     warehouse = fields.Many2one('stock.warehouse', 'Warehouse')
@@ -121,6 +129,9 @@ class StockPlanning(models.Model):
     from_date = fields.Date('From Date')
     scheduled_date = fields.Date('Scheduled date')
     product = fields.Many2one('product.product', 'Product')
+    category = fields.Many2one(
+        'product.category', 'category', related='product.categ_id',
+        store=True)
     qty_available = fields.Float(
         'Quantity On Hand', compute=_get_product_info_location,
         digits_compute=dp.get_precision('Product Unit of Measure'))
@@ -155,6 +166,29 @@ class StockPlanning(models.Model):
         'Required quantity', related='required_increase',
         digits_compute=dp.get_precision('Product Unit of Measure'),
         store=True)
+
+    @api.multi
+    def show_procurements(self):
+        self.ensure_one()
+        procurement_obj = self.env['procurement.order']
+        cond = [('company_id', '=', self.company.id),
+                ('product_id', '=', self.product.id),
+                ('date_planned', '<=', self.scheduled_date),
+                ('location_id', '=', self.location.id),
+                ('state', 'in', ('confirmed', 'running'))]
+        if self.from_date:
+            cond.append(('date_planned', '>', self.from_date))
+        procurements = procurement_obj.search(cond)
+        if not procurements:
+            raise exceptions.Warning(_('There are no procurements to show'))
+        return {
+              'name': _('Procurement orders'),
+              'view_type': 'form',
+              "view_mode": 'tree,form',
+              'res_model': 'procurement.order',
+              'type': 'ir.actions.act_window',
+              'domain': [('id', 'in', procurements.ids)],
+              }
 
     @api.multi
     def generate_procurement(self):

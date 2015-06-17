@@ -15,11 +15,25 @@ class WizStockPlanning(models.TransientModel):
     def _def_company(self):
         return self.env.user.company_id.id
 
-    company = fields.Many2one('res.company', 'Company', default=_def_company,
-                              required=True)
-    scheduled_date = fields.Date('Scheduled date', required=True)
-    days = fields.Integer('Days interval', required=True)
-    to_date = fields.Date('To date', required=True)
+    company = fields.Many2one(
+        'res.company', 'Company', default=_def_company, required=True)
+    from_date = fields.Date(
+        'From date', required=True,
+        help='Date from which the interval starts counting days')
+    days = fields.Integer(
+        'Days interval', required=True,
+        help='Increase number of days starting from the date from')
+    to_date = fields.Date('To date', required=True,
+                          help='Deadline for calculating periods')
+    category = fields.Many2one(
+        'product.category', 'Category',
+        help='Enter this field if you want to filter by category')
+    template = fields.Many2one(
+        'product.template', 'Template',
+        help='Enter this field if you want to filter by template')
+    product = fields.Many2one(
+        'product.product', 'Product',
+        help='Enter this field if you want to filter by product')
 
     @api.multi
     def calculate_stock_planning(self):
@@ -29,7 +43,7 @@ class WizStockPlanning(models.TransientModel):
         planning_obj = self.env['stock.planning']
         planning = planning_obj.search([])
         planning.unlink()
-        fdate = self.scheduled_date
+        fdate = self.from_date
         from_date = False
         while fdate < self.to_date:
             product_datas = {}
@@ -38,7 +52,19 @@ class WizStockPlanning(models.TransientModel):
                     ('state', 'not in', ('done', 'cancel'))]
             if from_date:
                 cond.append(('date', '>', from_date))
-            moves = move_obj.search(cond)
+            if self.product:
+                cond.append(('product_id', '>', self.product_id.id))
+            moves = move_obj.search(cond).filtered(
+                lambda x: x.location_id.usage == 'internal' or
+                x.location_dest_id.usage == 'internal')
+            if self.category:
+                moves = moves.filtered(
+                    lambda x: x.product_id.product_tmpl_id.categ_id.id ==
+                    self.category.id)
+            if self.template:
+                moves = moves.filtered(
+                    lambda x: x.product_id.product_tmpl_id.id ==
+                    self.template.id)
             for move in moves:
                 if move.location_id.usage == 'internal':
                     product_datas = self._find_product_in_table(
@@ -53,19 +79,30 @@ class WizStockPlanning(models.TransientModel):
                     ('state', 'in', ('confirmed', 'running'))]
             if from_date:
                 cond.append(('date_planned', '>', from_date))
-            procurements = procurement_obj.search(cond)
+            if self.product:
+                cond.append(('product_id', '>', self.product_id.id))
+            procurements = procurement_obj.search(cond).filtered(
+                lambda x: x.location_id.usage == 'internal')
+            if self.category:
+                procurements = procurements.filtered(
+                    lambda x: x.product_id.product_tmpl_id.categ_id.id ==
+                    self.category.id)
+            if self.template:
+                procurements = procurements.filtered(
+                    lambda x: x.product_id.product_tmpl_id.id ==
+                    self.template.id)
             for procurement in procurements:
-                if procurement.location_id.usage == 'internal':
-                    product_datas = self._find_product_in_table(
-                        product_datas, procurement.product_id,
-                        procurement.location_id, procurement.warehouse_id)
+                product_datas = self._find_product_in_table(
+                    product_datas, procurement.product_id,
+                    procurement.location_id, procurement.warehouse_id)
             for data in product_datas:
                 datos_array = product_datas[data]
                 vals = {'company': self.company.id,
                         'location': datos_array['location'].id,
-                        'from_date': from_date,
                         'scheduled_date': fdate,
                         'product': datos_array['product'].id}
+                if from_date:
+                    vals['from_date'] = from_date
                 if datos_array['warehouse']:
                     vals['warehouse'] = datos_array['warehouse'].id
                 else:

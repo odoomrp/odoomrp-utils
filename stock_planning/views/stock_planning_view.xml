@@ -11,12 +11,18 @@
                     <field name="warehouse" />
                     <field name="location" />
                     <field name="scheduled_date" />
+                    <field name="category" />
                     <field name="product" />
+                    <separator/>
+                    <filter string="Increase greater than zero" domain="[('required_qty','>',0)]" />
                     <group expand="0" string="Group By">
+                        <filter string="Month" context="{'group_by':'scheduled_date:month'}"/>
+                        <filter string="Week" context="{'group_by':'scheduled_date:week'}"/>
                         <filter string="Company" domain="[]" context="{'group_by':'company'}" />
                         <filter string="Warehouse" domain="[]" context="{'group_by':'warehouse'}"/>
                         <filter string="Location" domain="[]" context="{'group_by':'location'}"/>
                         <filter string="Scheduled date" domain="[]" context="{'group_by':'scheduled_date'}"/>
+                        <filter string="Category" domain="[]" context="{'group_by':'category'}"/>
                         <filter string="Product" domain="[]" context="{'group_by':'product'}"/>
                     </group>
                 </search>
@@ -27,7 +33,7 @@
             <field name="name">stock.planning.tree.view</field>
             <field name="model">stock.planning</field>
             <field name="arch" type="xml">
-                <tree string="Stock Planning">
+                <tree colors="orange:required_increase&lt;0;red:required_increase&gt;0;green:required_increase==0" string="Stock Planning">
                         <field name="company" />
                         <field name="warehouse" />
                         <field name="location" />
@@ -43,9 +49,11 @@
                         <field name="rule_min_qty" />
                         <field name="rule_max_qty" />
                         <field name="required_increase" />
+                        <button string="Show procurements" name="show_procurements"
+                                type="object" icon="gtk-convert" />
                         <button string="Generate procurement" name="generate_procurement"
                                 type="object" icon="gtk-execute"
-                                attrs="{'invisible':[('required_increase', '=', 0)]}"/>
+                                attrs="{'invisible':[('required_increase', '&lt;=', 0)]}" />
                 </tree>
             </field>
         </record>
