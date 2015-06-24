@@ -2,47 +2,20 @@
 <openerp>
     <data>
 
-       <record id="mrp_bom_component_tree_view_inh_searchview" model="ir.ui.view">
-            <field name="name">mrp.bom.component.tree.view.inh.searchview</field>
+        <record id="mrp_bom_component_tree_view_inh_searchview" model="ir.ui.view">
+            <field name="name">"mrp.bom.component.tree.view.inh.searchview</field>
             <field name="model">mrp.bom.line</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_component_tree_view"/>
             <field name="arch" type="xml">
-                <tree string="Components" >
-                    <field name="sequence" widget="handle"/>
-                    <field name="bom_id"/>
-                    <field name="product_id" on_change="onchange_product_id(product_id)"/>
-                    <field name="type"/>
-                    <field name="product_qty"/>
-                    <field name="product_rounding"/>
-                    <field name="product_efficiency"/>
-                    <field name="product_uom" on_change="onchange_uom(product_id, product_uom)" groups="product.group_uom"/>
-                    <field name="product_uos_qty" groups="product.group_uos"/>
-                    <field name="product_uos" groups="product.group_uos"/>
-                    <field name="date_start"/>
-                    <field name="date_stop"/>
-                    <field name="routing_id"/>
-                    <field name="attribute_value_ids" widget="many2many_tags"/>
-                    <field name="property_ids" widget="many2many_tags"/>
+                <tree string="Components" position="attributes">
+                    <attribute name="editable"></attribute>
                 </tree>
             </field>
         </record>
 
         <record id="mrp.mrp_bom_form_action2" model="ir.actions.act_window">
-            <field name="name">Bill of Material Components</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">mrp.bom.line</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="mrp.view_mrp_bom_line_filter"/>
-            <field name="view_id" ref="mrp_bom_component_tree_view_inh_searchview" />
-            <field name="help" type="html">
-              <p class="oe_view_nocontent_create">
-                Click to add a component to a bill of material.
-              </p><p>
-                Bills of materials components are components and by-products
-                used to create master bills of materials.  Use this menu to
-                search in which BoM a specific component is used.
-              </p>
-            </field>
         </record>
 
     </data>
