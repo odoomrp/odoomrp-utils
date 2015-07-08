@@ -16,8 +16,18 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mrp_bom_line_structure_show_child_bom
-#: field:mrp.bom.line,parent_routing_id:0
+#: field:mrp.bom.line,routing_id:0
 msgid "Productive Process"
+msgstr ""
+
+#. module: mrp_bom_line_structure_show_child_bom
+#: field:mrp.bom.line,standard_price:0
+msgid "Cost Price"
+msgstr ""
+
+#. module: mrp_bom_line_structure_show_child_bom
+#: field:mrp.bom.line,childs_standard_price:0
+msgid "Childs Cost Price"
 msgstr ""
 
 #. module: mrp_bom_line_structure_show_child_bom

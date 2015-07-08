@@ -17,9 +17,19 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #. module: mrp_bom_line_structure_show_child_bom
-#: field:mrp.bom.line,parent_routing_id:0
+#: field:mrp.bom.line,routing_id:0
 msgid "Productive Process"
 msgstr "Proceso Productivo"
+
+#. module: mrp_bom_line_structure_show_child_bom
+#: field:mrp.bom.line,standard_price:0
+msgid "Cost Price"
+msgstr "Precio coste"
+
+#. module: mrp_bom_line_structure_show_child_bom
+#: field:mrp.bom.line,childs_standard_price:0
+msgid "Childs Cost Price"
+msgstr "Precio coste hijos"
 
 #. module: mrp_bom_line_structure_show_child_bom
 #: model:ir.actions.server,name:mrp_bom_line_structure_show_child_bom.bom_from_child_action_server_tree

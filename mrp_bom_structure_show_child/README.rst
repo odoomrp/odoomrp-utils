@@ -1,8 +1,8 @@
 MRP - BoM line structure show child
 ===================================
-This module serves to add the amount field to the structure of materials,
-and also shows the value of the production process and can navigate by
-clicking BOM
+This module serves to add the amount, cost price, and childs cost price fields
+to the structure of materials, and also shows the value of the production
+process and can navigate by clicking BOM
 
 Credits
 =======
