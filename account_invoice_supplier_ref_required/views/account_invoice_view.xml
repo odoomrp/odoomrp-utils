@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="account_invoice_supplier_form_view">
+            <field name="name">account.invoice.supplier.form</field>
+            <field name="model">account.invoice</field>
+            <field name="priority">2</field>
+            <field name="inherit_id" ref="account.invoice_supplier_form" />
+            <field name="arch" type="xml">
+                <field name="reference" position="attributes">
+                    <attribute name="attrs">{'required':[('reference_type','!=',False)]}</attribute>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>
