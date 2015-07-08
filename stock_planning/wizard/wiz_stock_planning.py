@@ -38,8 +38,6 @@ class WizStockPlanning(models.TransientModel):
     @api.multi
     def calculate_stock_planning(self):
         self.ensure_one()
-        move_obj = self.env['stock.move']
-        procurement_obj = self.env['procurement.order']
         planning_obj = self.env['stock.planning']
         planning = planning_obj.search([])
         planning.unlink()
@@ -47,50 +45,12 @@ class WizStockPlanning(models.TransientModel):
         from_date = False
         while fdate < self.to_date:
             product_datas = {}
-            cond = [('company_id', '=', self.company.id),
-                    ('date', '<=', fdate),
-                    ('state', 'not in', ('done', 'cancel'))]
-            if from_date:
-                cond.append(('date', '>', from_date))
-            if self.product:
-                cond.append(('product_id', '>', self.product_id.id))
-            moves = move_obj.search(cond).filtered(
-                lambda x: x.location_id.usage == 'internal' or
-                x.location_dest_id.usage == 'internal')
-            if self.category:
-                moves = moves.filtered(
-                    lambda x: x.product_id.product_tmpl_id.categ_id.id ==
-                    self.category.id)
-            if self.template:
-                moves = moves.filtered(
-                    lambda x: x.product_id.product_tmpl_id.id ==
-                    self.template.id)
+            moves = self._select_moves_to_try(fdate, from_date)
             for move in moves:
-                if move.location_id.usage == 'internal':
-                    product_datas = self._find_product_in_table(
-                        product_datas, move.product_id, move.location_id,
-                        move.warehouse_id)
-                if move.location_dest_id.usage == 'internal':
-                    product_datas = self._find_product_in_table(
-                        product_datas, move.product_id,
-                        move.location_dest_id, move.warehouse_id)
-            cond = [('company_id', '=', self.company.id),
-                    ('date_planned', '<=', fdate),
-                    ('state', 'in', ('confirmed', 'running'))]
-            if from_date:
-                cond.append(('date_planned', '>', from_date))
-            if self.product:
-                cond.append(('product_id', '>', self.product_id.id))
-            procurements = procurement_obj.search(cond).filtered(
-                lambda x: x.location_id.usage == 'internal')
-            if self.category:
-                procurements = procurements.filtered(
-                    lambda x: x.product_id.product_tmpl_id.categ_id.id ==
-                    self.category.id)
-            if self.template:
-                procurements = procurements.filtered(
-                    lambda x: x.product_id.product_tmpl_id.id ==
-                    self.template.id)
+                product_datas = self._find_product_in_table(
+                    product_datas, move.product_id, move.location_id,
+                    move.warehouse_id)
+            procurements = self._select_procurements_to_try(fdate, from_date)
             for procurement in procurements:
                 product_datas = self._find_product_in_table(
                     product_datas, procurement.product_id,
@@ -121,6 +81,49 @@ class WizStockPlanning(models.TransientModel):
                 'view_mode': 'tree',
                 'res_model': 'stock.planning',
                 }
+
+    def _select_moves_to_try(self, fdate, from_date):
+        move_obj = self.env['stock.move']
+        cond = [('company_id', '=', self.company.id),
+                ('date', '<=', fdate),
+                ('state', 'not in', ('done', 'cancel'))]
+        if from_date:
+            cond.append(('date', '>', from_date))
+        if self.product:
+            cond.append(('product_id', '>', self.product_id.id))
+        moves = move_obj.search(cond).filtered(
+            lambda x: x.location_id.usage == 'internal' or
+            x.location_dest_id.usage == 'internal')
+        if self.category:
+            moves = moves.filtered(
+                lambda x: x.product_id.product_tmpl_id.categ_id.id ==
+                self.category.id)
+        if self.template:
+            moves = moves.filtered(
+                lambda x: x.product_id.product_tmpl_id.id ==
+                self.template.id)
+        return moves
+
+    def _select_procurements_to_try(self, fdate, from_date):
+        procurement_obj = self.env['procurement.order']
+        cond = [('company_id', '=', self.company.id),
+                ('date_planned', '<=', fdate),
+                ('state', 'in', ('confirmed', 'running'))]
+        if from_date:
+            cond.append(('date_planned', '>', from_date))
+        if self.product:
+            cond.append(('product_id', '>', self.product_id.id))
+        procurements = procurement_obj.search(cond).filtered(
+            lambda x: x.location_id.usage == 'internal')
+        if self.category:
+            procurements = procurements.filtered(
+                lambda x: x.product_id.product_tmpl_id.categ_id.id ==
+                self.category.id)
+        if self.template:
+            procurements = procurements.filtered(
+                lambda x: x.product_id.product_tmpl_id.id ==
+                self.template.id)
+        return procurements
 
     def _find_product_in_table(self, product_datas, product, location,
                                warehouse):
