@@ -1,29 +1,32 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
+# For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-from openerp import models, fields
+from openerp import models, fields, api
+import openerp.addons.decimal_precision as dp
 
 
 class MrpBomLine(models.Model):
     _inherit = 'mrp.bom.line'
 
+    @api.one
+    def _compute_standard_price(self):
+        self.standard_price = (self.product_id.standard_price or
+                               self.product_template.standard_price)
+
+    @api.one
+    def _compute_childs_standard_price(self):
+        self.childs_standard_price = 0
+        for line in self.child_line_ids:
+            self.childs_standard_price += (line.standard_price +
+                                           line.childs_standard_price)
+
     routing_id = fields.Many2one(
         'mrp.routing', string="Productive Process",
         related="bom_id.routing_id", store=True, readonly=True)
+    standard_price = fields.Float(
+        string='Cost Price', compute='_compute_standard_price',
+        digits_compute=dp.get_precision('Product Price'))
+    childs_standard_price = fields.Float(
+        string='Childs Cost Price', compute='_compute_childs_standard_price',
+        digits_compute=dp.get_precision('Product Price'))
