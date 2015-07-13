@@ -31,8 +31,7 @@
     'depends': ['product_type',
                 'stock_planning'
                 ],
-    'data': ['wizard/wiz_stock_planning_view.xml',
-             'views/stock_planning_view.xml'
+    'data': ['views/stock_planning_view.xml'
              ],
     'installable': True,
     'auto_install': True,
