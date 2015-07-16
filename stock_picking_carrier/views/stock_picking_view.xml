@@ -8,8 +8,8 @@
             <field name="arch" type="xml">
                 <field name="state" position="before">
                     <field name="carrier_id" />
-                    <field name="weight" />
-                    <field name="weight_net" />
+                    <field name="weight" sum="Total Weight"/>
+                    <field name="weight_net" sum="Total Net Weight"/>
                 </field>
             </field>
         </record>
