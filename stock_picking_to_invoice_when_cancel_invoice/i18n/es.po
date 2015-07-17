@@ -1,0 +1,28 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* stock_picking_to_invoice_when_cancel_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-17 09:44+0000\n"
+"PO-Revision-Date: 2015-07-17 11:45+0100\n"
+"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: stock_picking_to_invoice_when_cancel_invoice
+#: code:addons/stock_picking_to_invoice_when_cancel_invoice/models/account_invoice.py:17
+#, python-format
+msgid "Before deleting invoice should cancel the picking: %s"
+msgstr "Antes de borrar la factura debe cancelar el albarán: %s"
+
+#. module: stock_picking_to_invoice_when_cancel_invoice
+#: model:ir.model,name:stock_picking_to_invoice_when_cancel_invoice.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
