@@ -34,5 +34,4 @@
     'data': ['views/product_attribute_value_view.xml'
              ],
     'installable': True,
-    'auto_install': True,
 }
