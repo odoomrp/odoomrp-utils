@@ -11,20 +11,30 @@ class AccountInvoice(models.Model):
     @api.multi
     def unlink(self):
         for invoice in self:
-            cond = [('name', '=', invoice.origin)]
-            picking = self.env['stock.picking'].search(cond)
-            if picking and picking.state != 'cancel':
-                raise exceptions.Warning(_('Before deleting invoice should'
-                                           ' cancel the picking: %s')
-                                         % invoice.origin)
+            if invoice.origin.find(",") >= 0:
+                picking_names = invoice.origin.split(',')
+            else:
+                picking_names = [invoice.origin]
+            for picking_name in picking_names:
+                cond = [('name', '=', picking_name)]
+                picking = self.env['stock.picking'].search(cond, limit=1)
+                if picking and picking.state != 'cancel':
+                    raise exceptions.Warning(_('Before deleting invoice should'
+                                               ' cancel the picking: %s')
+                                             % picking_name)
         return super(AccountInvoice, self).unlink()
 
     @api.multi
     def action_cancel(self):
         res = super(AccountInvoice, self).action_cancel()
         for invoice in self:
-            cond = [('name', '=', invoice.origin)]
-            picking = self.env['stock.picking'].search(cond)
-            if picking:
-                picking.write({'invoice_state': '2binvoiced'})
+            if invoice.origin.find(",") >= 0:
+                picking_names = invoice.origin.split(',')
+            else:
+                picking_names = [invoice.origin]
+            for picking_name in picking_names:
+                cond = [('name', '=', picking_name)]
+                picking = self.env['stock.picking'].search(cond, limit=1)
+                if picking:
+                    picking.write({'invoice_state': '2binvoiced'})
         return res
