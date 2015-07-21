@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="mrp_production_form_view_inh_unreserve">
+            <field name="name">mrp.production.form.view.inh.unreserve</field>
+            <field name="model">mrp.production</field>
+            <field name="inherit_id" ref="mrp.mrp_production_form_view" />
+            <field name="arch" type="xml">
+                <field name="date_planned" position="after">
+                    <field name="show_check_availability" invisible="1" />
+                    <field name="show_force_reservation" invisible="1" />
+                    <field name="show_unreserve" invisible="1" />
+                </field>
+                <button name="action_assign" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':[('show_check_availability','=',False)]}</attribute>
+                </button>
+                <button name="force_production" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':[('show_force_reservation','=',False)]}</attribute>
+                </button>
+                <button name="force_production" position="after">
+                    <button name="button_unreserve" string="Unreserve" type="object"
+                            attrs="{'invisible':[('show_unreserve', '=', False)]}"/>
+                </button>
+                <xpath expr="//field[@name='workcenter_lines']/form//field[@name='workcenter_id']" position="after">
+                    <field name="show_check_availability" invisible="1" />
+                    <field name="show_force_reservation" invisible="1" />
+                    <field name="show_unreserve" invisible="1" />
+                </xpath>
+                <xpath expr="//field[@name='workcenter_lines']/form//button[@string='Check Availability']" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':[('show_check_availability','=',False)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='workcenter_lines']/form//button[@string='Check Availability']" position="after">
+                    <button name="button_unreserve" string="Unreserve" type="object"
+                            attrs="{'invisible':[('show_unreserve', '=', False)]}"/>
+                </xpath>
+                <xpath expr="//field[@name='workcenter_lines']/form//button[@name='force_assign']" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':[('show_force_reservation','=',False)]}</attribute>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>
