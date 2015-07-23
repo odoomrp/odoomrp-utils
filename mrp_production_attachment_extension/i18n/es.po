@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_production_attachment_extension
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-23 09:45+0000\n"
+"PO-Revision-Date: 2015-07-23 11:47+0100\n"
+"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: mrp_production_attachment_extension
+#: view:mrp.production:mrp_production_attachment_extension.mrp_production_form_view_inh_attachment_ext
+#: view:mrp.production.workcenter.line:mrp_production_attachment_extension.workcenter_line_form_view_inh_attachment_ext
+msgid "Extra Information"
+msgstr "Información extra"
+
+#. module: mrp_production_attachment_extension
+#: view:mrp.production:mrp_production_attachment_extension.mrp_production_form_view_inh_inh_attachment_ext
+msgid "Information"
+msgstr "Información"
+
+#. module: mrp_production_attachment_extension
+#: model:ir.model,name:mrp_production_attachment_extension.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Órden de producción"
+
+#. module: mrp_production_attachment_extension
+#: view:mrp.production:mrp_production_attachment_extension.mrp_production_form_view_inh_attachment_ext
+msgid "Product attachments"
+msgstr "Adjuntos del producto"
+
+#. module: mrp_production_attachment_extension
+#: model:ir.model,name:mrp_production_attachment_extension.model_mrp_production_workcenter_line
+msgid "Work Order"
+msgstr "Orden de trabajo"
+
+#. module: mrp_production_attachment_extension
+#: view:mrp.production:mrp_production_attachment_extension.mrp_production_form_view_inh_inh_attachment_ext
+#: view:mrp.production.workcenter.line:mrp_production_attachment_extension.workcenter_line_form_view_inh_attachment_ext
+msgid "Work center attachments"
+msgstr "Adjuntos del centro de trabajo"
+
