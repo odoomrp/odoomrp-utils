@@ -26,7 +26,7 @@
                      "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
                      "Ana Juaristi <anajuaristi@avanzosc.es>",
                      "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>"],
-    "depends": ["base", "purchase",],
+    "depends": ["base", "purchase"],
     "data": [],
     "installable": True
 }
