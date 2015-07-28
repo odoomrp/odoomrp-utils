@@ -18,15 +18,15 @@
 {
     "name": "Purchase Order Copy Bid and Origin",
     "version": "1.0",
-    "author": "AvanzOSC, "
+    "author": "OdooMRP team,"
+              "AvanzOSC, "
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
-    "website": "www.avanzosc.es",
+    "website": "www.odoomrp.com",
     "category": "Purchase Management",
     "contributors": ["Esther Martín <esthermartin@avanzosc.es>",
                      "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
                      "Ana Juaristi <anajuaristi@avanzosc.es>",
                      "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>"],
-    "depends": ["base", "purchase"],
-    "data": [],
+    "depends": ["purchase", "purchase_requisition"],
     "installable": True
 }
