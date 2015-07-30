@@ -1,5 +1,5 @@
-MRP Production Attachment Extension
-===================================
+MRP show related attachment
+===========================
 
 This module adds the new tab "Product attachments" in manufacturing order form,
 in which product to produce attachments documents shown.

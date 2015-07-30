@@ -18,7 +18,7 @@
 #
 ##############################################################################
 {
-    "name": "MRP Production Attachment Extension",
+    "name": "MRP Show Related Attachment",
     "version": "1.0",
     "author": "OdooMRP team,"
               "AvanzOSC,"
