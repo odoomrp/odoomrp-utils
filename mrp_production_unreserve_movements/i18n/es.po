@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mrp_production_unreserve_movements
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-07-21 14:55+0000\n"
+"PO-Revision-Date: 2015-07-21 16:57+0100\n"
+"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+
+#. module: mrp_production_unreserve_movements
+#: model:ir.model,name:mrp_production_unreserve_movements.model_mrp_production
+msgid "Manufacturing Order"
+msgstr "Órden de producción"
+
+#. module: mrp_production_unreserve_movements
+#: view:mrp.production:mrp_production_unreserve_movements.mrp_production_form_view_inh_unreserve
+#: view:mrp.production.workcenter.line:mrp_production_unreserve_movements.workcenter_line_form_view_inh_unreserve
+msgid "Unreserve"
+msgstr "Anular reserva"
+
+#. module: mrp_production_unreserve_movements
+#: model:ir.model,name:mrp_production_unreserve_movements.model_mrp_production_workcenter_line
+msgid "Work Order"
+msgstr "Orden de trabajo"
+

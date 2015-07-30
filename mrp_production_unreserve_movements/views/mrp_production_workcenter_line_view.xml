@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="mrp_production_workcenter_form_view_inh_unreserve">
+            <field name="name">mrp.production.workcenter.form.view.inh.unreserve</field>
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="inherit_id" ref="mrp_operations.mrp_production_workcenter_form_view_inherit" />
+            <field name="arch" type="xml">
+                <field name="sequence" position="after">
+                    <field name="show_check_availability" invisible="1"/>
+                    <field name="show_force_reservation" invisible="1"/>
+                    <field name="show_unreserve" invisible="1"/>
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="workcenter_line_form_view_inh_unreserve">
+            <field name="name">workcenter.line.form.view.inh.unreserve</field>
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="inherit_id" ref="mrp_operations_extension.workcenter_line_inh_form_view" />
+            <field name="arch" type="xml">
+                <button name="action_assign" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':[('show_check_availability','=',False)]}</attribute>
+                </button>
+                <button name="force_assign" position="attributes">
+                    <attribute name="states"></attribute>
+                    <attribute name="attrs">{'invisible':[('show_force_reservation','=',False)]}</attribute>
+                </button>
+                <button name="force_assign" position="after">
+                    <button name="button_unreserve" string="Unreserve" type="object"
+                            attrs="{'invisible':[('show_unreserve', '=', False)]}"/>
+                </button>
+            </field>
+        </record>
+
+    </data>
+</openerp>
