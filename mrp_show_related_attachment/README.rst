@@ -1,11 +1,11 @@
 MRP show related attachment
 ===========================
 
-This module adds the new tab "Product attachments" in manufacturing order form,
-in which product to produce attachments documents shown.
+This module adds a new tab called "Product attachments" in manufacturing order form
+that shows the attachments of the product to produce.
 
-The new tab "Work center attachments" is also displayed, in work center form,
-in which work center attachmets documents shown.
+There's also a new tab "Work center attachments" in work center view,
+in which the attachments of the work center are shown.
 
 Credits
 =======
