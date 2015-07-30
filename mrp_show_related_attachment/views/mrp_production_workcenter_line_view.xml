@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="workcenter_line_form_view_inh_relatedattachment" >
+            <field name="name">workcenter.line.form.view.inh.relatedattachment</field>
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="inherit_id" ref="mrp_operations_extension.workcenter_line_inh_form_view"/>
+            <field name="arch" type="xml">
+                <page string="Extra Information" position="after">
+                    <page string="Work center attachments">
+                        <field name="workcenter_attachments" nolabel="1" />
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</openerp>
