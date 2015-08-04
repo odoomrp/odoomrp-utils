@@ -1,5 +1,5 @@
-Product attribute value with image
-==================================
+Product attribute value image
+=============================
 
 This module allows you to define an image in product attribute value.
 

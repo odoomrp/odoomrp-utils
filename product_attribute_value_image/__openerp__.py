@@ -16,7 +16,7 @@
 #
 ##############################################################################
 {
-    'name': 'Product Attribute Value With Image',
+    'name': 'Product Attribute Value Image',
     'version': "1.0",
     'author': 'OdooMRP team,'
               'AvanzOSC,'
