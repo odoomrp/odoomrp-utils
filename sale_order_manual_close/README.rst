@@ -1,6 +1,6 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
     :alt: License: AGPL-3
-Sale order force ending
+Sale order manual close
 =======================
 
 This module allows to force manually ending of sale orders.

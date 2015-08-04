@@ -18,7 +18,7 @@
 ##############################################################################
 
 {
-    "name": "Sale Order force ending",
+    "name": "Sale Order manual close",
     "version": "1.0",
     'author': 'OdooMRP team',
     'website': "http://www.odoomrp.com",

@@ -14,12 +14,12 @@ class wizard_saleorder_wf(models.TransientModel):
         sale_obj = self.env['sale.order']
         context = self.env.context
         if 'active_ids' in context:
-            for sale_id in context['active_ids']:
-                sale = sale_obj.browse(sale_id)
-                if sale.state in ('draft', 'done', 'cancel'):
+            sale_orders = sale_obj.browse(context['active_ids'])
+            for order in sale_orders:
+                if order.state in ('draft', 'done', 'cancel'):
                     raise exceptions.Warning(
-                        _("Selected Sale Orders cannot be processed!"))
-                else:
-                    workflow.trg_delete(self.env.uid, 'sale.order', sale_id,
-                                        self.env.cr)
-                    sale.state = 'done'
+                        _("Selected Sale Orders cannot be processed as they "
+                          "are already processed or in 'draft' state!"))
+                workflow.trg_delete(self.env.uid, 'sale.order', order.id,
+                                    self.env.cr)
+            sale_orders.write({'state': 'done'})
