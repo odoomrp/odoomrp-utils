@@ -29,8 +29,10 @@ class StockPlanning(models.Model):
 
     @api.one
     def _get_to_date(self):
-        self.incoming_to_date = 0
+        self.move_incoming_to_date = 0
+        self.procurement_incoming_to_date = 0
         self.outgoing_to_date = 0
+        self.scheduled_to_date = 0
         move_obj = self.env['stock.move']
         procurement_obj = self.env['procurement.order']
         move_qty = 0
@@ -61,7 +63,8 @@ class StockPlanning(models.Model):
                 (procurement.purchase_id and procurement.purchase_id.state ==
                  'draft')):
                 procurement_qty += procurement.product_qty
-        self.incoming_to_date = move_qty + procurement_qty
+        self.move_incoming_to_date = move_qty
+        self.procurement_incoming_to_date = procurement_qty
         cond = [('company_id', '=', self.company.id),
                 ('product_id', '=', self.product.id),
                 ('date', '<=', self.scheduled_date),
@@ -86,8 +89,9 @@ class StockPlanning(models.Model):
                 line = max(lines, key=lambda x: x.scheduled_date)
                 qty_available = line.scheduled_to_date
         if qty_available:
-            self.scheduled_to_date = (qty_available + self.incoming_to_date -
-                                      self.outgoing_to_date)
+            self.scheduled_to_date = (
+                qty_available + self.move_incoming_to_date +
+                self.procurement_incoming_to_date - self.outgoing_to_date)
 
     @api.one
     def _get_rule(self):
@@ -133,34 +137,37 @@ class StockPlanning(models.Model):
         'product.category', 'category', related='product.categ_id',
         store=True, translate=True)
     qty_available = fields.Float(
-        'Quantity On Hand', compute=_get_product_info_location,
+        'Quantity On Hand', compute='_get_product_info_location',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     virtual_available = fields.Float(
-        'Forecast Quantity', compute=_get_product_info_location,
+        'Forecast Quantity', compute='_get_product_info_location',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     incoming_qty = fields.Float(
-        'Incoming', compute=_get_product_info_location,
+        'Incoming', compute='_get_product_info_location',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     outgoing_qty = fields.Float(
-        'Outgoing', compute=_get_product_info_location,
+        'Outgoing', compute='_get_product_info_location',
         digits_compute=dp.get_precision('Product Unit of Measure'))
-    incoming_to_date = fields.Float(
-        'Incoming to date', compute=_get_to_date,
+    move_incoming_to_date = fields.Float(
+        'Incoming up to date from moves', compute='_get_to_date',
+        digits_compute=dp.get_precision('Product Unit of Measure'))
+    procurement_incoming_to_date = fields.Float(
+        'Incoming up to date from procurements', compute='_get_to_date',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     outgoing_to_date = fields.Float(
-        'Outgoing to date', compute=_get_to_date,
+        'Outgoing to date', compute='_get_to_date',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     scheduled_to_date = fields.Float(
-        'Scheduled to date', compute=_get_to_date,
+        'Scheduled to date', compute='_get_to_date',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     rule_min_qty = fields.Float(
-        'Rule min. qty', compute=_get_rule,
+        'Rule min. qty', compute='_get_rule',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     rule_max_qty = fields.Float(
-        'Rule max. qty', compute=_get_rule,
+        'Rule max. qty', compute='_get_rule',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     required_increase = fields.Float(
-        'Required increase', compute=_get_required_increase,
+        'Required increase', compute='_get_required_increase',
         digits_compute=dp.get_precision('Product Unit of Measure'))
     required_qty = fields.Float(
         'Required quantity', related='required_increase',
