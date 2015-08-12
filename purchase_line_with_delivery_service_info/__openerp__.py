@@ -24,7 +24,7 @@
     "website": "http://www.odoomrp.com",
     "category": "Delivery",
     "depends": ['delivery',
-                'procurement_purchase_no_grouping',
+                'procurement_service',
                 ],
     "data": [],
     "installable": True
