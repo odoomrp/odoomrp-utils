@@ -2,5 +2,4 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-from . import account_invoice
-from . import stock_move
+from . import test_account_invoice_line_stock_move_info
