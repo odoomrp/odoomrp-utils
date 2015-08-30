@@ -11,8 +11,13 @@ class MrpBomLine(models.Model):
 
     @api.one
     def _compute_standard_price(self):
-        self.standard_price = (self.product_id.standard_price or
-                               self.product_template.standard_price)
+        try:
+            template_std_price = self.product_template.standard_price
+        except AttributeError:
+            # This is in case mrp_product_variants module is not installed
+            template_std_price = 0.0
+        self.standard_price = (
+            self.product_id.standard_price or template_std_price)
 
     @api.one
     def _compute_childs_standard_price(self):
