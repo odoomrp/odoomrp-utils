@@ -12,9 +12,12 @@ addons:
 
 env:
   global:
-  - VERSION="8.0" TESTS="0" LINT_CHECK="0"
+  - VERSION="8.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - TRANSIFEX_USER='transbot@odoo-community.org' TRANSIFEX_ORGANIZATION="oca" TRANSIFEX_PROJECT_SLUG="odoomrp-utils-8-0"
+  - secure: Vpshu+bBwtFovOMH7nOlugcJojFULBgpE4WDo1Nkv3uz8za7Q+nya+w3mxR1bRwkcIH6Ke3FR4RGypjWmOuIlGr3rU4BGt86YBL0jNeiDQlBOio6FTMLsGYLLrbUfbfktnDGkYFFKsWvDVvUYeUzk3wx5DJXlQ2BF3wXimLERpU=
   matrix:
   - LINT_CHECK="1"
+  - TRANSIFEX="1"
   - TESTS="1" ODOO_REPO="odoo/odoo"
   - TESTS="1" ODOO_REPO="OCA/OCB"
 
@@ -23,9 +26,6 @@ virtualenv:
 
 install:
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
-  - git clone https://github.com/odoomrp/odoomrp-wip ${HOME}/odoomrp-wip -b ${VERSION}
-  - git clone https://github.com/OCA/stock-logistics-workflow.git ${HOME}/stock-logistics-workflow -b ${VERSION} 
-  - git clone https://github.com/OCA/manufacture ${HOME}/manufacture -b ${VERSION}
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 

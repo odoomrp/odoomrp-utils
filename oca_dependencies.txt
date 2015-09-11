@@ -1,0 +1,5 @@
+# List the OdooMRP project dependencies, one per line
+odoomrp-wip
+# List the OCA project dependencies, one per line
+stock-logistics-workflow https://github.com/OCA/stock-logistics-workflow
+manufacture https://github.com/OCA/manufacture
