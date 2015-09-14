@@ -12,7 +12,7 @@ class MrpProduction(models.Model):
     @api.one
     @api.depends('product_id')
     def _calc_production_attachments(self):
-        self.product_attachments = [(5)]
+        self.product_attachments = None
         if self.product_id:
             cond = [('res_model', '=', 'product.product'),
                     ('res_id', '=', self.product_id.id)]
@@ -33,7 +33,7 @@ class MrpProductionWorkcenterLine(models.Model):
     @api.one
     @api.depends('workcenter_id')
     def _calc_workcenter_line_attachments(self):
-        self.workcenter_attachments = [(5)]
+        self.workcenter_attachments = None
         if self.workcenter_id:
             cond = [('res_model', '=', 'mrp.workcenter'),
                     ('res_id', '=', self.workcenter_id.id)]
