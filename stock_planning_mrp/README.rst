@@ -1,7 +1,7 @@
 Stock planning MRP
 ==================
-This module shows a prevision of stock and allows you to generate their
-respective procurement order.
+This module extends the information of "prevision of stock" with OF
+information.
 
 Credits
 =======
