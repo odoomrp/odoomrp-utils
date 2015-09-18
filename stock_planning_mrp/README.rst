@@ -1,3 +1,4 @@
+==================
 Stock planning MRP
 ==================
 This module extends the information of "prevision of stock" with OF

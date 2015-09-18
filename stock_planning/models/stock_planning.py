@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
@@ -11,85 +11,7 @@ class StockPlanning(models.Model):
 
     _name = 'stock.planning'
     _description = 'Stock Planning'
-
-    company = fields.Many2one('res.company', 'Company')
-    warehouse = fields.Many2one('stock.warehouse', 'Warehouse')
-    location = fields.Many2one('stock.location', 'Location', translate=True)
-    from_date = fields.Date('From Date')
-    scheduled_date = fields.Date('Scheduled date')
-
-    def _calculate_move_incoming_to_date(self):
-        move_obj = self.env['stock.move']
-        move_qty = 0
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date', '<=', self.scheduled_date),
-                ('location_dest_id', '=', self.location.id),
-                ('state', 'not in', ('done', 'cancel'))]
-        if self.from_date:
-            cond.append(('date', '>', self.from_date))
-        moves = move_obj.search(cond)
-        if moves:
-            move_qty = sum(x.product_uom_qty for x in moves)
-        return move_qty
-
-    def _calculate_outgoing_to_date(self):
-        move_obj = self.env['stock.move']
-        move_qty = 0
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date', '<=', self.scheduled_date),
-                ('location_id', '=', self.location.id),
-                ('state', 'not in', ('done', 'cancel'))]
-        if self.from_date:
-            cond.append(('date', '>', self.from_date))
-        moves = move_obj.search(cond)
-        if moves:
-            move_qty = sum(x.product_uom_qty for x in moves)
-        return move_qty
-
-    def _calculate_procurement_incoming_to_date(self):
-        procurement_obj = self.env['procurement.order']
-        procurement_qty = 0
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date_planned', '<=', self.scheduled_date),
-                ('location_id', '=', self.location.id),
-                ('state', 'in', ('confirmed', 'exception'))]
-        if self.from_date:
-            cond.append(('date_planned', '>', self.from_date))
-        procurements = procurement_obj.search(cond)
-        # In selected procurements can not be applied "filtered" by
-        # "purchase_id" because this field is of type "Related" and
-        # "store = False".
-        for procurement in procurements:
-            if (not procurement.purchase_id or
-                (procurement.purchase_id and procurement.purchase_id.state
-                 not in ('cancel', 'except_picking', 'except_invoice',
-                         'done'))):
-                procurement_qty += procurement.product_qty
-        return procurement_qty
-
-    def _calculate_incoming_in_po(self):
-        purchase_line_obj = self.env['purchase.order.line']
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date_planned', '<=', self.scheduled_date),
-                ('state', '!=', 'cancel')]
-        if self.from_date:
-            cond.append(('date_planned', '>', self.from_date))
-        purchase_lines = purchase_line_obj.search(cond)
-        lines = purchase_lines.filtered(
-            lambda x: x.order_id.state not in ('cancel', 'except_picking',
-                                               'except_invoice', 'done'))
-        if self.warehouse:
-            lines = lines.filtered(
-                lambda x: x.order_id.picking_type_id.warehouse_id.id ==
-                self.warehouse.id)
-        if self.location:
-            lines = lines.filtered(
-                lambda x: x.order_id.location_id.id == self.location.id)
-        return lines
+    _order = 'id asc'
 
     @api.one
     def _get_product_info_location(self):
@@ -107,14 +29,31 @@ class StockPlanning(models.Model):
 
     @api.one
     def _get_to_date(self):
-        self.incoming_in_po = 0
-        self.scheduled_to_date = 0
-        self.move_incoming_to_date = self._calculate_move_incoming_to_date()
-        self.procurement_incoming_to_date = (
-            self._calculate_procurement_incoming_to_date())
-        self.outgoing_to_date = self._calculate_outgoing_to_date()
-        lines = self._calculate_incoming_in_po()
-        self.incoming_in_po = sum(lines.mapped('product_qty'))
+        print '*** ID: ' + str(self.id)
+        move_obj = self.env['stock.move']
+        proc_obj = self.env['procurement.order']
+        purchase_line_obj = self.env['purchase.order.line']
+        moves = move_obj._find_moves_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date,
+            product=self.product, warehouse=self.warehouse,
+            location_dest_id=self.location)
+        self.move_incoming_to_date = sum(x.product_uom_qty for x in moves)
+        states = ('confirmed', 'exception')
+        procurements = proc_obj._find_procurements_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, states,
+            product=self.product, warehouse=self.warehouse,
+            location_id=self.location, without_purchases=True)
+        self.procurement_incoming_to_date = sum(x.product_qty for x in
+                                                procurements)
+        moves = move_obj._find_moves_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date,
+            product=self.product, warehouse=self.warehouse,
+            location_id=self.location)
+        self.outgoing_to_date = sum(x.product_uom_qty for x in moves)
+        lines = purchase_line_obj._find_purchase_lines_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, self.product,
+            self.warehouse, self.location)
+        self.incoming_in_po = sum(x.product_qty for x in lines)
         purchase_orders = self.env['purchase.order']
         for line in lines:
             purchase_orders |= line.order_id

@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
@@ -10,24 +10,23 @@ class StockPlanning(models.Model):
 
     _inherit = 'stock.planning'
 
-    def _calculate_incoming_in_mo(self):
-        production_obj = self.env['mrp.production']
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date_planned', '<=', self.scheduled_date),
-                ('state', '=', 'draft')]
-        if self.from_date:
-            cond.append(('date_planned', '>', self.from_date))
-        if self.location:
-            cond.append(('location_dest_id', '=', self.location.id))
-        productions = production_obj.search(cond)
-        return productions
-
     @api.one
     def _get_to_date(self):
+        production_obj = self.env['mrp.production']
+        proc_obj = self.env['procurement.order']
         super(StockPlanning, self)._get_to_date()
-        productions = self._calculate_incoming_in_mo()
-        self.incoming_in_mo = sum(productions.mapped('product_qty'))
+        states = ('confirmed', 'exception')
+        procurements = proc_obj._find_procurements_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, states,
+            product=self.product, warehouse=self.warehouse,
+            location_id=self.location, without_purchases=True,
+            without_productions=True)
+        self.procurement_incoming_to_date = sum(x.product_qty for x in
+                                                procurements)
+        productions = production_obj._find_productions_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, self.product,
+            self.warehouse, self.location)
+        self.incoming_in_mo = sum(x.product_qty for x in productions)
         mrp_productions = self.env['mrp.production']
         for line in productions:
             mrp_productions |= line
