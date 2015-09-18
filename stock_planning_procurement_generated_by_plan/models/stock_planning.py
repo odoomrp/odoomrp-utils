@@ -12,17 +12,14 @@ class StockPlanning(models.Model):
     @api.one
     def _get_to_date(self):
         super(StockPlanning, self)._get_to_date()
-        procurement_obj = self.env['procurement.order']
-        self.procurement_plan_incoming_to_date = 0
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date_planned', '<=', self.scheduled_date),
-                ('location_id', '=', self.location.id),
-                ('level', '>', 1),
-                ('state', 'in', ('confirmed', 'running'))]
-        if self.from_date:
-            cond.append(('date_planned', '>', self.from_date))
-        procurements = procurement_obj.search(cond)
+        proc_obj = self.env['procurement.order']
+        states = ('confirmed', 'exception')
+        procurements = proc_obj._find_procurements_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, states,
+            product=self.product, warehouse=self.warehouse,
+            location_id=self.location)
+        procurements = procurements.filtered(
+            lambda x: x.level > 0)
         self.procurement_plan_incoming_to_date = sum(
             x.product_qty for x in procurements)
         if self.scheduled_to_date and self.procurement_plan_incoming_to_date:
