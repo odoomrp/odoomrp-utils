@@ -23,6 +23,7 @@
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
     'website': "http://www.odoomrp.com",
     'category': 'Warehouse Management',
+    "license": 'AGPL-3',
     "contributors": [
         "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <anajuaristi@avanzosc.es>",

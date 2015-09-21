@@ -29,7 +29,6 @@ class StockPlanning(models.Model):
 
     @api.one
     def _get_to_date(self):
-        print '*** ID: ' + str(self.id)
         move_obj = self.env['stock.move']
         proc_obj = self.env['procurement.order']
         purchase_line_obj = self.env['purchase.order.line']
