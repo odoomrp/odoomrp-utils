@@ -16,7 +16,7 @@
 #
 ##############################################################################
 {
-    'name': 'Stock Planning',
+    'name': 'Stock Planning MRP',
     'version': "1.0",
     "author": "OdooMRP team,"
               "AvanzOSC,"
@@ -29,14 +29,11 @@
         "Ana Juaristi <anajuaristi@avanzosc.es>",
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
     ],
-    'depends': ['sale',
-                'purchase',
-                'stock'
+    'depends': ['mrp',
+                'stock_planning',
                 ],
-    'data': ['security/stock_planning.xml',
-             'security/ir.model.access.csv',
-             'wizard/wiz_stock_planning_view.xml',
-             'views/stock_planning_view.xml',
+    'data': ['views/stock_planning_view.xml',
              ],
     'installable': True,
+    'auto_install': True,
 }

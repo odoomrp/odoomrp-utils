@@ -11,7 +11,7 @@ class StockPlanning(models.Model):
 
     _name = 'stock.planning'
     _description = 'Stock Planning'
-    _order = 'location, warehouse, product, scheduled_date'
+    _order = 'id asc'
 
     @api.one
     def _get_product_info_location(self):
@@ -29,56 +29,35 @@ class StockPlanning(models.Model):
 
     @api.one
     def _get_to_date(self):
-        self.move_incoming_to_date = 0
-        self.procurement_incoming_to_date = 0
-        self.outgoing_to_date = 0
-        self.scheduled_to_date = 0
         move_obj = self.env['stock.move']
-        procurement_obj = self.env['procurement.order']
-        move_qty = 0
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date', '<=', self.scheduled_date),
-                ('location_dest_id', '=', self.location.id),
-                ('state', 'not in', ('done', 'cancel'))]
+        proc_obj = self.env['procurement.order']
+        purchase_line_obj = self.env['purchase.order.line']
+        moves = move_obj._find_moves_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date,
+            product=self.product, warehouse=self.warehouse,
+            location_dest_id=self.location)
+        self.move_incoming_to_date = sum(x.product_uom_qty for x in moves)
+        states = ('confirmed', 'exception')
+        procurements = proc_obj._find_procurements_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, states,
+            product=self.product, warehouse=self.warehouse,
+            location_id=self.location, without_purchases=True)
+        self.procurement_incoming_to_date = sum(x.product_qty for x in
+                                                procurements)
+        moves = move_obj._find_moves_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date,
+            product=self.product, warehouse=self.warehouse,
+            location_id=self.location)
+        self.outgoing_to_date = sum(x.product_uom_qty for x in moves)
+        lines = purchase_line_obj._find_purchase_lines_from_stock_planning(
+            self.company, self.scheduled_date, self.from_date, self.product,
+            self.warehouse, self.location)
+        self.incoming_in_po = sum(x.product_qty for x in lines)
+        purchase_orders = self.env['purchase.order']
+        for line in lines:
+            purchase_orders |= line.order_id
+        self.purchases = [(6, 0, purchase_orders.ids)]
         if self.from_date:
-            cond.append(('date', '>', self.from_date))
-        moves = move_obj.search(cond)
-        if moves:
-            move_qty = sum(x.product_uom_qty for x in moves)
-        procurement_qty = 0
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date_planned', '<=', self.scheduled_date),
-                ('location_id', '=', self.location.id),
-                ('state', 'in', ('confirmed', 'running'))]
-        if self.from_date:
-            cond.append(('date_planned', '>', self.from_date))
-        procurements = procurement_obj.search(cond)
-        # In selected procurements can not be applied "filtered" by
-        # "purchase_id" because this field is of type "Related" and
-        # "store = False".
-        for procurement in procurements:
-            if (not procurement.purchase_id or
-                (procurement.purchase_id and procurement.purchase_id.state ==
-                 'draft')):
-                procurement_qty += procurement.product_qty
-        self.move_incoming_to_date = move_qty
-        self.procurement_incoming_to_date = procurement_qty
-        cond = [('company_id', '=', self.company.id),
-                ('product_id', '=', self.product.id),
-                ('date', '<=', self.scheduled_date),
-                ('location_id', '=', self.location.id),
-                ('state', 'not in', ('done', 'cancel'))]
-        if self.from_date:
-            cond.append(('date', '>', self.from_date))
-        moves = move_obj.search(cond)
-        if moves:
-            self.outgoing_to_date = sum(x.product_uom_qty for x in moves)
-        if not self.from_date:
-            qty_available = self.qty_available
-        else:
-            qty_available = 0
             cond = [('company', '=', self.company.id),
                     ('warehouse', '=', self.warehouse.id or False),
                     ('location', '=', self.location.id),
@@ -87,11 +66,15 @@ class StockPlanning(models.Model):
             lines = self.search(cond)
             if lines:
                 line = max(lines, key=lambda x: x.scheduled_date)
-                qty_available = line.scheduled_to_date
-        if qty_available:
-            self.scheduled_to_date = (
-                qty_available + self.move_incoming_to_date +
-                self.procurement_incoming_to_date - self.outgoing_to_date)
+                self.move_incoming_to_date += line.move_incoming_to_date
+                self.procurement_incoming_to_date += (
+                    line.procurement_incoming_to_date)
+                self.incoming_in_po += line.incoming_in_po
+                self.outgoing_to_date += line.outgoing_to_date
+        self.scheduled_to_date = (
+            self.qty_available + self.move_incoming_to_date +
+            self.procurement_incoming_to_date + self.incoming_in_po -
+            self.outgoing_to_date)
 
     @api.one
     def _get_rule(self):
@@ -108,10 +91,17 @@ class StockPlanning(models.Model):
     def _get_required_increase(self):
         self.required_increase = 0
         if self.scheduled_to_date <= self.rule_min_qty:
-            self.required_increase = self.rule_min_qty
-            if self.scheduled_to_date < 0:
-                self.required_increase = ((self.scheduled_to_date * -1) +
-                                          self.rule_min_qty)
+            if self.rule_max_qty > self.scheduled_to_date:
+                if self.scheduled_to_date >= 0:
+                    self.required_increase = self.rule_max_qty
+                else:
+                    self.required_increase = ((self.scheduled_to_date * -1) +
+                                              self.rule_max_qty)
+            else:
+                if self.scheduled_to_date >= 0:
+                    self.required_increase = self.scheduled_to_date
+                else:
+                    self.required_increase = (self.scheduled_to_date * -1)
         elif self.scheduled_to_date > 0:
             if self.rule_min_qty == 0 and self.rule_max_qty == 0:
                 self.required_increase = self.scheduled_to_date * -1
@@ -154,6 +144,13 @@ class StockPlanning(models.Model):
     procurement_incoming_to_date = fields.Float(
         'Incoming up to date from procurements', compute='_get_to_date',
         digits_compute=dp.get_precision('Product Unit of Measure'))
+    incoming_in_po = fields.Float(
+        'Incoming in PO', compute='_get_to_date',
+        digits_compute=dp.get_precision('Product Unit of Measure'))
+    purchases = fields.Many2many(
+        comodel_name='purchase.order', relation='rel_stock_planning_purchase',
+        column1='stock_planning_id', column2='purchase_id',
+        string='Purchases', compute='_get_to_date')
     outgoing_to_date = fields.Float(
         'Outgoing to date', compute='_get_to_date',
         digits_compute=dp.get_precision('Product Unit of Measure'))
@@ -182,7 +179,7 @@ class StockPlanning(models.Model):
                 ('product_id', '=', self.product.id),
                 ('date_planned', '<=', self.scheduled_date),
                 ('location_id', '=', self.location.id),
-                ('state', 'in', ('confirmed', 'running'))]
+                ('state', 'in', ('confirmed', 'exception'))]
         if self.from_date:
             cond.append(('date_planned', '>', self.from_date))
         procurements = procurement_obj.search(cond)
@@ -194,6 +191,17 @@ class StockPlanning(models.Model):
                 'res_model': 'procurement.order',
                 'type': 'ir.actions.act_window',
                 'domain': [('id', 'in', procurements.ids)]
+                }
+
+    @api.multi
+    def show_purchases(self):
+        self.ensure_one()
+        return {'name': _('Purchase orders'),
+                'view_type': 'form',
+                "view_mode": 'tree,form',
+                'res_model': 'purchase.order',
+                'type': 'ir.actions.act_window',
+                'domain': [('id', 'in', self.purchases.ids)]
                 }
 
     @api.multi
