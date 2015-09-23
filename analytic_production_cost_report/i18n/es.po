@@ -1,0 +1,144 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* analytic_production_cost_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-23 15:21+0000\n"
+"PO-Revision-Date: 2015-09-23 17:27+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,nbr:0
+msgid "# Entries"
+msgstr "# Entradas"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,account_id:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: analytic_production_cost_report
+#: model:ir.model,name:analytic_production_cost_report.model_analytic_production_cost_report
+msgid "Analytic Production Cost Report"
+msgstr "Analytic Production Cost Report"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_graph_view
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: model:ir.actions.act_window,name:analytic_production_cost_report.action_analytic_production_cost_report
+#: model:ir.ui.menu,name:analytic_production_cost_report.menu_action_analytic_production_cost_report
+msgid "Analytic production cost analysis"
+msgstr "Análisis analítica costes producción"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,currency_id:0
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,name:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,general_account_id:0
+msgid "General Account"
+msgstr "Cuenta general"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,journal_id:0
+msgid "Journal"
+msgstr "Diario"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+msgid "Month"
+msgstr "Mes"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,move_id:0
+msgid "Move"
+msgstr "Movimiento"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+msgid "My Entries"
+msgstr "Mis entradas"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,partner_id:0
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,product_id:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,product_uom_id:0
+msgid "Product Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,production:0
+msgid "Production"
+msgstr "Producción"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,unit_amount:0
+msgid "Unit Amount"
+msgstr "Importe unitario"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,user_id:0
+msgid "User"
+msgstr "Usuario"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,workorder:0
+msgid "Work order"
+msgstr "Órden de trabajo"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,amount:0
+msgid "amount"
+msgstr "Importe"

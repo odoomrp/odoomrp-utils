@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_analytic_production_cost_report_account_manager,analytic.production.cost.report,model_analytic_production_cost_report,account.group_account_manager,1,0,0,0
+access_analytic_production_cost_report_mrp_manager,analytic.production.cost.report,model_analytic_production_cost_report,mrp.group_mrp_manager,1,0,0,0
+

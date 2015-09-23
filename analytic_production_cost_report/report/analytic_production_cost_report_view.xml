@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+    <record id="analytic_production_cost_report_search_view" model="ir.ui.view">
+        <field name="name">analytic.production.cost.report.search.view</field>
+        <field name="model">analytic.production.cost.report</field>
+        <field name="arch" type="xml">
+            <search string="Analytic production cost analysis">
+                <field name="date"/>
+                <filter string="My Entries" domain="[('user_id','=',uid)]" help="My Entries"/>
+                <field name="account_id" groups="analytic.group_analytic_accounting"/>
+                <field name="product_id" />
+                <field name="user_id"/>
+                <group expand="0" string="Group By">
+                    <filter string="Production" context="{'group_by':'production'}"/>
+                    <filter string="Work order" context="{'group_by':'workorder'}"/>
+                    <filter string="Partner" context="{'group_by':'partner_id'}"/>
+                    <filter string="Account" name="Account" context="{'group_by':'account_id'}" groups="analytic.group_analytic_accounting"/>
+                    <filter string="General Account" context="{'group_by':'general_account_id'}"/>
+                    <filter string="Journal" context="{'group_by':'journal_id'}"/>
+                    <filter string="Product" context="{'group_by':'product_id'}"/>
+                    <filter string="User" context="{'group_by':'user_id'}"/>
+                    <filter string="Company" context="{'group_by':'company_id'}" groups="base.group_multi_company"/>
+                    <separator/>
+                    <filter string="Month" name="Month" context="{'group_by':'date:month'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+    <record id="analytic_production_cost_report_graph_view" model="ir.ui.view">
+         <field name="name">analytic.production.cost.report.graph.view</field>
+         <field name="model">analytic.production.cost.report</field>
+         <field name="arch" type="xml">
+             <graph string="Analytic production cost analysis" type="pivot">
+                <field name="account_id" type="row"/>
+                <field name="date" interval="month" type="col"/>
+                <field name="nbr" type="measure"/>
+                <field name="unit_amount" type="measure"/>
+                <field name="amount" type="measure"/>
+             </graph>
+         </field>
+    </record>
+    <record id="action_analytic_production_cost_report" model="ir.actions.act_window">
+        <field name="name">Analytic production cost analysis</field>
+        <field name="res_model">analytic.production.cost.report</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">graph</field>
+        <field name="search_view_id" ref="analytic_production_cost_report_search_view"/>
+        <field name="context">{'group_by_no_leaf':1, 'search_default_Account':1, 'group_by':[]}</field>
+    </record>
+
+    <menuitem action="action_analytic_production_cost_report"
+        id="menu_action_analytic_production_cost_report"
+        groups="analytic.group_analytic_accounting"
+        parent="account.menu_finance_reporting" sequence="5"/>
+
+</data>
+</openerp>
