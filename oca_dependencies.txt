@@ -2,4 +2,5 @@
 odoomrp-wip
 # List the OCA project dependencies, one per line
 stock-logistics-workflow https://github.com/OCA/stock-logistics-workflow
+stock-logistics-warehouse https://github.com/OCA/stock-logistics-warehouse
 manufacture https://github.com/OCA/manufacture
