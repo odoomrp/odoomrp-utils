@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * analytic_production_cost_report
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-10-07 10:28+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/odoomrp-utils-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,nbr:0
+msgid "# Entries"
+msgstr "# vnosov"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,account_id:0
+msgid "Account"
+msgstr "Konto"
+
+#. module: analytic_production_cost_report
+#: model:ir.model,name:analytic_production_cost_report.model_analytic_production_cost_report
+msgid "Analytic Production Cost Report"
+msgstr "Analitično poročilo o proizvodnih stroških"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_graph_view
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: model:ir.actions.act_window,name:analytic_production_cost_report.action_analytic_production_cost_report
+#: model:ir.ui.menu,name:analytic_production_cost_report.menu_action_analytic_production_cost_report
+msgid "Analytic production cost analysis"
+msgstr "Analitična analiza proizvodnih stroškov"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,company_id:0
+msgid "Company"
+msgstr "Družba"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,currency_id:0
+msgid "Currency"
+msgstr "Valuta"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,name:0
+msgid "Description"
+msgstr "Opis"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,general_account_id:0
+msgid "General Account"
+msgstr "Splošni konto"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+msgid "Group By"
+msgstr "Združi po"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,journal_id:0
+msgid "Journal"
+msgstr "Dnevnik"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+msgid "Month"
+msgstr "Mesec"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,move_id:0
+msgid "Move"
+msgstr "Premik"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+msgid "My Entries"
+msgstr "Moji vnosi"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,partner_id:0
+msgid "Partner"
+msgstr "Partner"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,product_id:0
+msgid "Product"
+msgstr "Proizvod"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,product_uom_id:0
+msgid "Product Unit of Measure"
+msgstr "Enota mere proizvoda"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,production:0
+msgid "Production"
+msgstr "Proizvodnja"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,unit_amount:0
+msgid "Unit Amount"
+msgstr "Znesek enote"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,user_id:0
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: analytic_production_cost_report
+#: view:analytic.production.cost.report:analytic_production_cost_report.analytic_production_cost_report_search_view
+#: field:analytic.production.cost.report,workorder:0
+msgid "Work order"
+msgstr "Delovni nalog"
+
+#. module: analytic_production_cost_report
+#: field:analytic.production.cost.report,amount:0
+msgid "amount"
+msgstr "znesek"

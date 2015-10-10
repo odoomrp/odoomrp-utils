@@ -1,0 +1,61 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * crm_claim_extra_ref
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-09-26 07:42+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/odoomrp-utils-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: crm_claim_extra_ref
+#: model:ir.model,name:crm_claim_extra_ref.model_crm_claim
+msgid "Claim"
+msgstr "Zahtevek"
+
+#. module: crm_claim_extra_ref
+#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
+msgid "Partner"
+msgstr "Partner"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_model_name2:0
+msgid "Ref. Model 2"
+msgstr "Sklic modela 2"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_model_name3:0
+msgid "Ref. Model 3"
+msgstr "Sklic modela 3"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_name2:0
+msgid "Ref. Name 2"
+msgstr "Sklic naziva 2"
+
+#. module: crm_claim_extra_ref
+#: field:crm.claim,ref_name3:0
+msgid "Ref. Name 3"
+msgstr "Sklic naziva 3"
+
+#. module: crm_claim_extra_ref
+#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
+#: field:crm.claim,ref2:0
+msgid "Reference 2"
+msgstr "Sklic 2"
+
+#. module: crm_claim_extra_ref
+#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
+#: field:crm.claim,ref3:0
+msgid "Reference 3"
+msgstr "Sklic 3"

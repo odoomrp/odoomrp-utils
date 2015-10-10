@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * stock_picking_carrier
+# 
+# Translators:
+# Oihane Crucelaegui <oihanecruce@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-09-11 12:42+0000\n"
+"Last-Translator: Oihane Crucelaegui <oihanecruce@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/odoomrp-utils-8-0/language/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: stock_picking_carrier
+#: view:stock.picking:stock_picking_carrier.stock_picking_carrier_search_view
+msgid "Carrier"
+msgstr "Transportista"
+
+#. module: stock_picking_carrier
+#: view:stock.picking:stock_picking_carrier.stock_picking_carrier_search_view
+msgid "Group By"
+msgstr "Agrupar por"
+
+#. module: stock_picking_carrier
+#: view:stock.picking:stock_picking_carrier.stock_picking_carrier_tree_view
+msgid "Total Net Weight"
+msgstr "Peso neto total"
+
+#. module: stock_picking_carrier
+#: view:stock.picking:stock_picking_carrier.stock_picking_carrier_tree_view
+msgid "Total Weight"
+msgstr "Peso total"

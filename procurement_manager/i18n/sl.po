@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * procurement_manager
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:46+0000\n"
+"PO-Revision-Date: 2015-09-26 07:41+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/odoomrp-utils-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: procurement_manager
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+#: view:procurement.check:procurement_manager.procurement_check_view
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "Cancel"
+msgstr "Preklic"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_cancel_procurements
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+msgid "Cancel procurements"
+msgstr "Preklic oskrbovanj"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_cancel
+msgid "Cancel the selected procurements"
+msgstr "Preklic izbranih oskrbovanj"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_check_procurements
+#: view:procurement.check:procurement_manager.procurement_check_view
+msgid "Check procurements"
+msgstr "Overi oskrbovanja"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_check
+msgid "Check the selected procurements"
+msgstr "Overi izbrana oskrbovanja"
+
+#. module: procurement_manager
+#: field:procurement.cancel,create_uid:0 field:procurement.check,create_uid:0
+#: field:procurement.reset.to.confirmed,create_uid:0
+#: field:procurement.run,create_uid:0
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: procurement_manager
+#: field:procurement.cancel,create_date:0
+#: field:procurement.check,create_date:0
+#: field:procurement.reset.to.confirmed,create_date:0
+#: field:procurement.run,create_date:0
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: procurement_manager
+#: field:procurement.cancel,id:0 field:procurement.check,id:0
+#: field:procurement.reset.to.confirmed,id:0 field:procurement.run,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: procurement_manager
+#: field:procurement.cancel,write_uid:0 field:procurement.check,write_uid:0
+#: field:procurement.reset.to.confirmed,write_uid:0
+#: field:procurement.run,write_uid:0
+msgid "Last Updated by"
+msgstr "Zadnjič posodobil"
+
+#. module: procurement_manager
+#: field:procurement.cancel,write_date:0 field:procurement.check,write_date:0
+#: field:procurement.reset.to.confirmed,write_date:0
+#: field:procurement.run,write_date:0
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_reset_to_confirmed_procurements
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+msgid "Reset to confirmed procurements"
+msgstr "Ponastavi na potrjena oskrbovanja"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_reset_to_confirmed
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+msgid "Reset to confirmed selected procurements"
+msgstr "Ponastavi na izbrana oskrbovanja"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_run_procurements
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "Run procurements"
+msgstr "Zaženi oskrbovanja"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_run
+msgid "Run the selected procurements"
+msgstr "Zaženi izbrana oskrbovanja"
+
+#. module: procurement_manager
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+msgid "You are going to cancel selected procurements."
+msgstr "Izbrana oskrbovanja boste preklicali."
+
+#. module: procurement_manager
+#: view:procurement.check:procurement_manager.procurement_check_view
+msgid "You are going to check selected procurements."
+msgstr "Izbrana oskrbovanja boste overili."
+
+#. module: procurement_manager
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+msgid "You are going to reset to confirmed selected procurements."
+msgstr "Izbrana oskrbovanja boste ponastavili."
+
+#. module: procurement_manager
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "You are going to run selected procurements."
+msgstr "Izbrana oskrbovanja boste zagnali."
+
+#. module: procurement_manager
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+#: view:procurement.check:procurement_manager.procurement_check_view
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "or"
+msgstr "ali"

@@ -1,0 +1,57 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * delivery_partner_properties
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-09-26 07:43+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/odoomrp-utils-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: delivery_partner_properties
+#: field:res.partner,banned_carrier_ids:0
+msgid "Banned delivery carrier"
+msgstr "Prepovedani prevoznik"
+
+#. module: delivery_partner_properties
+#: view:res.partner:delivery_partner_properties.res_partner_extended_form_view
+msgid "Deliveries"
+msgstr "Dostave"
+
+#. module: delivery_partner_properties
+#: code:addons/delivery_partner_properties/models/res_partner.py:36
+#, python-format
+msgid ""
+"It is not possible to have the mandatory carrier as banned one and "
+"viceversa, please check carrier: %s"
+msgstr "Obvezni prevoznik ne more biti prepovedan. Preverite prevoznika: %s"
+
+#. module: delivery_partner_properties
+#: field:res.partner,property_mandatory_carrier:0
+msgid "Mandatory delivery method"
+msgstr "Obvezna metoda dostave"
+
+#. module: delivery_partner_properties
+#: model:ir.model,name:delivery_partner_properties.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+
+#. module: delivery_partner_properties
+#: model:ir.model,name:delivery_partner_properties.model_sale_order
+msgid "Sales Order"
+msgstr "Prodajni nalog"
+
+#. module: delivery_partner_properties
+#: view:sale.order:delivery_partner_properties.sale_order_extended_form_view
+msgid "{'readonly':[('property_mandatory_carrier','!=',False)]}"
+msgstr "{'readonly':[('property_mandatory_carrier','!=',False)]}"

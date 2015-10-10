@@ -1,42 +1,52 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* product_expiry_ext
-#
+# * product_expiry_ext
+# 
+# Translators:
+# Oihane Crucelaegui <oihanecruce@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0rc1\n"
+"Project-Id-Version: odoomrp-utils (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-05 18:05+0000\n"
-"PO-Revision-Date: 2014-08-05 18:05+0000\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-09-11 12:50+0000\n"
+"Last-Translator: Oihane Crucelaegui <oihanecruce@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/odoomrp-utils-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: product_expiry_ext
-#: selection:stock.production.lot,expiry_state:0
-msgid "Expired"
-msgstr "Caducado"
+#: code:addons/product_expiry_ext/models/stock.py:21
+#, python-format
+msgid ""
+"Dates must be: Alert Date < Removal Date < Best Before Date < Expiry Date"
+msgstr "Las fechas deben ser: fecha de alerta < fecha de eliminación < fecha de consumo preferente < fecha de caducidad"
 
 #. module: product_expiry_ext
-#: selection:stock.production.lot,expiry_state:0
-msgid "In alert"
-msgstr "En alerta"
+#: model:ir.model,name:product_expiry_ext.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lote/Nº de serie"
 
 #. module: product_expiry_ext
-#: selection:stock.production.lot,expiry_state:0
-msgid "Normal"
-msgstr "Normal"
+#: model:ir.model,name:product_expiry_ext.model_stock_transfer_details_items
+msgid "Picking wizard items"
+msgstr "Elementos del asistente de albarán"
 
 #. module: product_expiry_ext
-#: field:stock.production.lot,expiry_state:0
-msgid "Expiry state"
-msgstr "Estado de caducidad"
+#: model:ir.model,name:product_expiry_ext.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
 
 #. module: product_expiry_ext
-#: selection:stock.production.lot,expiry_state:0
-msgid "To remove"
-msgstr "A eliminar"
-
+#: view:stock.production.lot:product_expiry_ext.product_expiry_tree_view
+#: view:stock.quant:product_expiry_ext.quant_expiry_tree_view
+msgid ""
+"orange: expiry_state == 'best_before';\n"
+"                        blue: expiry_state == 'alert';\n"
+"                        gold: expiry_state == 'to_remove';\n"
+"                        green: expiry_state == 'normal';\n"
+"                        red: expiry_state == 'expired'"
+msgstr ""

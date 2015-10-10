@@ -1,0 +1,52 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * product_expiry_ext
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-09-26 07:43+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/odoomrp-utils-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: product_expiry_ext
+#: code:addons/product_expiry_ext/models/stock.py:21
+#, python-format
+msgid ""
+"Dates must be: Alert Date < Removal Date < Best Before Date < Expiry Date"
+msgstr "Datumi morajo biti: Datum opozorila < Datum izločitve < Uporabno najmanj do < Rok trajanja"
+
+#. module: product_expiry_ext
+#: model:ir.model,name:product_expiry_ext.model_stock_production_lot
+msgid "Lot/Serial"
+msgstr "Lot/Serijska št."
+
+#. module: product_expiry_ext
+#: model:ir.model,name:product_expiry_ext.model_stock_transfer_details_items
+msgid "Picking wizard items"
+msgstr "Predmeti čarovnika za zbirnike"
+
+#. module: product_expiry_ext
+#: model:ir.model,name:product_expiry_ext.model_stock_quant
+msgid "Quants"
+msgstr "Kvanti"
+
+#. module: product_expiry_ext
+#: view:stock.production.lot:product_expiry_ext.product_expiry_tree_view
+#: view:stock.quant:product_expiry_ext.quant_expiry_tree_view
+msgid ""
+"orange: expiry_state == 'best_before';\n"
+"                        blue: expiry_state == 'alert';\n"
+"                        gold: expiry_state == 'to_remove';\n"
+"                        green: expiry_state == 'normal';\n"
+"                        red: expiry_state == 'expired'"
+msgstr "orange: expiry_state == 'best_before';\n                        blue: expiry_state == 'alert';\n                        gold: expiry_state == 'to_remove';\n                        green: expiry_state == 'normal';\n                        red: expiry_state == 'expired'"

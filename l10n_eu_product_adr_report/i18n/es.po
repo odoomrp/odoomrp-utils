@@ -1,25 +1,33 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* l10n_eu_product_adr_report
-#
+# * l10n_eu_product_adr_report
+# 
+# Translators:
+# Oihane Crucelaegui <oihanecruce@gmail.com>, 2015
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: odoomrp-utils (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-22 08:58+0000\n"
-"PO-Revision-Date: 2015-04-22 10:59+0100\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2015-10-08 08:46+0000\n"
+"PO-Revision-Date: 2015-09-11 12:46+0000\n"
+"Last-Translator: Oihane Crucelaegui <oihanecruce@gmail.com>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/odoomrp-utils-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. module: l10n_eu_product_adr_report
 #: view:product.adr.class:l10n_eu_product_adr_report.product_adr_class_form_view
 msgid "ADR Class"
 msgstr "Clase ADR"
+
+#. module: l10n_eu_product_adr_report
+#: model:ir.actions.act_window,name:l10n_eu_product_adr_report.product_adr_action
+#: model:ir.ui.menu,name:l10n_eu_product_adr_report.product_ADR_menu
+msgid "ADR Product"
+msgstr "Producto ADR"
 
 #. module: l10n_eu_product_adr_report
 #: model:ir.actions.report.xml,name:l10n_eu_product_adr_report.product_adr_report
@@ -34,17 +42,10 @@ msgstr "Por el transportista:"
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid ""
-"CERTIFY that these goods are admitted to be transported by road in "
-"accordance with the provisions of\n"
-"                        ADR, and has been properly classified, packaged, "
-"marked and labeled in accordance with the provisions\n"
+"CERTIFY that these goods are admitted to be transported by road in accordance with the provisions of\n"
+"                        ADR, and has been properly classified, packaged, marked and labeled in accordance with the provisions\n"
 "                        needed to be transported by road."
-msgstr ""
-"CERTIFICAMOS que esta materia se admite al transporte por carretera de "
-"acuerdo con las\n"
-"disposiciones del ADR, y ha sido debidamente clasificada, envasada, marcada "
-"y etiquetada de acuerdo\n"
-"con las disposiciones necesarias para ser transportada por carretera."
+msgstr "CERTIFICAMOS que esta materia se admite al transporte por carretera de acuerdo con las\ndisposiciones del ADR, y ha sido debidamente clasificada, envasada, marcada y etiquetada de acuerdo\ncon las disposiciones necesarias para ser transportada por carretera."
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
@@ -161,9 +162,7 @@ msgstr "El conductor DECLARA :"
 msgid ""
 "The instructions to follow in case of accident, leak or fire\n"
 "                            that may occur during transport."
-msgstr ""
-"Las instrucciones a seguir en caso de accidente, fuga o incendio \n"
-"que pudiesen producirse durante el transporte."
+msgstr "Las instrucciones a seguir en caso de accidente, fuga o incendio \nque pudiesen producirse durante el transporte."
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
@@ -173,15 +172,9 @@ msgstr "La naturaleza de la mercancía y el peligro que encierra su transporte."
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid ""
-"The vehicle and the containment vessel of the goods meet the conditions of "
-"the current\n"
-"                            regulations on Road Transport and especially "
-"that relating to hazardous waste."
-msgstr ""
-"Que el vehículo y el recipiente contenedor de la mercancía cumplen con las "
-"condiciones exigidas por la\n"
-"normativa vigente sobre el Transporte por Carreteras y, en especial, la "
-"relativa a mercancía peligrosa."
+"The vehicle and the containment vessel of the goods meet the conditions of the current\n"
+"                            regulations on Road Transport and especially that relating to hazardous waste."
+msgstr "Que el vehículo y el recipiente contenedor de la mercancía cumplen con las condiciones exigidas por la\nnormativa vigente sobre el Transporte por Carreteras y, en especial, la relativa a mercancía peligrosa."
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
@@ -191,27 +184,17 @@ msgstr "Matrícula:"
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid ""
-"Which is duly legitimized by driving the vehicle transported corresponds "
-"this document\n"
-"                            and knows the rules on movement of your vehicle "
-"and transport load fully responsible for\n"
+"Which is duly legitimized by driving the vehicle transported corresponds this document\n"
+"                            and knows the rules on movement of your vehicle and transport load fully responsible for\n"
 "                            their transportation task once started."
-msgstr ""
-"Que está debidamente legitimado por la conducción del vehículo a cuyo "
-"transporte corresponde este\n"
-"documento y conoce perfectamente las normas sobre circulación de su vehículo "
-"y transporte de la\n"
-"carga, responsabilizándose plenamente de su cometido una vez iniciado el "
-"transporte."
+msgstr "Que está debidamente legitimado por la conducción del vehículo a cuyo transporte corresponde este\ndocumento y conoce perfectamente las normas sobre circulación de su vehículo y transporte de la\ncarga, responsabilizándose plenamente de su cometido una vez iniciado el transporte."
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document
 msgid ""
 "an MSDS of the product specified above in which\n"
 "                        follows:"
-msgstr ""
-"una MSDS del producto especificado anteriormente en la que  \n"
-"de la siguiente manera:"
+msgstr "una MSDS del producto especificado anteriormente en la que  \nde la siguiente manera:"
 
 #. module: l10n_eu_product_adr_report
 #: view:website:l10n_eu_product_adr_report.product_adr_report_document

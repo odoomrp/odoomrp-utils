@@ -1,0 +1,135 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * procurement_manager
+# 
+# Translators:
+# danimaribeiro <danimaribeiro@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:46+0000\n"
+"PO-Revision-Date: 2015-10-09 01:57+0000\n"
+"Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/odoomrp-utils-8-0/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: procurement_manager
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+#: view:procurement.check:procurement_manager.procurement_check_view
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_cancel_procurements
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+msgid "Cancel procurements"
+msgstr "Cancelar aprovisionamentos"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_cancel
+msgid "Cancel the selected procurements"
+msgstr "Cancelar os aprovisionamentos selecionados"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_check_procurements
+#: view:procurement.check:procurement_manager.procurement_check_view
+msgid "Check procurements"
+msgstr "Conferir aprovisionamento"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_check
+msgid "Check the selected procurements"
+msgstr "Conferir o aprovisionamento selecionado"
+
+#. module: procurement_manager
+#: field:procurement.cancel,create_uid:0 field:procurement.check,create_uid:0
+#: field:procurement.reset.to.confirmed,create_uid:0
+#: field:procurement.run,create_uid:0
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: procurement_manager
+#: field:procurement.cancel,create_date:0
+#: field:procurement.check,create_date:0
+#: field:procurement.reset.to.confirmed,create_date:0
+#: field:procurement.run,create_date:0
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: procurement_manager
+#: field:procurement.cancel,id:0 field:procurement.check,id:0
+#: field:procurement.reset.to.confirmed,id:0 field:procurement.run,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: procurement_manager
+#: field:procurement.cancel,write_uid:0 field:procurement.check,write_uid:0
+#: field:procurement.reset.to.confirmed,write_uid:0
+#: field:procurement.run,write_uid:0
+msgid "Last Updated by"
+msgstr "Última atualização por"
+
+#. module: procurement_manager
+#: field:procurement.cancel,write_date:0 field:procurement.check,write_date:0
+#: field:procurement.reset.to.confirmed,write_date:0
+#: field:procurement.run,write_date:0
+msgid "Last Updated on"
+msgstr "Última atualização em"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_reset_to_confirmed_procurements
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+msgid "Reset to confirmed procurements"
+msgstr "Resetar para aprovisionamentos confirmados"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_reset_to_confirmed
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+msgid "Reset to confirmed selected procurements"
+msgstr "Resetar para os aprovisionamentos confirmados e selecionados"
+
+#. module: procurement_manager
+#: model:ir.actions.act_window,name:procurement_manager.action_run_procurements
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "Run procurements"
+msgstr "Rodar aprovisionamentos"
+
+#. module: procurement_manager
+#: model:ir.model,name:procurement_manager.model_procurement_run
+msgid "Run the selected procurements"
+msgstr "Rodar os aprovisionamentos selecionados"
+
+#. module: procurement_manager
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+msgid "You are going to cancel selected procurements."
+msgstr "Você irá cancelar os aprovisionamentos selecionados"
+
+#. module: procurement_manager
+#: view:procurement.check:procurement_manager.procurement_check_view
+msgid "You are going to check selected procurements."
+msgstr "Você irá conferir os aprovisionamentos selecionados"
+
+#. module: procurement_manager
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+msgid "You are going to reset to confirmed selected procurements."
+msgstr "Você irá resetar para confirmado os aprovisionamentos"
+
+#. module: procurement_manager
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "You are going to run selected procurements."
+msgstr "Você irá rodar os aprovisionamentos selecionados"
+
+#. module: procurement_manager
+#: view:procurement.cancel:procurement_manager.procurement_cancel_view
+#: view:procurement.check:procurement_manager.procurement_check_view
+#: view:procurement.reset.to.confirmed:procurement_manager.procurement_reset_to_confirmed_view
+#: view:procurement.run:procurement_manager.procurement_run_view
+msgid "or"
+msgstr "ou"

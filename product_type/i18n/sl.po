@@ -1,0 +1,67 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * product_type
+# 
+# Translators:
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:45+0000\n"
+"PO-Revision-Date: 2015-09-26 07:43+0000\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian (http://www.transifex.com/oca/odoomrp-utils-8-0/language/sl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sl\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+
+#. module: product_type
+#: field:product.product.type,create_uid:0
+msgid "Created by"
+msgstr "Ustvaril"
+
+#. module: product_type
+#: field:product.product.type,create_date:0
+msgid "Created on"
+msgstr "Ustvarjeno"
+
+#. module: product_type
+#: view:product.template:product_type.product_template_extended_search_view
+msgid "Group by..."
+msgstr "Združi po..."
+
+#. module: product_type
+#: field:product.product.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: product_type
+#: field:product.product.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Zadnjič posodobil"
+
+#. module: product_type
+#: field:product.product.type,write_date:0
+msgid "Last Updated on"
+msgstr "Zadnjič posodobljeno"
+
+#. module: product_type
+#: model:ir.model,name:product_type.model_product_template
+msgid "Product Template"
+msgstr "Predloga proizvoda"
+
+#. module: product_type
+#: field:product.product.type,name:0
+#: view:product.template:product_type.product_template_extended_search_view
+#: field:product.template,product_type:0
+msgid "Product Type"
+msgstr "Tip proizvoda"
+
+#. module: product_type
+#: model:ir.actions.act_window,name:product_type.product_product_type_action
+#: model:ir.ui.menu,name:product_type.menu_product_product_type_conf
+msgid "Product Types"
+msgstr "Tipi proizvodov"

@@ -1,37 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* mrp_bom_line_structure_show_child_bom
-#
+# * mrp_bom_structure_show_child
+# 
+# Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: odoomrp-utils (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-21 06:46+0000\n"
-"PO-Revision-Date: 2015-05-21 08:48+0100\n"
-"Last-Translator: <>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2015-10-08 08:46+0000\n"
+"PO-Revision-Date: 2015-09-11 10:24+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>\n"
+"Language-Team: Spanish (http://www.transifex.com/oca/odoomrp-utils-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
+"Content-Transfer-Encoding: \n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#. module: mrp_bom_line_structure_show_child_bom
-#: field:mrp.bom.line,routing_id:0
-msgid "Productive Process"
-msgstr "Proceso Productivo"
-
-#. module: mrp_bom_line_structure_show_child_bom
-#: field:mrp.bom.line,standard_price:0
-msgid "Cost Price"
-msgstr "Precio coste"
-
-#. module: mrp_bom_line_structure_show_child_bom
-#: field:mrp.bom.line,childs_standard_price:0
-msgid "Childs Cost Price"
-msgstr "Precio coste hijos"
-
-#. module: mrp_bom_line_structure_show_child_bom
-#: model:ir.actions.server,name:mrp_bom_line_structure_show_child_bom.bom_from_child_action_server_tree
+#. module: mrp_bom_structure_show_child
+#: model:ir.actions.server,name:mrp_bom_structure_show_child.bom_from_child_action_server_tree
 msgid "Show BoM"
 msgstr "Mostrar LdM"

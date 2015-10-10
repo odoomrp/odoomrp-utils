@@ -1,0 +1,39 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * stock_quant_reservation_status
+# 
+# Translators:
+# danimaribeiro <danimaribeiro@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-08 08:46+0000\n"
+"PO-Revision-Date: 2015-10-09 01:52+0000\n"
+"Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/odoomrp-utils-8-0/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. module: stock_quant_reservation_status
+#: model:ir.model,name:stock_quant_reservation_status.model_stock_quant
+msgid "Quants"
+msgstr "Quants"
+
+#. module: stock_quant_reservation_status
+#: view:stock.quant:stock_quant_reservation_status.stock_quant_reserved_search_view
+msgid "Reservado"
+msgstr "Reservado"
+
+#. module: stock_quant_reservation_status
+#: field:stock.quant,is_reserved:0
+msgid "Reserved Quant"
+msgstr "Quant reservado"
+
+#. module: stock_quant_reservation_status
+#: view:stock.quant:stock_quant_reservation_status.stock_quant_reserved_search_view
+msgid "Unreserved"
+msgstr "Desreservar"
