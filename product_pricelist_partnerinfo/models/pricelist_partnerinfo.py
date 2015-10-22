@@ -35,7 +35,7 @@ class PricelistPartnerinfo(models.Model):
     product_code = fields.Char(
         string='Product Code', related='suppinfo_id.product_code', store=True)
     sequence = fields.Integer(
-        string='Sequence', related='suppinfo_id.sequence')
+        string='Sequence', related='suppinfo_id.sequence', store=True)
     company_id = fields.Many2one(
         comodel_name='res.company', string='Company',
-        related='suppinfo_id.company_id')
+        related='suppinfo_id.company_id', store=True)
