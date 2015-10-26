@@ -12,13 +12,15 @@ class MrpBomLine(models.Model):
     @api.multi
     def _compute_standard_price(self):
         for record in self:
-            try:
-                template_std_price = record.product_template.standard_price
-            except AttributeError:
-                # This is in case mrp_product_variants module is not installed
-                template_std_price = 0.0
-            record.standard_price = (
-                record.product_id.standard_price or template_std_price)
+            template_std_price = record.product_id.standard_price
+            if not record.product_id:
+                try:
+                    template_std_price = record.product_template.standard_price
+                except AttributeError:
+                    # This is in case mrp_product_variants module is not
+                    # installed
+                    template_std_price = 0.0
+            record.standard_price = template_std_price
 
     @api.multi
     def _compute_childs_standard_price(self):
@@ -36,7 +38,7 @@ class MrpBomLine(models.Model):
             record.child_bom_id = record.child_line_ids[:1].bom_id
 
     routing_id = fields.Many2one(
-        'mrp.routing', string="Productive Process",
+        comodel_name='mrp.routing', string="Productive Process",
         related="bom_id.routing_id", store=True, readonly=True)
     standard_price = fields.Float(
         string='Cost Price', compute='_compute_standard_price',
