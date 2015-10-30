@@ -12,8 +12,8 @@ addons:
 
 env:
   global:
-  - VERSION="8.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
-  - TRANSIFEX_USER='transbot@odoo-community.org' TRANSIFEX_ORGANIZATION="oca" TRANSIFEX_PROJECT_SLUG="odoomrp-utils-8-0"
+  - VERSION="9.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - TRANSIFEX_USER='transbot@odoo-community.org' TRANSIFEX_ORGANIZATION="oca" TRANSIFEX_PROJECT_SLUG="odoomrp-utils-9-0"
   - secure: Vpshu+bBwtFovOMH7nOlugcJojFULBgpE4WDo1Nkv3uz8za7Q+nya+w3mxR1bRwkcIH6Ke3FR4RGypjWmOuIlGr3rU4BGt86YBL0jNeiDQlBOio6FTMLsGYLLrbUfbfktnDGkYFFKsWvDVvUYeUzk3wx5DJXlQ2BF3wXimLERpU=
   matrix:
   - LINT_CHECK="1"
