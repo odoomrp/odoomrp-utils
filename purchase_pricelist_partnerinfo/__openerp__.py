@@ -37,6 +37,6 @@
     "data": [
         "views/pricelist_partnerinfo_view.xml"
     ],
-    "installable": True,
+    'installable': False,
     "auto_install": True,
 }

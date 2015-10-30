@@ -32,5 +32,5 @@
         "Ana Juaristi <anajuaristi@avanzosc.es>"
     ],
     "category": "Tools",
-    "installable": True,
+    'installable': False,
 }

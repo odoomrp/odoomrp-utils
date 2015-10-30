@@ -29,6 +29,6 @@
     'data': ["views/stock_view.xml",
              "views/account_invoice_view.xml",
              "views/sale_order_view.xml"],
-    'installable': True,
+    'installable': False,
     'auto_install': False,
 }

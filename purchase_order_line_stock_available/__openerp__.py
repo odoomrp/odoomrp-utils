@@ -31,5 +31,5 @@
     "category": "Custom Modules",
     "data": ['views/purchase_view.xml',
              ],
-    "installable": True
+    'installable': False
 }

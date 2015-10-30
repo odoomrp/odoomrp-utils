@@ -40,5 +40,5 @@
         "views/stock_quant_view.xml",
         "wizard/stock_transfer_details_view.xml",
     ],
-    "installable": True,
+    'installable': False,
 }

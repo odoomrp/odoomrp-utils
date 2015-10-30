@@ -37,5 +37,5 @@
         "wizard/wiz_picking_to_wave_view.xml",
         "views/stock_picking_package_preparation_view.xml",
     ],
-    'installable': True,
+    'installable': False,
 }

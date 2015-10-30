@@ -29,5 +29,5 @@
                      "Ana Juaristi <anajuaristi@avanzosc.es>"],
     'category': 'Sales Management',
     "data": [],
-    "installable": True
+    'installable': False
 }

@@ -33,6 +33,6 @@
                 ],
     'data': ['views/stock_planning_view.xml',
              ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
 }

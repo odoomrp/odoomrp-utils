@@ -28,5 +28,5 @@
                      "Ana Juaristi <anajuaristi@avanzosc.es>",
                      "Oihane Crucelaegui <oihanecrucelaegi@avanzosc.es>"],
     "depends": ["purchase", "purchase_requisition"],
-    "installable": True
+    'installable': False
 }

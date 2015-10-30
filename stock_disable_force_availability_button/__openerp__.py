@@ -37,5 +37,5 @@
         "security/stock_disable_force_availability_button_security.xml",
         "views/stock_view.xml",
     ],
-    "installable": True,
+    'installable': False,
 }

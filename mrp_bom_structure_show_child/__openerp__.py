@@ -33,5 +33,5 @@
     "data": [
         "views/mrp_bom_line_structure_view.xml",
         ],
-    "installable": True,
+    'installable': False,
 }

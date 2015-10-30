@@ -36,5 +36,5 @@
     "data": [
         "views/stock_quant_view.xml",
     ],
-    "installable": True,
+    'installable': False,
 }

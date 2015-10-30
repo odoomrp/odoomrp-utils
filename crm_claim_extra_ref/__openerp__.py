@@ -39,5 +39,5 @@
     "data": [
         'views/crm_claim_view.xml',
     ],
-    "installable": True
+    'installable': False
 }

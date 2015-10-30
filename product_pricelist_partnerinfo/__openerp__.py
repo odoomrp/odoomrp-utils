@@ -38,5 +38,5 @@
         "views/pricelist_partnerinfo_view.xml",
         "views/product_view.xml",
     ],
-    "installable": True,
+    'installable': False,
 }

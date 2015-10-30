@@ -39,5 +39,5 @@
              'views/stock_planning_view.xml',
              'views/stock_config_settings_view.xml',
              ],
-    'installable': True,
+    'installable': False,
 }

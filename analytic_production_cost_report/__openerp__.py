@@ -36,5 +36,5 @@
     'data': ['security/ir.model.access.csv',
              'report/analytic_production_cost_report_view.xml',
              ],
-    'installable': True,
+    'installable': False,
 }

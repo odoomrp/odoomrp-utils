@@ -38,5 +38,5 @@ This module creates types of products
         "views/product_view.xml",
         "security/ir.model.access.csv",
     ],
-    "installable": True,
+    'installable': False,
 }

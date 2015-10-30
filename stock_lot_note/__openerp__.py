@@ -35,5 +35,5 @@
     "data": [
         "views/lot_view.xml",
     ],
-    "installable": True,
+    'installable': False,
 }

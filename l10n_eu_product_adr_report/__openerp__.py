@@ -39,5 +39,5 @@
         "report/product_adr_report.xml",
         "security/ir.model.access.csv",
     ],
-    "installable": True,
+    'installable': False,
 }

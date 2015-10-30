@@ -33,6 +33,6 @@
                 ],
     'data': ["views/account_invoice_line_wave_view.xml",
              ],
-    'installable': True,
+    'installable': False,
     'auto_install': True,
 }

@@ -35,5 +35,5 @@
     "data": [
         "views/stock_picking_view.xml",
     ],
-    "installable": True
+    'installable': False
 }
