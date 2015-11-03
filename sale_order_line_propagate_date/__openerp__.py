@@ -4,7 +4,7 @@
 
 {
     "name": "Sale Order Line Propagate Date",
-    "version": "8.0.1.0",
+    "version": "8.0.1.0.0",
     "author": "OdooMRP team, "
               "AvanzOSC, "
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
@@ -15,7 +15,6 @@
                      "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
                      "Ana Juaristi <anajuaristi@avanzosc.es>"],
     "depends": ["sale_order_line_view", "sale_order_line_dates"],
-    "data": ["views/res_partner.xml",
-             "views/sale_order_line.xml"],
+    "data": ["views/sale_order_line.xml"],
     "installable": True
 }
