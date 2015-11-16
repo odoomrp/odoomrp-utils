@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-        <record model="ir.ui.view" id="mrp_production_product_line_stock_info_tree_view">
+        <record id="mrp_production_product_line_stock_info_view_tree" model="ir.ui.view">
             <field name="name">mrp.production.product.line.stock_info.tree</field>
             <field name="model">mrp.production.product.line</field>
             <field name="inherit_id" ref="mrp.mrp_production_product_tree_view" />
@@ -13,7 +13,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="mrp_production_product_line_stock_info_form_view">
+        <record id="mrp_production_product_line_stock_info_view_form" model="ir.ui.view">
             <field name="name">mrp.production.product.line.stock_info.form</field>
             <field name="model">mrp.production.product.line</field>
             <field name="inherit_id" ref="mrp.mrp_production_product_form_view" />
