@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: odoomrp-utils (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 08:45+0000\n"
-"PO-Revision-Date: 2015-09-16 12:31+0000\n"
+"POT-Creation-Date: 2015-11-16 11:58+0000\n"
+"PO-Revision-Date: 2015-10-23 07:47+0000\n"
 "Last-Translator: Oihane Crucelaegui <oihanecruce@gmail.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/oca/odoomrp-utils-8-0/language/es/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,13 @@ msgid ""
 msgstr "<p class=\"oe_view_nocontent_create\">\n                    Pulse para crear una nueva relación producto / empresa.\n                </p>\n            "
 
 #. module: product_pricelist_partnerinfo
+#: help:pricelist.partnerinfo,sequence:0
+msgid "Assigns the priority to the list of product supplier."
+msgstr ""
+
+#. module: product_pricelist_partnerinfo
 #: view:pricelist.partnerinfo:product_pricelist_partnerinfo.pricelist_partnerinfo_search_view
+#: field:pricelist.partnerinfo,company_id:0
 msgid "Company"
 msgstr "Compañía"
 
@@ -83,6 +89,11 @@ msgstr "Información de la empresa / producto"
 #: field:pricelist.partnerinfo,product_tmpl_id:0
 msgid "Product Template"
 msgstr "Plantilla de producto"
+
+#. module: product_pricelist_partnerinfo
+#: field:pricelist.partnerinfo,sequence:0
+msgid "Sequence"
+msgstr "Secuencia"
 
 #. module: product_pricelist_partnerinfo
 #: view:pricelist.partnerinfo:product_pricelist_partnerinfo.pricelist_partnerinfo_search_view

@@ -4,12 +4,13 @@
 # 
 # Translators:
 # danimaribeiro <danimaribeiro@gmail.com>, 2015
+# danimaribeiro <danimaribeiro@gmail.com>, 2015
 msgid ""
 msgstr ""
 "Project-Id-Version: odoomrp-utils (8.0)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 08:45+0000\n"
-"PO-Revision-Date: 2015-10-09 01:13+0000\n"
+"POT-Creation-Date: 2015-11-16 11:58+0000\n"
+"PO-Revision-Date: 2015-11-18 18:01+0000\n"
 "Last-Translator: danimaribeiro <danimaribeiro@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) (http://www.transifex.com/oca/odoomrp-utils-8-0/language/pt_BR/)\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +29,13 @@ msgid ""
 msgstr "<p class=\"oe_view_nocontent_create\">\n                    Clique aqui para criar uma nova informação de lista de preço por parceiro\n                </p>\n            "
 
 #. module: product_pricelist_partnerinfo
+#: help:pricelist.partnerinfo,sequence:0
+msgid "Assigns the priority to the list of product supplier."
+msgstr "Indica a prioridade para a lista de fornecedores"
+
+#. module: product_pricelist_partnerinfo
 #: view:pricelist.partnerinfo:product_pricelist_partnerinfo.pricelist_partnerinfo_search_view
+#: field:pricelist.partnerinfo,company_id:0
 msgid "Company"
 msgstr "Empresa"
 
@@ -83,6 +90,11 @@ msgstr "Info de Parceiro do produto"
 #: field:pricelist.partnerinfo,product_tmpl_id:0
 msgid "Product Template"
 msgstr "Produto"
+
+#. module: product_pricelist_partnerinfo
+#: field:pricelist.partnerinfo,sequence:0
+msgid "Sequence"
+msgstr "Sequência"
 
 #. module: product_pricelist_partnerinfo
 #: view:pricelist.partnerinfo:product_pricelist_partnerinfo.pricelist_partnerinfo_search_view
