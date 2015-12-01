@@ -2,24 +2,27 @@
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
-from openerp import models, workflow, api, exceptions, _
+from openerp import models, api, exceptions, _
 
 
-class wizard_saleorder_wf(models.TransientModel):
+class WizardSaleorderWf(models.TransientModel):
     _name = 'wizard.saleorder.wf'
-    _description = 'Wizard Sale Order Workflow'
+    _description = 'Wizard Sale Order Workflow Finish'
 
     @api.multi
     def saleorder_finish_wf(self):
-        sale_obj = self.env['sale.order']
-        context = self.env.context
-        if 'active_ids' in context:
-            sale_orders = sale_obj.browse(context['active_ids'])
-            for order in sale_orders:
-                if order.state in ('draft', 'done', 'cancel'):
-                    raise exceptions.Warning(
-                        _("Selected Sale Orders cannot be processed as they "
-                          "are already processed or in 'draft' state!"))
-                workflow.trg_delete(self.env.uid, 'sale.order', order.id,
-                                    self.env.cr)
-            sale_orders.write({'state': 'done'})
+        active_id = self.env.context.get('active_id', False)
+        if not active_id:
+            return
+        order = self.env['sale.order'].browse(active_id)
+        if order.state in ('draft', 'done', 'cancel'):
+            raise exceptions.Warning(_("Cannot process already processed "
+                                       "or in 'draft' state order."))
+        elif order.picking_ids.filtered(lambda x:
+                                        x.state not in ('cancel', 'done')):
+            raise exceptions.Warning(_("The order has no processed picking."))
+        elif order.invoice_ids.filtered(lambda x:
+                                        x.state not in ('cancel', 'paid')):
+            raise exceptions.Warning(_("The order has no processed invoices."))
+        order.delete_workflow()
+        order.state = 'done'

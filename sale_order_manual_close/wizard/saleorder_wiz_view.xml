@@ -22,7 +22,7 @@
         </record>
         <act_window id="saleorder_wf" name="End Sale Order Workflow"
             res_model="wizard.saleorder.wf" src_model="sale.order"
-            key2="client_action_multi" view_id="view_saleorder_wf"
+            key2="client_action_relate" view_id="view_saleorder_wf"
             target="new" />
     </data>
 </openerp>

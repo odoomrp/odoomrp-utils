@@ -1,5 +1,4 @@
-
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -19,13 +18,16 @@
 
 {
     "name": "Sale Order manual close",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
     'author': 'OdooMRP team',
     'website': "http://www.odoomrp.com",
     'contributors': ["Daniel Campos <danielcampos@avanzosc.es>",
+                     "Ainara Galdona <ainaragaldona@gmail.com>",
                      "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
                      "Ana Juaristi <ajuaristio@gmail.com>"],
-    "depends": ['sale'],
+    "depends": ['sale',
+                'sale_stock'
+                ],
     "category": "Custom Modules",
     "data": ['wizard/saleorder_wiz_view.xml'],
     "installable": True
