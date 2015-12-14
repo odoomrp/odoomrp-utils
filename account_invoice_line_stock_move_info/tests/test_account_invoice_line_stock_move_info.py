@@ -41,8 +41,10 @@ class TestAccountInvoiceLineStockMoveInfo(common.TransactionCase):
 
     def test_confirm_sale_and_generate_invoice(self):
         self.sale_order.action_button_confirm()
-        cond = [('sale_id', '=', self.sale_order.id)]
-        picking = self.picking_model.search(cond, limit=1)
+        pickings = self.picking_model.search([])
+        # "Filtered" is used because the "sale_id" field of pickings is not
+        # stored to disk
+        picking = pickings.filtered(lambda x: x.sale_id == self.sale_order)
         self.assertEqual(len(picking), 1, "Picking not found")
         picking.force_assign()
         self.assertEqual(picking.state, 'assigned', "Picking not assigned")
