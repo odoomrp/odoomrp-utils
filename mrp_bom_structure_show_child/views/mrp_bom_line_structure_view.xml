@@ -34,8 +34,9 @@ action = {
             <field name="arch" type="xml">
                 <data>
                     <field name="product_uom" position="after">
-                        <field name="product_qty"/>
-                        <field name="routing_id"/>
+                        <field name="product_qty" />
+                        <field name="bom_qty" />
+                        <field name="routing_id" groups="mrp.group_mrp_routings" />
                         <field name="standard_price" />
                         <field name="childs_standard_price" />
                     </field>

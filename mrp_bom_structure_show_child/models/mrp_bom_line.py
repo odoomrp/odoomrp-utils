@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-# For copyright and license notices, see __openerp__.py file in root directory
-##############################################################################
+# (c) 2015 Alfredo de la Fuente - AvanzOSC
+# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
+
 from openerp import models, fields, api
 import openerp.addons.decimal_precision as dp
 
@@ -9,29 +9,43 @@ import openerp.addons.decimal_precision as dp
 class MrpBomLine(models.Model):
     _inherit = 'mrp.bom.line'
 
-    @api.one
+    @api.multi
     def _compute_standard_price(self):
-        try:
-            template_std_price = self.product_template.standard_price
-        except AttributeError:
-            # This is in case mrp_product_variants module is not installed
-            template_std_price = 0.0
-        self.standard_price = (
-            self.product_id.standard_price or template_std_price)
+        for record in self:
+            template_std_price = record.product_id.standard_price
+            if not record.product_id:
+                try:
+                    template_std_price = record.product_template.standard_price
+                except AttributeError:
+                    # This is in case mrp_product_variants module is not
+                    # installed
+                    template_std_price = 0.0
+            record.standard_price = template_std_price
 
-    @api.one
+    @api.multi
     def _compute_childs_standard_price(self):
-        self.childs_standard_price = 0
-        for line in self.child_line_ids:
-            self.childs_standard_price += (line.standard_price +
-                                           line.childs_standard_price)
+        for record in self:
+            childs_standard_price = 0.0
+            for line in record.child_line_ids:
+                childs_standard_price += (
+                    (line.product_qty / line.bom_id.product_qty) *
+                    (line.standard_price + line.childs_standard_price))
+            record.childs_standard_price = childs_standard_price
+
+    @api.multi
+    def _compute_child_bom_id(self):
+        for record in self:
+            record.child_bom_id = record.child_line_ids[:1].bom_id
 
     routing_id = fields.Many2one(
-        'mrp.routing', string="Productive Process",
+        comodel_name='mrp.routing', string="Productive Process",
         related="bom_id.routing_id", store=True, readonly=True)
     standard_price = fields.Float(
         string='Cost Price', compute='_compute_standard_price',
-        digits_compute=dp.get_precision('Product Price'))
+        digits=dp.get_precision('Product Price'))
     childs_standard_price = fields.Float(
         string='Childs Cost Price', compute='_compute_childs_standard_price',
-        digits_compute=dp.get_precision('Product Price'))
+        digits=dp.get_precision('Product Price'))
+    child_bom_id = fields.Many2one(
+        comodel_name='mrp.bom', compute='_compute_child_bom_id')
+    bom_qty = fields.Float(related='child_bom_id.product_qty')
