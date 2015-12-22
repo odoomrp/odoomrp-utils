@@ -20,5 +20,23 @@ msgstr ""
 
 #. module: purchase_product_menu
 #: model:ir.ui.menu,name:purchase_product_menu.menu_products
+#: model:ir.actions.act_window,name:purchase_product_menu.product_normal_action_purchase
 msgid "Products"
 msgstr "Proizvodi"
+
+#. module: purchase
+#: model:ir.actions.act_window,help:purchase_product_menu.product_normal_action_purchase
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"            Click to define a new product.\n"
+"          </p><p>\n"
+"            You must define a product for everything you purchase, whether\n"
+"            it's a physical product, a consumable or services you buy to\n"
+"            subcontractants.\n"
+"          </p><p>\n"
+"            The product form contains detailed information to improve the\n"
+"            purchase process: prices, procurement logistics, accounting data,\n"
+"            available suppliers, etc.\n"
+"          </p>\n"
+"        "
+msgstr "<p class=\"oe_view_nocontent_create\">\n            Določi nov proizvod.\n          </p><p>\n            Proizvod se določi za karkoli nabavljamo, najsi bo fizičen\n            proizvod, potrošni material ali storitev\n            podizvajalcev.\n          </p><p>\n            Obrazec proizvoda vsebuje podrobne podatke potrebne za izboljšanje\n            nabavnega procesa: cene, nabavno logistiko, knjigovodske podatke,\n            razpoložljive dobavitelje, itd.\n          </p>\n        "
