@@ -12,10 +12,16 @@ class MrpBomLine(models.Model):
     @api.multi
     def _compute_standard_price(self):
         for record in self:
-            template_std_price = record.product_id.standard_price
+            template_std_price = record.product_uom._compute_price(
+                record.product_id.uom_id.id, record.product_id.standard_price,
+                record.product_uom.id)
             if not record.product_id:
                 try:
-                    template_std_price = record.product_template.standard_price
+                    template_std_price =\
+                        record.product_uom._compute_price(
+                            record.product_template.uom_id.id,
+                            record.product_template.standard_price,
+                            record.product_uom.id)
                 except AttributeError:
                     # This is in case mrp_product_variants module is not
                     # installed
