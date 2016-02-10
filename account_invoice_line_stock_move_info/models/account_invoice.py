@@ -25,6 +25,14 @@ class AccountInvoice(models.Model):
             {'invoice_state': '2binvoiced'})
         return res
 
+    @api.multi
+    def action_cancel_draft(self):
+        # go from canceled state to draft state
+        res = super(AccountInvoice, self).action_cancel_draft()
+        self.mapped('invoice_line.picking_id').write(
+            {'invoice_state': 'invoiced'})
+        return res
+
 
 class AccountInvoiceLine(models.Model):
     _inherit = 'account.invoice.line'
