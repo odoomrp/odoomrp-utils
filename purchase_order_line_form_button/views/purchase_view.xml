@@ -16,7 +16,7 @@
             <field name="name">purchase.order.line.button.form</field>
             <field name="model">purchase.order.line</field>
             <field eval="40" name="priority"/>
-            <field name="inherit_id" ref="purchase.purchase_order_line_form" />
+            <field name="inherit_id" ref="purchase.purchase_order_line_form2" />
             <field name="arch" type="xml">
                 <xpath expr="//sheet" position="after">
                     <footer invisible="not context.get('view_buttons')">
