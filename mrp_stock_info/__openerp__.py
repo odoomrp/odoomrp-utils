@@ -37,6 +37,6 @@
     "data": [
         "views/mrp_production_view.xml",
     ],
-    'installable': False,
+    'installable': True,
     "auto_install": False,
 }
