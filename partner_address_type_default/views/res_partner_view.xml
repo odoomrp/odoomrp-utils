@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- © 2015 AvanzOSC, Pedro M. Baeza, Sodexis, OdooMRP team
+     License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl.html). -->
 <openerp>
     <data>
-        <record model="ir.ui.view" id="view_partner_form_inh_defaultaddress">
-            <field name="name">view.partner.form.inh.defaultaddress</field>
+        <record model="ir.ui.view" id="view_partner_form_inherit">
+            <field name="name">view.partner.form.inherit</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
-                <xpath expr="//form[@string='Contact']//sheet//group//div[@name='div_type']" position="after">
-                    <label for="default_address" attrs="{'invisible':['|',('customer', '=', False),('type', 'not in', ('invoice','delivery'))]}"/>
-                    <div name="default_address" attrs="{'invisible':['|',('customer', '=', False),('type', 'not in', ('invoice','delivery'))]}">
-                        <field name="default_address"/>
-                    </div>
-                    <newline/>
+                <xpath
+                    expr="//page/field/form//field[@name='type']" position="after">
+                    <group attrs="{'invisible':['|',('customer', '=', False),('type', 'not in', ('invoice','delivery'))]}">
+                        <field name="default_address" />
+                    </group>
                 </xpath>
             </field>
         </record>
