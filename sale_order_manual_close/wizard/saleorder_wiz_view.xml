@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_saleorder_wf" model="ir.ui.view">
+            <field name="name">view.saleorder.wf</field>
+            <field name="model">wizard.saleorder.wf</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Sale Order Process">
+                    <separator string="Finish selected Sale Orders?"
+                        colspan="4" />
+                    <footer>
+                        <button class="oe_highlight" name="saleorder_finish_wf"
+                            string="Accept" type="object" />
+                        or
+                        <button class="oe_link" special="cancel"
+                            string="Cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <act_window id="saleorder_wf" name="End Sale Order Workflow"
+            res_model="wizard.saleorder.wf" src_model="sale.order"
+            key2="client_action_relate" view_id="view_saleorder_wf"
+            target="new" />
+    </data>
+</openerp>
