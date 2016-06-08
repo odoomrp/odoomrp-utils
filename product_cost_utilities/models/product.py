@@ -13,7 +13,7 @@ class ProductProduct(models.Model):
     @api.depends('list_price', 'cost_price')
     def _compute_average_margin(self):
         for product in self:
-            product.manual_margin = product.list_price - product.cost_price
+            product.average_margin = product.list_price - product.cost_price
 
     @api.multi
     @api.depends('list_price', 'manual_standard_cost')

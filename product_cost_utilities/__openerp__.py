@@ -8,12 +8,10 @@
     "category": "Custom Module",
     "license": "AGPL-3",
     "author": "OdooMRP team,"
-              "AvanzOSC,"
-              "Serv. Tecnol. Avanzados - Pedro M. Baeza",
+              "AvanzOSC",
     "website": "http://www.odoomrp.com",
     "contributors": [
         "Esther Martín <esthermartin@avanzosc.es>",
-        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
         "Ana Juaristi <anajuaristi@avanzosc.es>",
     ],
     "depends": [

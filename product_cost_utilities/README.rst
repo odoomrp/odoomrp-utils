@@ -6,7 +6,7 @@
 Product Cost Utilities
 ======================
 
-* This module shows adds two new fields on products: "average margin" and
+* This module adds two new fields on products: "average margin" and
   "manual margin".
 
 
@@ -18,4 +18,3 @@ Contributors
 ------------
 * Esther Martín <esthermartin@avanzosc.es>
 * Ana Juaristi <ajuaristio@gmail.com>
-* Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>
