@@ -19,8 +19,8 @@ class MrpBomLine(models.Model):
                 try:
                     template_std_price =\
                         record.product_uom._compute_price(
-                            record.product_template.uom_id.id,
-                            record.product_template.standard_price,
+                            record.product_tmpl_id.uom_id.id,
+                            record.product_tmpl_id.standard_price,
                             record.product_uom.id)
                 except AttributeError:
                     # This is in case mrp_product_variants module is not
