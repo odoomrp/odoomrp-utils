@@ -10,10 +10,11 @@ class ProductProduct(models.Model):
     _inherit = 'product.product'
 
     @api.multi
-    @api.depends('list_price', 'cost_price')
+    @api.depends('list_price', 'standard_price')
     def _compute_average_margin(self):
         for product in self:
-            product.average_margin = product.list_price - product.cost_price
+            product.average_margin =\
+                product.list_price - product.standard_price
 
     @api.multi
     @api.depends('list_price', 'manual_standard_cost')
@@ -23,11 +24,11 @@ class ProductProduct(models.Model):
                 product.list_price - product.manual_standard_cost
 
     @api.multi
-    @api.depends('cost_price', 'manual_standard_cost')
+    @api.depends('standard_price', 'manual_standard_cost')
     def _compute_cost(self):
         for product in self:
             product.cost = \
-                product.manual_standard_cost - product.cost_price
+                product.manual_standard_cost - product.standard_price
 
     average_margin = fields.Float(
         digits=dp.get_precision('Product Price'),

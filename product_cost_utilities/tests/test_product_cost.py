@@ -12,7 +12,7 @@ class TestProductCost(common.TransactionCase):
         self.product = self.env.ref('product.product_product_6')
 
     def test_compute_average_manual_margin(self):
-        average_margin = self.product.list_price - self.product.cost_price
+        average_margin = self.product.list_price - self.product.standard_price
         self.assertEqual(self.product.average_margin, average_margin,
                          'Average margin doesn\'t match')
         manual_margin = \

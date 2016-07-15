@@ -7,7 +7,7 @@
     "version": "8.0.1.0.0",
     "category": "Custom Module",
     "license": "AGPL-3",
-    "author": "OdooMRP team,"
+    "author": "OdooMRP team, "
               "AvanzOSC",
     "website": "http://www.odoomrp.com",
     "contributors": [
@@ -16,7 +16,7 @@
     ],
     "depends": [
         "mrp_production_estimated_cost",
-        "product_variant_cost",
+        "product_variant_cost_price",
     ],
     "data": [
         "views/product_view.xml",
