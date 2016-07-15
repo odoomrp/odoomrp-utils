@@ -13,6 +13,7 @@
                 </field>
             </field>
         </record>
+
         <record id="product_product_cost_view_search" model="ir.ui.view">
             <field name="name">product.product.cost.search</field>
             <field name="model">product.product</field>
