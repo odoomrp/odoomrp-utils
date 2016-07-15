@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* purchase_order_manual_close
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-03 09:12+0000\n"
+"PO-Revision-Date: 2015-12-03 09:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_order_manual_close
+#: view:purchase.order.finish.wf:purchase_order_manual_close.purchase_order_finish_wf_form_view
+msgid "Accept"
+msgstr "Aceptar"
+
+#. module: purchase_order_manual_close
+#: view:purchase.order.finish.wf:purchase_order_manual_close.purchase_order_finish_wf_form_view
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: purchase_order_manual_close
+#: code:addons/purchase_order_manual_close/tests/test_purchase_order_manual_close.py:60
+#: code:addons/purchase_order_manual_close/tests/test_purchase_order_manual_close.py:71
+#: code:addons/purchase_order_manual_close/tests/test_purchase_order_manual_close.py:132
+#: code:addons/purchase_order_manual_close/wizard/purchase_order_finish_wf.py:19
+#, python-format
+msgid "Cannot process already processed or in 'draft' state order."
+msgstr "No se puede procesar un pedido procesado o en estado 'borrador'."
+
+#. module: purchase_order_manual_close
+#: field:purchase.order.finish.wf,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: purchase_order_manual_close
+#: field:purchase.order.finish.wf,create_date:0
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: purchase_order_manual_close
+#: model:ir.actions.act_window,name:purchase_order_manual_close.action_purchase_order_finish_wf
+msgid "End Purchase Order Workflow"
+msgstr "Finalizar workflow del pedido de compra"
+
+#. module: purchase_order_manual_close
+#: view:purchase.order.finish.wf:purchase_order_manual_close.purchase_order_finish_wf_form_view
+msgid "Finish selected Purchase Orders?"
+msgstr "¿Quieres finalizar los pedidos de compra seleccionados?"
+
+#. module: purchase_order_manual_close
+#: field:purchase.order.finish.wf,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: purchase_order_manual_close
+#: field:purchase.order.finish.wf,write_uid:0
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+#. module: purchase_order_manual_close
+#: field:purchase.order.finish.wf,write_date:0
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+#. module: purchase_order_manual_close
+#: view:purchase.order.finish.wf:purchase_order_manual_close.purchase_order_finish_wf_form_view
+msgid "Purchase Order Process"
+msgstr "Procesar pedidos de compra"
+
+#. module: purchase_order_manual_close
+#: code:addons/purchase_order_manual_close/tests/test_purchase_order_manual_close.py:107
+#: code:addons/purchase_order_manual_close/wizard/purchase_order_finish_wf.py:26
+#, python-format
+msgid "The order has no processed invoices."
+msgstr "El pedido tiene facturas no procesadas."
+
+#. module: purchase_order_manual_close
+#: code:addons/purchase_order_manual_close/tests/test_purchase_order_manual_close.py:83
+#: code:addons/purchase_order_manual_close/tests/test_purchase_order_manual_close.py:95
+#: code:addons/purchase_order_manual_close/wizard/purchase_order_finish_wf.py:23
+#, python-format
+msgid "The order has no processed picking."
+msgstr "El pedido tiene albaranes no procesadas."
+
+#. module: purchase_order_manual_close
+#: model:ir.model,name:purchase_order_manual_close.model_purchase_order_finish_wf
+msgid "Wizard Purchase Order Workflow Finish"
+msgstr "Asistente para finalizar el workflow de pedidos de compra"
+
+#. module: purchase_order_manual_close
+#: view:purchase.order.finish.wf:purchase_order_manual_close.purchase_order_finish_wf_form_view
+msgid "or"
+msgstr "o"
+
