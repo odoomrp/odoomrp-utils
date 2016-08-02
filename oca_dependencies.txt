@@ -6,3 +6,4 @@ stock-logistics-workflow https://github.com/OCA/stock-logistics-workflow
 stock-logistics-warehouse https://github.com/OCA/stock-logistics-warehouse
 manufacture https://github.com/OCA/manufacture
 product-attribute https://github.com/OCA/product-attribute
+product-variant https://github.com/OCA/product-variant
