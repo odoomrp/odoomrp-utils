@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="purchase_order_finish_wf_form_view" model="ir.ui.view">
+            <field name="name">purchase.order.finish.wf.view</field>
+            <field name="model">purchase.order.finish.wf</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="Purchase Order Process">
+                    <separator string="Finish selected Purchase Orders?"
+                        colspan="4" />
+                    <footer>
+                        <button class="oe_highlight" name="end_workflow"
+                            string="Accept" type="object" />
+                        or
+                        <button class="oe_link" special="cancel"
+                            string="Cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window
+            id="action_purchase_order_finish_wf"
+            name="End Purchase Order Workflow"
+            res_model="purchase.order.finish.wf"
+            src_model="purchase.order"
+            key2="client_action_relate"
+            view_id="purchase_order_finish_wf_form_view"
+            target="new" />
+    </data>
+</openerp>

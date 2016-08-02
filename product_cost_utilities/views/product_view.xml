@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="product_product_cost_view_tree" model="ir.ui.view">
+            <field name="name">product.product.cost.tree</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_product_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="product_tmpl_id" position="after">
+                    <field name="average_margin"/>
+                    <field name="manual_margin"/>
+                    <field name="cost"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="product_product_cost_view_search" model="ir.ui.view">
+            <field name="name">product.product.cost.search</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_search_form_view"/>
+            <field name="arch" type="xml">
+                <field name="attribute_value_ids" position="after">
+                    <filter string="Average margin negative" name="average_negative" domain="[('average_margin','&lt;=',0)]"/>
+                    <filter string="Manual margin negative" name="manual_negative" domain="[('manual_margin','&lt;=',0)]"/>
+                    <filter string="Manual cost != Cost price" name="manual_different_standard" domain="[('cost','!=',0)]"/>
+                 </field>
+            </field>
+        </record>
+    </data>
+</openerp>
