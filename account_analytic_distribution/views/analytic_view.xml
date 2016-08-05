@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="analytic_distribution_form" model="ir.ui.view">
+            <field name="name">Analytic Distribution Form</field>
+            <field name="model">analytic.distribution.line</field>
+            <field name="arch" type="xml">
+                <form string="Analytic Distribution">
+                    <field name="parent_id" invisible="1"/>
+                    <group>
+                        <field name="analytic_id" required="1"/>
+                        <field name="percent"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="analytic_distribution_tree" model="ir.ui.view">
+            <field name="name">Analytic Distribution Tree</field>
+            <field name="model">analytic.distribution.line</field>
+            <field name="arch" type="xml">
+                <tree string="Analytic Distribution" editable="bottom">
+                    <field name="analytic_id" required="1"/>
+                    <field name="percent" sum="Percent"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_account_analytic_account_form" model="ir.ui.view">
+            <field name="name">analytic.analytic.account.form</field>
+            <field name="model">account.analytic.account</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+            <field name="arch" type="xml">
+                <notebook position="inside">
+                    <page string="Distribution">
+                        <group>
+                            <field name="distribution_type" attrs="{'required': [('distribution_line_ids', '!=', False)]}"/>
+                            <separator string="Distribution Lines"/>
+                            <field name="distribution_line_ids" nolabel="1"/>
+                        </group>
+                    </page>
+                </notebook>
+            </field>
+        </record>
+
+    </data>
+</openerp>
