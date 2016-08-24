@@ -1,14 +1,17 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 # For copyright and license notices, see __openerp__.py file in root directory
 ##############################################################################
 
 from openerp import models, fields
+from openerp.addons import decimal_precision as dp
 
 
 class StockQuant(models.Model):
     _inherit = 'stock.quant'
 
+    cost = fields.Float(digits=dp.get_precision('Product Price'))
+    inventory_value = fields.Float(digits=dp.get_precision('Product Price'))
     product_incoming_qty = fields.Float(
         string='Incoming Product', related='product_id.incoming_qty',
         help="Quantity of products that are planned to arrive.\n"
