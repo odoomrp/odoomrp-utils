@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+
+        <record id="view_invoice_line_tree" model="ir.ui.view">
+            <field name="name">account.invoice.line.tree</field>
+            <field name="model">account.invoice.line</field>
+            <field name="inherit_id" ref="account.view_invoice_line_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="before">
+                    <field name="invoice_id"/>
+                    <field name="product_id"/>
+                </field>
+                <field name="account_id" position="after">
+                    <field name="account_analytic_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_invoice_line_search" model="ir.ui.view">
+            <field name="name">account.invoice.line.search</field>
+            <field name="model">account.invoice.line</field>
+            <field name="arch" type="xml">
+                <search string="Invoice Lines">
+                    <field name="invoice_id"/>
+                    <field name="partner_id"/>
+                    <field name="product_id"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>

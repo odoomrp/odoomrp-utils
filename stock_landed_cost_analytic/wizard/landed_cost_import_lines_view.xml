@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record id="landed_cost_import_invoice_lines_form" model="ir.ui.view">
+            <field name="name">landed.cost.import.invoice.lines.form</field>
+            <field name="model">landed.cost.import.invoice.lines</field>
+            <field name="arch" type="xml">
+                <form string="Import Invoice Lines">
+                    <separator string="Select some invoice lines to import."/>
+                    <field name="invoice_line_ids" domain="[('invoice_id.type', '=', 'in_invoice'), ('product_id', '!=', False)]"/>
+                    <footer>
+                        <button name="import_lines" string="_Apply" type="object" class="oe_highlight"/>
+                        or
+                        <button string="_Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="act_landed_cost_import_invoice_lines" model="ir.actions.act_window">
+            <field name="name">Landed Cost Import Lines</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">landed.cost.import.invoice.lines</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="view_id" ref="landed_cost_import_invoice_lines_form"/>
+        </record>
+    </data>
+</openerp>

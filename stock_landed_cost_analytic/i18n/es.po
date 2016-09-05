@@ -1,0 +1,122 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_landed_cost_analytic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-09-06 08:15+0000\n"
+"PO-Revision-Date: 2016-09-06 10:17+0100\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: stock_landed_cost_analytic
+#: code:addons/stock_landed_cost_analytic/models/stock_landed_cost.py:46
+#, python-format
+msgid " already out"
+msgstr " transferido"
+
+#. module: stock_landed_cost_analytic
+#: field:stock.landed.cost,analytic_id:0
+#: field:stock.landed.cost.lines,analytic_id:0
+msgid "Analytic Account"
+msgstr "Cuenta analítica"
+
+#. module: stock_landed_cost_analytic
+#: view:stock.landed.cost:stock_landed_cost_analytic.view_stock_landed_cost_form
+msgid "Cost Lines"
+msgstr "Líneas de coste"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,create_uid:0
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,create_date:0
+msgid "Created on"
+msgstr "Creado el"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,display_name:0
+msgid "Display Name"
+msgstr "Mostrar nombre"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_landed_cost_analytic
+#: code:addons/stock_landed_cost_analytic/wizard/landed_cost_import_lines.py:21
+#, python-format
+msgid "INV"
+msgstr "FACT"
+
+#. module: stock_landed_cost_analytic
+#: view:landed.cost.import.invoice.lines:stock_landed_cost_analytic.landed_cost_import_invoice_lines_form
+#: view:stock.landed.cost:stock_landed_cost_analytic.view_stock_landed_cost_form
+msgid "Import Invoice Lines"
+msgstr "Importar líneas de factura"
+
+#. module: stock_landed_cost_analytic
+#: view:account.invoice.line:stock_landed_cost_analytic.view_invoice_line_search
+#: field:landed.cost.import.invoice.lines,invoice_line_ids:0
+msgid "Invoice Lines"
+msgstr "Líneas de factura"
+
+#. module: stock_landed_cost_analytic
+#: model:ir.actions.act_window,name:stock_landed_cost_analytic.act_landed_cost_import_invoice_lines
+msgid "Landed Cost Import Lines"
+msgstr "Importar líneas a costes en destino"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,__last_update:0
+msgid "Last Modified on"
+msgstr "Última modificación el"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,write_uid:0
+msgid "Last Updated by"
+msgstr "Modificado última vez por"
+
+#. module: stock_landed_cost_analytic
+#: field:landed.cost.import.invoice.lines,write_date:0
+msgid "Last Updated on"
+msgstr "Modificado última vez el"
+
+#. module: stock_landed_cost_analytic
+#: view:landed.cost.import.invoice.lines:stock_landed_cost_analytic.landed_cost_import_invoice_lines_form
+msgid "Select some invoice lines to import."
+msgstr "Selecciona alguna línea de factura para importar."
+
+#. module: stock_landed_cost_analytic
+#: model:ir.model,name:stock_landed_cost_analytic.model_stock_landed_cost
+msgid "Stock Landed Cost"
+msgstr "Coste en destino"
+
+#. module: stock_landed_cost_analytic
+#: model:ir.model,name:stock_landed_cost_analytic.model_stock_landed_cost_lines
+msgid "Stock Landed Cost Lines"
+msgstr "Líneas de coste en destino"
+
+#. module: stock_landed_cost_analytic
+#: view:landed.cost.import.invoice.lines:stock_landed_cost_analytic.landed_cost_import_invoice_lines_form
+msgid "_Apply"
+msgstr "_Aplicar"
+
+#. module: stock_landed_cost_analytic
+#: view:landed.cost.import.invoice.lines:stock_landed_cost_analytic.landed_cost_import_invoice_lines_form
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#. module: stock_landed_cost_analytic
+#: view:landed.cost.import.invoice.lines:stock_landed_cost_analytic.landed_cost_import_invoice_lines_form
+msgid "or"
+msgstr "o"
