@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -17,15 +17,16 @@
 ##############################################################################
 {
     'name': 'MRP Production Unreserve Movements',
-    'version': "1.0",
+    'version': "8.0.1.1.0",
     'author': 'OdooMRP team,'
               'AvanzOSC,'
               'Serv. Tecnol. Avanzados - Pedro M. Baeza',
     'website': "http://www.odoomrp.com",
     "contributors": [
-        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com",
+        "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
         "Ana Juaristi <anajuaristi@avanzosc.es>",
         "Alfredo de la Fuente <alfredodelafuente@avanzosc.es>",
+        "Ainara Galdona <ainaragaldona@avanzosc.es>"
         ],
     'category': 'Manufacturing',
     'depends': ['mrp',
@@ -34,6 +35,7 @@
                 ],
     'data': ["views/mrp_production_view.xml",
              "views/mrp_production_workcenter_line_view.xml",
+             "views/mrp_production_workflow.xml"
              ],
     'installable': True,
 }

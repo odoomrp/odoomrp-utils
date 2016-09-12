@@ -39,6 +39,15 @@ class MrpProduction(models.Model):
                 not x.work_order or x.work_order.state == 'draft'))
         return moves.do_unreserve()
 
+    @api.multi
+    def check_unreserved_moves(self):
+        self.ensure_one()
+        moves = self.move_lines.filtered(
+            lambda x: x.state in ('assigned', 'done'))
+        if moves:
+            return False
+        return True
+
 
 class MrpProductionWorkcenterLine(models.Model):
     _inherit = 'mrp.production.workcenter.line'
