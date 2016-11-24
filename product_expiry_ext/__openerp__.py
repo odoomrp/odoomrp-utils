@@ -18,7 +18,8 @@
 
 {
     "name": "Products Expiry Date - Extension",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
+    "license": "AGPL-3",
     "depends": [
         "stock",
         "product_expiry",
