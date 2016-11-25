@@ -18,6 +18,7 @@
                 </xpath>
                 <field name="create_date" position="after">
                     <field name="expiry_state" />
+                    <field name="mrp_date" />
                 </field>
             </field>
         </record>
@@ -38,6 +39,9 @@
                             <field name="use_date" />
                             <field name="life_date" />
                         </group>
+                        <group>
+                            <field name="mrp_date"/>
+                        </group>
                     </group>
                 </xpath>
             </field>
@@ -50,6 +54,7 @@
             <field name="arch" type="xml">
                 <field name="product_id" position="after">
                     <field name="expiry_state" />
+                    <field name="mrp_date" />
                 </field>
             </field>
         </record>
