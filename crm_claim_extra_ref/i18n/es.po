@@ -4,15 +4,15 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-20 08:37+0000\n"
-"PO-Revision-Date: 2015-04-20 10:39+0100\n"
-"Last-Translator: Alfredo <alfredodelafuente@avanzosc.com>\n"
+"POT-Creation-Date: 2016-12-06 13:12+0000\n"
+"PO-Revision-Date: 2016-12-06 13:12+0000\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
 #. module: crm_claim_extra_ref
@@ -21,39 +21,34 @@ msgid "Claim"
 msgstr "Reclamación"
 
 #. module: crm_claim_extra_ref
-#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
-msgid "Partner"
-msgstr "Empresa"
-
-#. module: crm_claim_extra_ref
-#: field:crm.claim,ref_model_name2:0
+#: model:ir.model.fields,field_description:crm_claim_extra_ref.field_crm_claim_ref_model_name2
 msgid "Ref. Model 2"
-msgstr "Ref. modelo 2"
+msgstr "Modelo ref. 2"
 
 #. module: crm_claim_extra_ref
-#: field:crm.claim,ref_model_name3:0
+#: model:ir.model.fields,field_description:crm_claim_extra_ref.field_crm_claim_ref_model_name3
 msgid "Ref. Model 3"
-msgstr "Ref. modelo 3"
+msgstr "Modelo ref. 3"
 
 #. module: crm_claim_extra_ref
-#: field:crm.claim,ref_name2:0
+#: model:ir.model.fields,field_description:crm_claim_extra_ref.field_crm_claim_ref_name2
 msgid "Ref. Name 2"
-msgstr "Ref. descripción 2"
+msgstr "Nombre ref. 2"
 
 #. module: crm_claim_extra_ref
-#: field:crm.claim,ref_name3:0
+#: model:ir.model.fields,field_description:crm_claim_extra_ref.field_crm_claim_ref_name3
 msgid "Ref. Name 3"
-msgstr "Ref. descripción 3"
+msgstr "Nombre ref. 3"
 
 #. module: crm_claim_extra_ref
-#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
-#: field:crm.claim,ref2:0
+#: model:ir.model.fields,field_description:crm_claim_extra_ref.field_crm_claim_ref2
+#: model:ir.ui.view,arch_db:crm_claim_extra_ref.view_crm_case_claims_filter
 msgid "Reference 2"
 msgstr "Referencia 2"
 
 #. module: crm_claim_extra_ref
-#: view:crm.claim:crm_claim_extra_ref.view_crm_case_claims_filter_inh_extraref
-#: field:crm.claim,ref3:0
+#: model:ir.model.fields,field_description:crm_claim_extra_ref.field_crm_claim_ref3
+#: model:ir.ui.view,arch_db:crm_claim_extra_ref.view_crm_case_claims_filter
 msgid "Reference 3"
 msgstr "Referencia 3"
 
