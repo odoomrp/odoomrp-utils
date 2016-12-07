@@ -38,9 +38,23 @@ class ProductUl(models.Model):
                               help='This is the related product when the UL is'
                               ' sold.')
     ul_qty = fields.Float(string='Quantity')
+    # These fields are redefined here for not losing them on the migration to
+    # v9, as the model has disappeared
+    name = fields.Char()
+    type = fields.Selection()
+    height = fields.Float()
+    width = fields.Float()
+    ul_length = fields.Float()
+    weight = fields.Float()
 
 
 class ProductPackaging(models.Model):
     _inherit = 'product.packaging'
 
     product_tmpl_id = fields.Many2one(required=False)
+    # These fields are redefined here for not losing them on the migration to
+    # v9, as the model has removed them
+    ul = fields.Many2one()
+    ul_qty = fields.Integer()
+    ul_container = fields.Many2one()
+    rows = fields.Integer()
