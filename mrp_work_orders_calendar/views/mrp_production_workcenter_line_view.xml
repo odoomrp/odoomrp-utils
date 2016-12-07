@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="workcenter_line_future_calendar_inh_bycenter">
+            <field name="name">workcenter.line.future.calendar.inh.bycenter</field>
+            <field name="model">mrp.production.workcenter.line</field>
+            <field name="inherit_id" ref="mrp_operations_extension.workcenter_line_future_calendar" />
+            <field name="arch" type="xml">
+                 <calendar position="attributes">
+                    <attribute name="color">workcenter_id</attribute>
+                 </calendar>
+            </field>
+        </record>
+    </data>
+</openerp>
