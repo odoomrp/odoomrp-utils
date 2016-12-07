@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_ul_form_view" model="ir.ui.view">
+        <field name="name">product.ul.form.view</field>
+        <field name="model">product.ul</field>
+        <field name="arch" type="xml">
+            <form string="Logistic Units">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="type"/>
+                    </group>
+                    <group>
+                        <field name="height"/>
+                        <field name="width"/>
+                        <field name="ul_length"/>
+                        <field name="weight"/>
+                    </group>
+                    <group>
+                        <field name="ul_qty"/>
+                        <field name="product"/>
+                    </group>
+                    <field name="packagings" nolabel="1"
+                           context="{'default_ul_container':id}">
+                        <tree editable="bottom">
+                            <field name="ul_qty"/>
+                            <field name="rows"/>
+                            <field name="qty"/>
+                            <field name="product_tmpl_id"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_ul_tree" model="ir.ui.view">
+        <field name="name">product.ul.tree</field>
+        <field name="model">product.ul</field>
+        <field name="arch" type="xml">
+            <tree string="Logistic Units">
+                <field name="name"/>
+                <field name="type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="product_ul_form_action" model="ir.actions.act_window">
+        <field name="name">Logistic Units</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.ul</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to add a new Logistic Unit
+            </p>
+            <p>
+                The logistic unit defines the container used for the package.
+                It has a type (e.g. pallet, box, ...) and you can specify its
+                size.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+            action="product_ul_form_action"
+            groups="product.group_stock_packaging"
+            id="menu_product_ul_form_action"
+            parent="product.prod_config_main"
+            sequence="5"
+    />
+
+</odoo>

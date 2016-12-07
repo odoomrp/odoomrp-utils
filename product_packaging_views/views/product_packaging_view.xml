@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="product_packaging_tree_view" model="ir.ui.view">
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="qty" position="after">
+                <field name="ul"/>
+                <field name="ul_container"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="product_packaging_form_view" model="ir.ui.view">
+        <field name="model">product.packaging</field>
+        <field name="inherit_id" ref="product.product_packaging_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet/group" position="inside">
+                <group>
+                    <field name="ul"/>
+                    <field name="product_tmpl_id"/>
+                </group>
+                <group string="Palletization">
+                    <field name="ul_qty"/>
+                    <field name="rows"/>
+                    <field name="ul_container"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_packaging_form_action" model="ir.actions.act_window">
+        <field name="name">Product Packagings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product.packaging</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+            action="product_packaging_form_action"
+            groups="product.group_stock_packaging"
+            id="menu_product_packaging_form_action"
+            parent="product.prod_config_main"
+            sequence="6"
+    />
+
+</odoo>

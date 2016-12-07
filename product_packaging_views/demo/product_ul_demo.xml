@@ -1,0 +1,12 @@
+<odoo>
+
+    <record id="product_ul_box" model="product.ul">
+        <field name="name">Box 20x20x40</field>
+        <field name="type">box</field>
+    </record>
+    <record id="product_ul_big_box" model="product.ul">
+        <field name="name">Box 30x40x60</field>
+        <field name="type">box</field>
+    </record>
+
+</odoo>

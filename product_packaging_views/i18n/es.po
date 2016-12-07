@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 9.0c\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-04-29 13:11+0000\n"
-"PO-Revision-Date: 2015-04-29 13:11+0000\n"
+"POT-Creation-Date: 2016-12-07 02:13+0000\n"
+"PO-Revision-Date: 2016-12-07 02:13+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,24 +16,142 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: product_packaging_views
+#: selection:product.ul,type:0
+msgid "Box"
+msgstr "Caja"
+
+#. module: product_packaging_views
+#: model:product.ul,name:product_packaging_views.product_ul_box
+msgid "Box 20x20x40"
+msgstr "Caja 20x20x40"
+
+#. module: product_packaging_views
+#: model:product.ul,name:product_packaging_views.product_ul_big_box
+msgid "Box 30x40x60"
+msgstr "Caja 30x40x60"
+
+#. module: product_packaging_views
+#: model:ir.actions.act_window,help:product_packaging_views.product_ul_form_action
+msgid "Click to add a new Logistic Unit"
+msgstr "Pulse para añadir una nueva unidad logística"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_create_date
+msgid "Created on"
+msgstr "Creado en"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_display_name
+msgid "Display Name"
+msgstr "Nombre mostrado"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_weight
+msgid "Empty Package Weight"
+msgstr "Peso paquete vacío"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_height
+msgid "Height"
+msgstr "Altura"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_id
+msgid "ID"
+msgstr "ID (identificación)"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul___last_update
+msgid "Last Modified on"
+msgstr "Última modificación en"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_write_uid
+msgid "Last Updated by"
+msgstr "Última actualización de"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_write_date
+msgid "Last Updated on"
+msgstr "Última actualización en"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_ul_length
+msgid "Length"
+msgstr "Longitud"
+
+#. module: product_packaging_views
 #: model:ir.model,name:product_packaging_views.model_product_ul
 msgid "Logistic Unit"
 msgstr "Unidad logística"
 
 #. module: product_packaging_views
+#: model:ir.actions.act_window,name:product_packaging_views.product_ul_form_action
+#: model:ir.ui.menu,name:product_packaging_views.menu_product_ul_form_action
+#: model:ir.ui.view,arch_db:product_packaging_views.product_ul_form_view
+#: model:ir.ui.view,arch_db:product_packaging_views.product_ul_tree
+msgid "Logistic Units"
+msgstr "Unidades logísticas"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_packaging_rows
+msgid "Number of Layers"
+msgstr "Nº de capas"
+
+#. module: product_packaging_views
+#: selection:product.ul,type:0
+msgid "Pack"
+msgstr "Paquete"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_packaging_ul
+msgid "Package Logistic Unit"
+msgstr "Unidad logística del paquete"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_packaging_ul_qty
+msgid "Package by layer"
+msgstr "Paquetes por capa"
+
+#. module: product_packaging_views
 #: model:ir.model,name:product_packaging_views.model_product_packaging
-#: view:product.template:product_packaging_views.product_template_packaging_form_view
+#: model:ir.ui.view,arch_db:product_packaging_views.product_template_packaging_form_view
 msgid "Packaging"
 msgstr "Empaquetado"
 
 #. module: product_packaging_views
-#: field:product.template,packagings:0
-#: field:product.ul,packagings:0
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_template_packagings
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_packagings
 msgid "Packagings"
 msgstr "Empaquetados"
 
 #. module: product_packaging_views
-#: field:product.ul,product:0
+#: selection:product.ul,type:0
+msgid "Pallet"
+msgstr "Palé"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_packaging_ul_container
+msgid "Pallet Logistic Unit"
+msgstr "Unidad logística del palé"
+
+#. module: product_packaging_views
+#: model:ir.ui.view,arch_db:product_packaging_views.product_packaging_form_view
+msgid "Palletization"
+msgstr "Paletización"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_product
 msgid "Product"
 msgstr "Producto"
 
@@ -41,7 +159,7 @@ msgstr "Producto"
 #: model:ir.actions.act_window,name:product_packaging_views.product_packaging_form_action
 #: model:ir.ui.menu,name:product_packaging_views.menu_product_packaging_form_action
 msgid "Product Packagings"
-msgstr "Empaquetado de producto"
+msgstr "Empaquetados del producto"
 
 #. module: product_packaging_views
 #: model:ir.model,name:product_packaging_views.model_product_template
@@ -49,12 +167,61 @@ msgid "Product Template"
 msgstr "Plantilla de producto"
 
 #. module: product_packaging_views
-#: field:product.ul,ul_qty:0
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_ul_qty
 msgid "Quantity"
 msgstr "Cantidad"
 
 #. module: product_packaging_views
-#: help:product.ul,product:0
+#: model:ir.model.fields,help:product_packaging_views.field_product_ul_height
+msgid "The height of the package"
+msgstr "El peso del paquete"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,help:product_packaging_views.field_product_ul_ul_length
+msgid "The length of the package"
+msgstr "La longitud del paquete"
+
+#. module: product_packaging_views
+#: model:ir.actions.act_window,help:product_packaging_views.product_ul_form_action
+msgid "The logistic unit defines the container used for the package.\n"
+"                It has a type (e.g. pallet, box, ...) and you can specify its\n"
+"                size."
+msgstr "La unidad logística define el contenedor usado para el paquete.\n"
+"                Tiene un tipo (e.g. palé, caja, ...) y puede especificar su\n"
+"                tamaño."
+
+#. module: product_packaging_views
+#: model:ir.model.fields,help:product_packaging_views.field_product_packaging_rows
+msgid "The number of layers on a pallet or box"
+msgstr "El número de capas en un palé o caja"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,help:product_packaging_views.field_product_packaging_ul_qty
+msgid "The number of packages by layer"
+msgstr "El número de paquetes por capa"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,help:product_packaging_views.field_product_ul_width
+msgid "The width of the package"
+msgstr "El ancho del paquete"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,help:product_packaging_views.field_product_ul_product
 msgid "This is the related product when the UL is sold."
-msgstr "Este es el producto relacionado cuando la UL es vendida."
+msgstr "Éste es el producto relacionado cuando la unidad logística se vende."
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: product_packaging_views
+#: selection:product.ul,type:0
+msgid "Unit"
+msgstr "Unidad"
+
+#. module: product_packaging_views
+#: model:ir.model.fields,field_description:product_packaging_views.field_product_ul_width
+msgid "Width"
+msgstr "Ancho"
 
