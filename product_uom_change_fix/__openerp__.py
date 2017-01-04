@@ -19,7 +19,7 @@
 {
     "name": "Product Unit Of Measure change fix",
     "version": "1.0",
-    "depends": ["product"],
+    "depends": ["stock"],
     "author": "OdooMRP team,"
               "AvanzOSC,"
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
