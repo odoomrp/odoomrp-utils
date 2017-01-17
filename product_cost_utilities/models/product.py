@@ -38,4 +38,5 @@ class ProductProduct(models.Model):
         compute='_compute_manual_margin', store=True)
     cost = fields.Float(
         digits=dp.get_precision('Product Price'),
-        compute='_compute_cost', store=True)
+        compute='_compute_cost', store=True,
+        help='Difference between manual standard and standard price')

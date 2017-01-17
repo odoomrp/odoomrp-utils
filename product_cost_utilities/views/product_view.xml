@@ -26,5 +26,18 @@
                  </field>
             </field>
         </record>
+
+        <record id="product_product_cost_view_form" model="ir.ui.view">
+            <field name="name">product.product.cost.form</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <field name="manual_standard_cost" position="after">
+                    <field name="average_margin"/>
+                    <field name="manual_margin"/>
+                    <field name="cost"/>
+                </field>
+            </field>
+        </record>
     </data>
 </openerp>
