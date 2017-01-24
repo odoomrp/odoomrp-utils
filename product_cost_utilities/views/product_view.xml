@@ -9,6 +9,7 @@
                 <field name="product_tmpl_id" position="after">
                     <field name="average_margin"/>
                     <field name="manual_margin"/>
+                    <field name="min_margin"/>
                     <field name="cost"/>
                 </field>
             </field>
@@ -35,6 +36,7 @@
                 <field name="manual_standard_cost" position="after">
                     <field name="average_margin"/>
                     <field name="manual_margin"/>
+                    <field name="min_margin"/>
                     <field name="cost"/>
                 </field>
             </field>

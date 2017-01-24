@@ -40,3 +40,5 @@ class ProductProduct(models.Model):
         digits=dp.get_precision('Product Price'),
         compute='_compute_cost', store=True,
         help='Difference between manual standard and standard price')
+    min_margin = fields.Float(string="Min. Margin",
+                              digits=dp.get_precision('Product Price'))
