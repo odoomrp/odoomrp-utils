@@ -27,6 +27,8 @@ class StockLandedCost(models.Model):
             'move_id': move_id,
             'product_id': line.product_id.id,
             'quantity': line.quantity,
+            'credit': 0,
+            'debit': 0
         }
         debit_line = dict(base_line, account_id=debit_account_id)
         credit_line = dict(
@@ -82,11 +84,13 @@ class StockLandedCost(models.Model):
                 debit_line = dict(
                     base_line, name=name, quantity=qty_out,
                     account_id=credit_account_id,
-                    analytic_account_id=line.cost_line_id.analytic_id.id)
+                    analytic_account_id=line.cost_line_id.analytic_id.id,
+                    debit=0, credit=0)
                 credit_line = dict(
                     base_line, name=name, quantity=qty_out,
                     account_id=already_out_account_id,
-                    analytic_account_id=line.cost_id.analytic_id.id)
+                    analytic_account_id=line.cost_id.analytic_id.id,
+                    debit=0, credit=0)
                 unit_debit = 0
                 unit_credit = 0
                 if diff > 0:
