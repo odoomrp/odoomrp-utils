@@ -1,28 +1,30 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * account_invoice_line_stock_move_info
-# 
-# Translators:
-# Oihane Crucelaegui <oihanecruce@gmail.com>, 2015
+# 	* account_invoice_line_stock_move_info
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: odoomrp-utils (8.0)\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-08 08:46+0000\n"
-"PO-Revision-Date: 2015-09-11 12:39+0000\n"
-"Last-Translator: Oihane Crucelaegui <oihanecruce@gmail.com>\n"
-"Language-Team: Spanish (http://www.transifex.com/oca/odoomrp-utils-8-0/language/es/)\n"
+"POT-Creation-Date: 2017-05-24 09:55+0000\n"
+"PO-Revision-Date: 2017-05-24 11:59+0100\n"
+"Last-Translator: Ainara Galdona <ainaragaldona@avanzosc.es>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
 
 #. module: account_invoice_line_stock_move_info
-#: code:addons/account_invoice_line_stock_move_info/models/account_invoice.py:17
+#: code:addons/account_invoice_line_stock_move_info/models/account_invoice.py:18
 #, python-format
-msgid "Before deleting invoice should cancel the picking(s): %s"
-msgstr "Antes de cancelar la factura debe cancelar los albaranes: %s"
+msgid ""
+"Before deleting invoices you should cancel them or cancel next picking(s): "
+"%s."
+msgstr ""
+"Antes de eliminar una factura debes cancelar la factura o cancelar lo(s) "
+"albaran(es): %s."
 
 #. module: account_invoice_line_stock_move_info
 #: model:ir.model,name:account_invoice_line_stock_move_info.model_account_invoice
@@ -33,6 +35,11 @@ msgstr "Factura"
 #: model:ir.model,name:account_invoice_line_stock_move_info.model_account_invoice_line
 msgid "Invoice Line"
 msgstr "Línea de factura"
+
+#. module: account_invoice_line_stock_move_info
+#: field:account.invoice.line,picking_id:0
+msgid "Picking"
+msgstr "Picking"
 
 #. module: account_invoice_line_stock_move_info
 #: field:account.invoice.line,move:0
