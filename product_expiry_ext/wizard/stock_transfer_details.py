@@ -9,4 +9,4 @@ from openerp import fields, models
 class TransferDetailsItems(models.TransientModel):
     _inherit = 'stock.transfer_details_items'
 
-    life_date = fields.Datetime(string='Life Date', related='lot_id.life_date')
+    removal_date = fields.Datetime(string='Removal Date', related='lot_id.removal_date')
