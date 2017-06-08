@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="stock_move_group_search_view">
+            <field name="name">stock.move.group.search</field>
+            <field name="model">stock.move</field>
+            <field name="inherit_id" ref="stock.view_move_search" />
+            <field name="arch" type="xml">
+                <filter name="groupby_create_date" position="after">
+                    <filter string="Creation (Day)" name="groupby_create_date_day"
+                            icon="terp-go-today" domain="[]"
+                            context="{'group_by':'create_date:day'}"/>
+                </filter>
+                <filter name="groupby_date" position="after">
+                    <filter string="Scheduled (Day)" name="groupby_date_day"
+                            icon="terp-go-today" domain="[]"
+                            context="{'group_by':'date_expected:day'}"/>
+                </filter>
+            </field>
+        </record>
+    </data>
+</openerp>
