@@ -35,7 +35,7 @@
                 <notebook position="inside">
                     <page string="Distribution">
                         <group>
-                            <field name="distribution_type" attrs="{'required': [('distribution_line_ids', '!=', False)]}"/>
+                            <field name="distribution_type" attrs="{'required': [('distribution_line_ids', '!=', [])]}"/>
                             <separator string="Distribution Lines"/>
                             <field name="distribution_line_ids" nolabel="1"/>
                         </group>
