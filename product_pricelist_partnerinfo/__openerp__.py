@@ -22,6 +22,7 @@
     "depends": [
         "product",
         "product_supplierinfo_for_customer",
+        "stock",
     ],
     "author": "OdooMRP team, "
               "AvanzOSC, "
