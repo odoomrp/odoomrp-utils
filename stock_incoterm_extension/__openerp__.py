@@ -18,7 +18,8 @@
 
 {
     "name": "Stock Incoterm Extension",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
+    "license": "AGPL-3",
     "depends": ["stock_account",
                 "sale_stock"],
     "author": "OdooMRP team,"
@@ -26,7 +27,8 @@
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
     "website": "http://www.odoomrp.com",
     "category": "Stock",
-    'data': ["views/stock_view.xml",
+    'data': ["security/ir.model.access.csv",
+             "views/stock_view.xml",
              "views/account_invoice_view.xml",
              "views/sale_order_view.xml"],
     'installable': True,
