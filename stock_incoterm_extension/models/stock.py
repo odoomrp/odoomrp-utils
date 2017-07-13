@@ -31,24 +31,29 @@ class StockPicking(models.Model):
 
     _inherit = 'stock.picking'
 
+    @api.model
+    def _get_selection_transport_type(self):
+        return self.env['sale.order'].fields_get(
+            allfields=['transport_type'])['transport_type']['selection']
+
     incoterm = fields.Many2one('stock.incoterms', string="Incoterm")
     req_destination_port = fields.Boolean(string="Requires destination port",
                                           related="incoterm.destination_port")
     req_transport_type = fields.Boolean(string="Requires transport type",
                                         related="incoterm.transport_type")
     destination_port = fields.Char(string="Destination port")
-    transport_type = fields.Selection([('air', 'Air'),
-                                       ('maritime', 'Maritime'),
-                                       ('ground', 'Ground')],
-                                      string="Transport type")
+    transport_type = fields.Selection(
+        selection='_get_selection_transport_type', string="Transport type")
 
     @api.model
     def _create_invoice_from_picking(self, picking, vals):
         if picking and picking.sale_id:
             sale = picking.sale_id
-            vals['incoterm'] = sale.incoterm and sale.incoterm.id or False
-            vals['destination_port'] = sale.destination_port
-            vals['transport_type'] = sale.transport_type
+            vals.update({
+                'incoterm': sale.incoterm and sale.incoterm.id or False,
+                'destination_port': sale.destination_port,
+                'transport_type': sale.transport_type
+                })
         return super(StockPicking, self)._create_invoice_from_picking(picking,
                                                                       vals)
 

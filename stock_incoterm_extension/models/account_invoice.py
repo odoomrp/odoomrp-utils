@@ -16,12 +16,17 @@
 #
 ##############################################################################
 
-from openerp import models, fields
+from openerp import models, fields, api
 
 
 class AccountInvoice(models.Model):
 
     _inherit = 'account.invoice'
+
+    @api.model
+    def _get_selection_transport_type(self):
+        return self.env['sale.order'].fields_get(
+            allfields=['transport_type'])['transport_type']['selection']
 
     incoterm = fields.Many2one('stock.incoterms', string="Incoterm")
     req_destination_port = fields.Boolean(string="Requires destination port",
@@ -29,7 +34,5 @@ class AccountInvoice(models.Model):
     req_transport_type = fields.Boolean(string="Requires transport type",
                                         related="incoterm.transport_type")
     destination_port = fields.Char(string="Destination port")
-    transport_type = fields.Selection([('air', 'Air'),
-                                       ('maritime', 'Maritime'),
-                                       ('ground', 'Ground')],
-                                      string="Transport type")
+    transport_type = fields.Selection(
+        selection='_get_selection_transport_type', string="Transport type")

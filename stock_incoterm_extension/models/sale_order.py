@@ -28,15 +28,16 @@ class SaleOrder(models.Model):
     req_transport_type = fields.Boolean(string="Requires transport type",
                                         related="incoterm.transport_type")
     destination_port = fields.Char(string="Destination port")
-    transport_type = fields.Selection([('air', 'Air'),
-                                       ('maritime', 'Maritime'),
-                                       ('ground', 'Ground')],
-                                      string="Transport type")
+    transport_type = fields.Selection(
+        selection=[('air', 'Air'), ('maritime', 'Maritime'),
+                   ('ground', 'Ground')], string="Transport type")
 
     @api.model
     def _prepare_invoice(self, order, line_ids):
         res = super(SaleOrder, self)._prepare_invoice(order, line_ids)
-        res['incoterm'] = order.incoterm.id
-        res['destination_port'] = order.destination_port
-        res['transport_type'] = order.transport_type
+        res.update({
+            'incoterm': order.incoterm.id,
+            'destination_port': order.destination_port,
+            'transport_type': order.transport_type
+            })
         return res
