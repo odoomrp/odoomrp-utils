@@ -21,7 +21,8 @@
     "version": "8.0.1.0.0",
     "license": "AGPL-3",
     "depends": ["stock_account",
-                "sale_stock"],
+                "sale_stock",
+                "purchase"],
     "author": "OdooMRP team,"
               "AvanzOSC,"
               "Serv. Tecnol. Avanzados - Pedro M. Baeza",
@@ -30,7 +31,8 @@
     'data': ["security/ir.model.access.csv",
              "views/stock_view.xml",
              "views/account_invoice_view.xml",
-             "views/sale_order_view.xml"],
+             "views/sale_order_view.xml",
+             "views/purchase_order_view.xml"],
     'installable': True,
     'auto_install': False,
 }
