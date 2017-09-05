@@ -16,7 +16,7 @@
 #
 ##############################################################################
 
-from openerp import models, fields
+from openerp import api, models, fields
 
 
 class SaleOrder(models.Model):
@@ -26,12 +26,11 @@ class SaleOrder(models.Model):
         comodel_name='delivery.carrier', string='Mandatory delivery method',
         related='partner_id.property_mandatory_carrier')
 
-    def onchange_partner_id(self, cr, uid, ids, partner_id, context=None):
-        res = super(SaleOrder, self).onchange_partner_id(
-            cr, uid, ids, partner_id, context=context)
+    @api.multi
+    def onchange_partner_id(self, partner_id):
+        res = super(SaleOrder, self).onchange_partner_id(partner_id)
         res['value'].update({'carrier_id': False})
-        partner_obj = self.pool['res.partner']
-        partner = partner_obj.browse(cr, uid, partner_id, context=context)
+        partner = self.env['res.partner'].browse(partner_id)
         if partner.property_mandatory_carrier:
             res['value'].update(
                 {'carrier_id': partner.property_mandatory_carrier.id})
@@ -42,3 +41,18 @@ class SaleOrder(models.Model):
         else:
             res.update({'domain': {'carrier_id': []}})
         return res
+
+    @api.model
+    def create(self, vals):
+        partner = self.env['res.partner'].browse(vals['partner_id'])
+        if partner.property_mandatory_carrier:
+            vals['carrier_id'] = partner.property_mandatory_carrier.id
+        return super(SaleOrder, self).create(vals)
+
+    @api.multi
+    def write(self, vals):
+        if vals.get('partner_id'):
+            partner = self.env['res.partner'].browse(vals['partner_id'])
+            if partner.property_mandatory_carrier:
+                vals['carrier_id'] = partner.property_mandatory_carrier.id
+        return super(SaleOrder, self).write(vals)
