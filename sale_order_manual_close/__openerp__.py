@@ -26,9 +26,12 @@
                      "Pedro M. Baeza <pedro.baeza@serviciosbaeza.com>",
                      "Ana Juaristi <ajuaristio@gmail.com>"],
     "depends": ['sale',
-                'sale_stock'
+                'sale_stock',
                 ],
     "category": "Custom Modules",
-    "data": ['wizard/saleorder_wiz_view.xml'],
+    "data": [
+      'security/so_manual_close_security.xml',
+      'wizard/saleorder_wiz_view.xml'
+    ],
     "installable": True
 }
