@@ -11,9 +11,8 @@
                     <separator string="Finish selected Sale Orders?"
                         colspan="4" />
                     <footer>
-                        <button class="oe_highlight"
-                            name="saleorder_finish_wf"
-                            string="Close Sale Order" type="object"/>
+                        <button class="oe_highlight" name="saleorder_finish_wf"
+                            string="Accept" type="object" confirm="Are you sure you want to end this sale order's process?"/>
                         or
                         <button class="oe_link" special="cancel"
                             string="Cancel" />
@@ -28,7 +27,7 @@
             src_model="sale.order"
             key2="client_action_relate"
             view_id="view_saleorder_wf"
-            groups="group_wizard_saleorder_wf_allowed"
+            groups="group_wizard_saleorder_wf_manager"
             target="new" />
     </data>
 </openerp>
