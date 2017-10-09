@@ -7,20 +7,10 @@
         <field name="parent_id" ref="base.module_category_tools"/>
         <field name="sequence">30</field>
     </record>
-
-    <record model="res.groups" id="group_wizard_saleorder_wf_user" >
-        <field name="name">User</field>
-        <field name="category_id" ref="module_category_wizard_saleorder_wf"/>
-        <field name="users" eval="[(4, ref('base.user_root'))]"/>
+    <record id="group_wizard_saleorder_wf_allowed" model="res.groups">
+        <field name="name">Allowed to close Sale Order</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
     </record>
-
-    <record model="res.groups" id="group_wizard_saleorder_wf_manager">
-        <field name="name">Manager</field>
-        <field name="category_id" ref="module_category_wizard_saleorder_wf"/>
-        <field name="comment">Members of this group have access to all Customer Asset functions.</field>
-        <field name="implied_ids" eval="[(4, ref('group_wizard_saleorder_wf_user'))]"/>
-    </record>
-
   </data>
 </openerp>
 
