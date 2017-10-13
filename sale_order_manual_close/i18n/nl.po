@@ -18,7 +18,7 @@ msgstr ""
 
 #. module: sale_order_manual_close
 #: view:wizard.saleorder.wf:sale_order_manual_close.view_saleorder_wf
-msgid "Are yousure you want to force this sale order to state Done?"
+msgid "Are you sure you want to force this sale order to state Done?"
 msgstr "Deze verkooporder naar Verwerkt zetten?"
 
 #. module: sale_order_manual_close

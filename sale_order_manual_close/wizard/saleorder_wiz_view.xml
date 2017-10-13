@@ -14,7 +14,7 @@
                         <button class="oe_highlight"
                             name="saleorder_finish_wf"
                             string="Close Sale Order" type="object"
-                            confirm="Are yousure you want to force this sale order to state Done?"/>
+                            confirm="Are you sure you want to force this sale order to state Done?"/>
                         or
                         <button class="oe_link" special="cancel"
                             string="Cancel" />
