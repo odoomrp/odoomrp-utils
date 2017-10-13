@@ -18,11 +18,6 @@ msgstr ""
 
 #. module: sale_order_manual_close
 #: view:wizard.saleorder.wf:sale_order_manual_close.view_saleorder_wf
-msgid "Are you sure you want to force this sale order to state Done?"
-msgstr "Deze verkooporder naar Verwerkt zetten?"
-
-#. module: sale_order_manual_close
-#: view:wizard.saleorder.wf:sale_order_manual_close.view_saleorder_wf
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -134,11 +129,6 @@ msgstr "Wizard Sale Order Workflow Finish"
 #: view:wizard.saleorder.wf:sale_order_manual_close.view_saleorder_wf
 msgid "or"
 msgstr "or"
-
-#. module: sale_order_manual_close
-#: model:ir.module.category,description:sale_order_manual_close.module_category_wizard_saleorder_wf
-msgid "test"
-msgstr "test"
 
 #~ msgid ""
 #~ "Are you                             sure you want to force this sale "
