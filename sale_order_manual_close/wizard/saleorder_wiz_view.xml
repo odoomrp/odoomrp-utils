@@ -29,7 +29,7 @@
             src_model="sale.order"
             key2="client_action_relate"
             view_id="view_saleorder_wf"
-            groups="group_wizard_saleorder_wf_manager"
+            groups="group_wizard_saleorder_wf_allowed"
             target="new" />
     </data>
 </openerp>
