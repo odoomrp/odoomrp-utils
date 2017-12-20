@@ -11,8 +11,9 @@
                     <separator string="Finish selected Sale Orders?"
                         colspan="4" />
                     <footer>
-                        <button class="oe_highlight" name="saleorder_finish_wf"
-                            string="Accept" type="object" />
+                        <button class="oe_highlight"
+                            name="saleorder_finish_wf"
+                            string="Close Sale Order" type="object"/>
                         or
                         <button class="oe_link" special="cancel"
                             string="Cancel" />
@@ -20,9 +21,14 @@
                 </form>
             </field>
         </record>
-        <act_window id="saleorder_wf" name="End Sale Order Workflow"
-            res_model="wizard.saleorder.wf" src_model="sale.order"
-            key2="client_action_relate" view_id="view_saleorder_wf"
+        <act_window
+            id="saleorder_wf"
+            name="End Sale Order Workflow"
+            res_model="wizard.saleorder.wf"
+            src_model="sale.order"
+            key2="client_action_relate"
+            view_id="view_saleorder_wf"
+            groups="group_wizard_saleorder_wf_allowed"
             target="new" />
     </data>
 </openerp>
