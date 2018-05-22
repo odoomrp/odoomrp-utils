@@ -25,6 +25,7 @@ class StockIncoterms(models.Model):
 
     destination_port = fields.Boolean(string="Requires destination port")
     transport_type = fields.Boolean(string="Requires transport type")
+    default_destination_port = fields.Char(string="Default Destination Port")
 
 
 class StockPicking(models.Model):
@@ -45,17 +46,22 @@ class StockPicking(models.Model):
     transport_type = fields.Selection(
         selection='_get_selection_transport_type', string="Transport type")
 
+    @api.onchange('incoterm')
+    def _onchange_incoterm(self):
+        for picking in self:
+            picking.destination_port = (
+                picking.incoterm.default_destination_port)
+
     @api.model
     def _create_invoice_from_picking(self, picking, vals):
-        if picking and picking.sale_id:
-            sale = picking.sale_id
+        if picking:
             vals.update({
-                'incoterm': sale.incoterm and sale.incoterm.id or False,
-                'destination_port': sale.destination_port,
-                'transport_type': sale.transport_type
-                })
-        return super(StockPicking, self)._create_invoice_from_picking(picking,
-                                                                      vals)
+                'incoterm': picking.incoterm and picking.incoterm.id or False,
+                'destination_port': picking.destination_port,
+                'transport_type': picking.transport_type,
+            })
+        return super(StockPicking, self)._create_invoice_from_picking(
+            picking, vals)
 
 
 class StockMove(models.Model):
