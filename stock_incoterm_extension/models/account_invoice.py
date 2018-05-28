@@ -36,3 +36,9 @@ class AccountInvoice(models.Model):
     destination_port = fields.Char(string="Destination port")
     transport_type = fields.Selection(
         selection='_get_selection_transport_type', string="Transport type")
+
+    @api.onchange('incoterm')
+    def _onchange_incoterm(self):
+        for invoice in self:
+            invoice.destination_port = (
+                invoice.incoterm.default_destination_port)

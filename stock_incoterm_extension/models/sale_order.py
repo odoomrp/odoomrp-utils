@@ -32,6 +32,11 @@ class SaleOrder(models.Model):
         selection=[('air', 'Air'), ('maritime', 'Maritime'),
                    ('ground', 'Ground')], string="Transport type")
 
+    @api.onchange('incoterm')
+    def _onchange_incoterm(self):
+        for order in self:
+            order.destination_port = order.incoterm.default_destination_port
+
     @api.model
     def _prepare_invoice(self, order, line_ids):
         res = super(SaleOrder, self)._prepare_invoice(order, line_ids)
