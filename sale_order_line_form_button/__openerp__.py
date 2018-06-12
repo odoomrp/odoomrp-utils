@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -18,7 +18,7 @@
 
 {
     "name": "Sale - Button to open sale order lines in form view",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
     "depends": [
         "sale"
     ],

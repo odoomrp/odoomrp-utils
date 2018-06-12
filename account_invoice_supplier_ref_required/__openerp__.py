@@ -1,4 +1,4 @@
-# -*- encoding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 {
     "name": "Account Invoice Supplier Reference Required",
     "summary": "",
-    "version": "1.0",
+    "version": "8.0.1.0.0",
     "category": "Custom Module",
     "license": "AGPL-3",
     "author": "OdooMRP team, "
