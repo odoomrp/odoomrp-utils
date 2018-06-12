@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-01 15:22+0000\n"
-"PO-Revision-Date: 2015-06-01 15:22+0000\n"
+"POT-Creation-Date: 2018-06-12 13:37+0000\n"
+"PO-Revision-Date: 2018-06-12 13:37+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,23 +21,25 @@ msgid "Additional Info"
 msgstr "Información adicional"
 
 #. module: stock_incoterm_extension
-#: selection:account.invoice,transport_type:0
 #: selection:sale.order,transport_type:0
-#: selection:stock.picking,transport_type:0
 msgid "Air"
 msgstr "Aereo"
 
 #. module: stock_incoterm_extension
+#: field:stock.incoterms,default_destination_port:0
+msgid "Default Destination Port"
+msgstr "Puerto de destino por defecto"
+
+#. module: stock_incoterm_extension
 #: field:account.invoice,destination_port:0
+#: field:purchase.order,destination_port:0
 #: field:sale.order,destination_port:0
 #: field:stock.picking,destination_port:0
 msgid "Destination port"
 msgstr "Puerto de destino"
 
 #. module: stock_incoterm_extension
-#: selection:account.invoice,transport_type:0
 #: selection:sale.order,transport_type:0
-#: selection:stock.picking,transport_type:0
 msgid "Ground"
 msgstr "Terrestre"
 
@@ -60,9 +62,7 @@ msgid "Invoice"
 msgstr "Factura"
 
 #. module: stock_incoterm_extension
-#: selection:account.invoice,transport_type:0
 #: selection:sale.order,transport_type:0
-#: selection:stock.picking,transport_type:0
 msgid "Maritime"
 msgstr "Maritimo"
 
@@ -77,12 +77,25 @@ msgid "Picking List"
 msgstr "Albarán"
 
 #. module: stock_incoterm_extension
+#: model:ir.model,name:stock_incoterm_extension.model_purchase_order
+msgid "Purchase Order"
+msgstr "Pedido de compra"
+
+#. module: stock_incoterm_extension
+#: field:account.invoice,req_destination_port:0
+#: field:purchase.order,req_destination_port:0
+#: field:sale.order,req_destination_port:0
 #: field:stock.incoterms,destination_port:0
+#: field:stock.picking,req_destination_port:0
 msgid "Requires destination port"
 msgstr "Requiere puerto de destino"
 
 #. module: stock_incoterm_extension
+#: field:account.invoice,req_transport_type:0
+#: field:purchase.order,req_transport_type:0
+#: field:sale.order,req_transport_type:0
 #: field:stock.incoterms,transport_type:0
+#: field:stock.picking,req_transport_type:0
 msgid "Requires transport type"
 msgstr "Requiere medio de transporte"
 
@@ -98,6 +111,7 @@ msgstr "Movimiento de existencias"
 
 #. module: stock_incoterm_extension
 #: field:account.invoice,transport_type:0
+#: field:purchase.order,transport_type:0
 #: field:sale.order,transport_type:0
 #: field:stock.picking,transport_type:0
 msgid "Transport type"
