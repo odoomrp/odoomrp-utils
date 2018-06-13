@@ -30,6 +30,7 @@
                     <group>
                         <field name="destination_port"/>
                         <field name="transport_type"/>
+                        <field name="default_destination_port" />
                     </group>
                 </field>
             </field>

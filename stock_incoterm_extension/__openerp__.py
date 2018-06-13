@@ -18,7 +18,7 @@
 
 {
     "name": "Stock Incoterm Extension",
-    "version": "8.0.1.1.0",
+    "version": "8.0.1.2.0",
     "license": "AGPL-3",
     "depends": [
         "stock_account",
