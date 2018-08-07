@@ -24,6 +24,11 @@ class PurchaseOrder(models.Model):
     transport_type = fields.Selection(
         selection='_get_selection_transport_type', string="Transport type")
 
+    @api.onchange('incoterm_id')
+    def _onchange_incoterm(self):
+        for order in self:
+            order.destination_port = order.incoterm_id.default_destination_port
+
     @api.model
     def _prepare_invoice(self, order, line_ids):
         res = super(PurchaseOrder, self)._prepare_invoice(order, line_ids)
