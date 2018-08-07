@@ -64,3 +64,9 @@ class TestStockIncotermExtension(common.TransactionCase):
         self.sale_order._onchange_incoterm()
         self.assertEquals(self.sale_order.destination_port,
                           self.incoterm.default_destination_port)
+
+    def test_purchase_order_onchange(self):
+        self.assertTrue(self.incoterm.default_destination_port)
+        self.purchase_order._onchange_incoterm()
+        self.assertEquals(self.purchase_order.destination_port,
+                          self.incoterm.default_destination_port)
