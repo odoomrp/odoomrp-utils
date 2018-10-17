@@ -67,15 +67,17 @@ class StockPicking(models.Model):
 class StockMove(models.Model):
     _inherit = "stock.move"
 
-    @api.multi
-    def action_confirm(self):
-        res = super(StockMove, self).action_confirm()
-        for move in self:
-            if (move.procurement_id and move.procurement_id.sale_line_id):
-                sale = move.procurement_id.sale_line_id.order_id
-                picking = move.picking_id
-                if picking and sale:
-                    picking.incoterm = sale.incoterm
-                    picking.destination_port = sale.destination_port
-                    picking.transport_type = sale.transport_type
-        return res
+    @api.model
+    def _prepare_picking_assign(self, move):
+        """ Prepares a new picking for this move as it could not be assigned to
+        another picking. This method is designed to be inherited.
+        """
+        values = super(StockMove, self)._prepare_picking_assign(move=move)
+        if (move.procurement_id and move.procurement_id.sale_line_id):
+            sale = move.procurement_id.sale_line_id.order_id
+            values.update({
+                'incoterm': sale.incoterm.id,
+                'destination_port': sale.destination_port,
+                'transport_type': sale.transport_type,
+            })
+        return values
