@@ -9,7 +9,7 @@ class ProductPackaging(models.Model):
     _inherit = 'product.packaging'
 
     def _default_ul(self):
-        return self.env['product.ul'].search([], limit=1).id
+        return self.env['product.ul'].search([], limit=1)
 
     ul = fields.Many2one(
         comodel_name='product.ul', string='Package Logistic Unit',
