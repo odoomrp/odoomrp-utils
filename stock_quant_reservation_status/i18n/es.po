@@ -35,3 +35,14 @@ msgstr "Quant reservado"
 msgid "Unreserved"
 msgstr "No reservado"
 
+#. module: stock_quant_reservation_status
+#: view:stock.quant:stock_quant_reservation_status.stock_quant_reserved_search_view
+msgid "Company"
+msgstr "Compañía"
+
+#. module: stock_quant_reservation_status
+#: view:stock.quant:stock_quant_reservation_status.stock_quant_reserved_search_view
+#: field:stock.quant,reserved_for:0
+msgid "Reserved for"
+msgstr "Reservado para"
+
