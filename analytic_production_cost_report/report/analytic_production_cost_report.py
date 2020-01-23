@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 from openerp import models, fields, tools
+from psycopg2.extensions import AsIs
 
 
 class AnalyticProductionCostReport(models.Model):
@@ -67,5 +68,12 @@ class AnalyticProductionCostReport(models.Model):
 
     def init(self, cr):
         tools.drop_view_if_exists(cr, self._table)
-        cr.execute("""CREATE or REPLACE VIEW %s as (%s %s %s)
-        """ % (self._table, self._select(), self._from(), self._group_by()))
+        cr.execute(
+            """CREATE or REPLACE VIEW %(table)s AS
+               (%(select)s %(from)s %(group_by)s)""",
+            {
+                'table': AsIs(self._table),
+                'select': AsIs(self._select()),
+                'from': AsIs(self._from()),
+                'group_by': AsIs(self._group_by()),
+            })
