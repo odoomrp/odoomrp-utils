@@ -25,6 +25,12 @@
                     <filter name="unreserved" string="Unreserved"
                         domain="[('is_reserved','=', False)]" />
                 </filter>
+                <field name="owner_id" position="after">
+                    <field name="reserved_for" />
+                </field>
+                <filter string='Company' position="after">
+                    <filter string='Reserved for' icon="terp-go-home" domain="[]" context="{'group_by' : 'reserved_for'}"/>
+                </filter>
             </field>
         </record>
     </data>
