@@ -22,7 +22,7 @@ msgstr ""
 #: model:ir.ui.menu,name:purchase_product_menu.menu_products
 #: model:ir.actions.act_window,name:purchase_product_menu.product_normal_action_purchase
 msgid "Products"
-msgstr "Productos"
+msgstr "Variantes de producto"
 
 #. module: purchase_product_menu
 #: model:ir.actions.act_window,help:purchase_product_menu.product_normal_action_purchase
